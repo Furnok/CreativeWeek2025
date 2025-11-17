@@ -18,13 +18,13 @@ public class S_WindowManager : MonoBehaviour
     [SerializeField] private RSE_OnOpenWindow rseOnOpenWindow;
     [SerializeField] private RSE_OnCloseWindow rseOnCloseWindow;
     [SerializeField] private RSE_OnCloseAllWindows rseOnCloseAllWindows;
-    //[SerializeField] private RSE_OnPlayerPause rseOnPlayerPause;
+    [SerializeField] private RSE_OnPlayerPause rseOnPlayerPause;
     [SerializeField] private RSE_OnFadeIn rseOnFadeIn;
     [SerializeField] private RSE_OnFadeOut rsOnFadeOut;
     [SerializeField] private RSE_OnDisplayUIGame rseOnDisplayUIGame;
 
     [Header("Outputs")]
-    //[SerializeField] private RSE_OnUIInputEnabled rseOnUIInputEnabled;
+    [SerializeField] private RSE_OnUIInputEnabled rseOnUIInputEnabled;
     [SerializeField] private RSE_OnGamePause rseOnGamePause;
     [SerializeField] private RSO_GameInPause rsoGameInPause;
     [SerializeField] private RSO_CurrentWindows rsoCurrentWindows;
@@ -41,7 +41,7 @@ public class S_WindowManager : MonoBehaviour
         rseOnOpenWindow.action += AlreadyOpen;
         rseOnCloseWindow.action += CloseWindow;
         rseOnCloseAllWindows.action += CloseAllWindows;
-        //rseOnPlayerPause.action += PauseGame;
+        rseOnPlayerPause.action += PauseGame;
         rseOnFadeIn.action += FadeIn;
         rsOnFadeOut.action += FadeOut;
         rseOnDisplayUIGame.action += DisplayUIGame;
@@ -52,7 +52,7 @@ public class S_WindowManager : MonoBehaviour
         rseOnOpenWindow.action -= AlreadyOpen;
         rseOnCloseWindow.action -= CloseWindow;
         rseOnCloseAllWindows.action -= CloseAllWindows;
-        //rseOnPlayerPause.action -= PauseGame;
+        rseOnPlayerPause.action -= PauseGame;
         rseOnFadeIn.action -= FadeIn;
         rsOnFadeOut.action -= FadeOut;
         rseOnDisplayUIGame.action -= DisplayUIGame;
@@ -92,7 +92,7 @@ public class S_WindowManager : MonoBehaviour
         {
             //RuntimeManager.PlayOneShot(uiSound);
 
-            //rseOnUIInputEnabled.Call();
+            rseOnUIInputEnabled.Call();
             OpenWindow(menuWindow);
             rsoGameInPause.Value = true;
             rseOnGamePause.Call(true);

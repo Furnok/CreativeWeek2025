@@ -1,6 +1,3 @@
-using Mono.Cecil;
-using Unity.Android.Gradle.Manifest;
-using Unity.VisualScripting.Dependencies.Sqlite;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -11,7 +8,7 @@ public class S_UIMenu : MonoBehaviour
     [SerializeField] private GameObject settingsWindow;
 
     [Header("Inputs")]
-    //[SerializeField] private RSE_OnPlayerPause rseOnPlayerPause;
+    [SerializeField] private RSE_OnPlayerPause rseOnPlayerPause;
 
     [Header("Outputs")]
     [SerializeField] private RSE_OnOpenWindow rseOnOpenWindow;
@@ -19,7 +16,7 @@ public class S_UIMenu : MonoBehaviour
     [SerializeField] private RSE_OnQuitGame rseOnQuitGame;
     [SerializeField] private RSE_OnLoadScene rseOnLoadScene;
     [SerializeField] private RSE_OnGamePause rseOnGamePause;
-    //[SerializeField] private RSE_OnGameInputEnabled rseOnGameInputEnabled;
+    [SerializeField] private RSE_OnGameInputEnabled rseOnGameInputEnabled;
     [SerializeField] private RSE_OnResetFocus rseOnResetFocus;
     [SerializeField] private RSE_OnFadeOut rseOnFadeOut;
     [SerializeField] private RSO_GameInPause rsoGameInPause;
@@ -30,14 +27,14 @@ public class S_UIMenu : MonoBehaviour
 
     private void OnEnable()
     {
-        //rseOnPlayerPause.action += CloseEscape;
+        rseOnPlayerPause.action += CloseEscape;
 
         isTransit = false;
     }
 
     private void OnDisable()
     {
-        //rseOnPlayerPause.action -= CloseEscape;
+        rseOnPlayerPause.action -= CloseEscape;
 
         isTransit = false;
     }
@@ -54,7 +51,7 @@ public class S_UIMenu : MonoBehaviour
 
     public void ResumeGame()
     {
-        //rseOnGameInputEnabled.Call();
+        rseOnGameInputEnabled.Call();
         rseOnCloseAllWindows.Call();
         rseOnResetFocus.Call();
         rsoGameInPause.Value = false;
