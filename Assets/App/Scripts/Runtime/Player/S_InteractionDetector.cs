@@ -11,6 +11,7 @@ public class S_InteractionDetector : MonoBehaviour
 
     [Header("Inputs")]
     [SerializeField] private RSE_OnPlayerInteract _onPlayerInteract;
+    [SerializeField] private RSE_OnPlayerMoveInput _onPlayerMoveInput;
 
     //[Header("Outputs")]
 
@@ -21,11 +22,13 @@ public class S_InteractionDetector : MonoBehaviour
     void OnEnable()
     {
         _onPlayerInteract.action += InteractPriority;
+        _onPlayerMoveInput.action += _ => RecalculateTarget();
     }
 
     private void OnDisable()
     {
         _onPlayerInteract.action -= InteractPriority;
+        _onPlayerMoveInput.action -= _ => RecalculateTarget();
     }
 
     void InteractPriority()
@@ -100,10 +103,5 @@ public class S_InteractionDetector : MonoBehaviour
                 _currentTarget = i;
             }
         }
-    }
-
-    private void Update()
-    {
-        RecalculateTarget();
     }
 }

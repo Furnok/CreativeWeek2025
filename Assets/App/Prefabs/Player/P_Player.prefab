@@ -327,6 +327,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _detectionCollider: {fileID: 4193220558634525563}
   _onPlayerInteract: {fileID: 11400000, guid: 0c73c4756da3f6e42a721d733438b133, type: 2}
+  _onPlayerMoveInput: {fileID: 11400000, guid: f81ab021498c6f54aa57af72b9fe7e82, type: 2}
 --- !u!1 &8568093786169867510
 GameObject:
   m_ObjectHideFlags: 0
