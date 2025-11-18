@@ -77,9 +77,6 @@ public class S_UIMenu : MonoBehaviour
             {
                 rseOnCloseAllWindows.Call();
 
-                rsoGameInPause.Value = false;
-                rseOnGamePause.Call(false);
-
                 Scene currentScene = SceneManager.GetActiveScene();
                 rseOnLoadScene.Call(sceneMainMenu.Name);
             }));

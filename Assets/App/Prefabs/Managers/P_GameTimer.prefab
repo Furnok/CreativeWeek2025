@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7616317127802561670}
   - component: {fileID: 993941142988145154}
+  - component: {fileID: 2688779508952840892}
   m_Layer: 0
   m_Name: P_GameTimer
   m_TagString: Untagged
@@ -48,3 +49,17 @@ MonoBehaviour:
   _gameTimeRemaining: {fileID: 11400000, guid: db0fc20a93467854eaee1bf26c18de58, type: 2}
   _onStartGameTimerRse: {fileID: 11400000, guid: 5884d174c62323b4ca5836a3f61a389b, type: 2}
   _onGameTimerEndRse: {fileID: 11400000, guid: e9fccb54274ac9f499dd6e15f8d358ab, type: 2}
+--- !u!114 &2688779508952840892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091465515501824717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cd4658657a359743accbf3637f8e808, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rsoGameInPause: {fileID: 11400000, guid: 05cbb53d0b3a5aa439dc8a14adc343b7, type: 2}
+  rseOnGamePause: {fileID: 11400000, guid: e0315f5f5ac494d44a53daeca203e79b, type: 2}

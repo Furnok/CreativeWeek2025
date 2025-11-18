@@ -9,8 +9,6 @@ public class S_UIGame : MonoBehaviour
 
     [SerializeField] private Slider sliderTemperature;
 
-    [SerializeField] private TextMeshProUGUI textTemperature;
-
     //[Header("Inputs")]
 
     //[Header("Outputs")]
@@ -33,6 +31,5 @@ public class S_UIGame : MonoBehaviour
     private void UpdateTemperature(float temperature)
     {
         sliderTemperature.value = temperature;
-        textTemperature.text = temperature.ToString() + "°";
     }
 }
