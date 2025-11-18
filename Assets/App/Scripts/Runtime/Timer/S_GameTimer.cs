@@ -6,7 +6,7 @@ public class S_GameTimer : MonoBehaviour
 
     [Header("References")]
     [SerializeField] SSO_Game_Settings _gameSettings;
-    [SerializeField] RSO_Float_GameTimeRemaining _gameTimeRemaining;
+    [SerializeField] RSO_GameTimeRemaining _gameTimeRemaining;
 
     [Header("Inputs")]
     [SerializeField] RSE_OnStartGameTimer _onStartGameTimerRse;

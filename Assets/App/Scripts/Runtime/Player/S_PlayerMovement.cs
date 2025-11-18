@@ -6,7 +6,7 @@ public class S_PlayerMovement : MonoBehaviour
 
     [Header("References")]
     [SerializeField] private Rigidbody2D _rb;
-    [SerializeField] private RSO_PlayerStats _playerStats;
+    [SerializeField] private SSO_PlayerStats _playerStats;
 
 
     [Header("Inputs")]

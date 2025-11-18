@@ -80,7 +80,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rb: {fileID: 8613030264555259308}
-  _playerStats: {fileID: 11400000, guid: 203c817f480c9324680891dcbebd16dc, type: 2}
+  _playerStats: {fileID: 11400000, guid: cea7641025dd6dc4fa869ec1ab8595d3, type: 2}
   _onPlayerMoveInput: {fileID: 11400000, guid: f81ab021498c6f54aa57af72b9fe7e82, type: 2}
 --- !u!114 &3063215768073807451
 MonoBehaviour:

@@ -14,3 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _value:
     TimerDuration: 1200
+    StartingTemperature: 10
+    TemperatureTresholdToLoseMentalHealth: 0
+    MaxTemperature: 20
+    MinTemperature: -40
+    StartTimeOfDay: 0
+    DayCycleDuration: 180
+    NightCycleDuration: 120

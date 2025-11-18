@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90fc5a15712e06d42a09df672439eec6, type: 3}
-  m_Name: RSO_Float_GameTimeRemaining
+  m_Script: {fileID: 11500000, guid: bc02825e2c2c5db4c9e1a65f024cff8c, type: 3}
+  m_Name: RSO_CurrentTemperature
   m_EditorClassIdentifier: 
   _value: 0

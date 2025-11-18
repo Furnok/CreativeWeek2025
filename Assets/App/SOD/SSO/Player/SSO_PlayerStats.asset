@@ -9,8 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5885e77463905d4d8836cc651ee3804, type: 3}
-  m_Name: RSO_PlayerStats
+  m_Script: {fileID: 11500000, guid: 48635a567205f92459f0dc8cbf875406, type: 3}
+  m_Name: SSO_PlayerStats
   m_EditorClassIdentifier: 
   _value:
     speed: 5
+    MaxMentalHealth: 100
+    StartingMentalHealth: 100

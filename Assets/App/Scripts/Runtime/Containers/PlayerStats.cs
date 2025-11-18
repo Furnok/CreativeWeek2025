@@ -5,4 +5,6 @@ using System;
 public struct PlayerStats
 {
     public float speed;
+    public float MaxMentalHealth;
+    public float StartingMentalHealth;
 }
