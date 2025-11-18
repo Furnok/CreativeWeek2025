@@ -53,7 +53,7 @@ public class S_SaveNameAttributeEditor : PropertyDrawer
 
         CacheSaveNames();
 
-        if (cachedSaveNamesArray.Length < 1)
+        if (!haveSettings && !haveSaves)
         {
             EditorGUI.LabelField(position, label.text, "Saves Disabled");
             EditorGUI.EndProperty();
