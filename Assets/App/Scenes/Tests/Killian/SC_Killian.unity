@@ -129,7 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 33398062}
   m_Layer: 0
-  m_Name: InteratiblesObejects
+  m_Name: InteractiblesObjects
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -395,7 +395,7 @@ GameObject:
   - component: {fileID: 270325282}
   - component: {fileID: 270325281}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -938,7 +938,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1321120216}
   m_Layer: 0
-  m_Name: Enivronement
+  m_Name: Environement
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
