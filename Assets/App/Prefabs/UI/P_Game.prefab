@@ -2371,5 +2371,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0e24bc04acd1764ab777c48a039ce2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animationSlider: 0.4
   sliderSanity: {fileID: 2798278406215836294}
   sliderTemperature: {fileID: 2251430326936392901}
