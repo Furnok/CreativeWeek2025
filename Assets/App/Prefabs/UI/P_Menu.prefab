@@ -823,6 +823,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneMainMenu:
+    sceneName: SC_MainMenu
     sceneGUID: 7145892410738c1409c06f533f734a6e
     scenePath: Assets/App/Scenes/Tests/SC_MainMenu.unity
   uiSound: {fileID: 0}

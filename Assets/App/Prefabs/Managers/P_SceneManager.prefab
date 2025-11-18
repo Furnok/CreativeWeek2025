@@ -45,15 +45,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelsName:
-  - sceneGUID: 7145892410738c1409c06f533f734a6e
+  - sceneName: SC_MainMenu
+    sceneGUID: 7145892410738c1409c06f533f734a6e
     scenePath: Assets/App/Scenes/Tests/SC_MainMenu.unity
-  - sceneGUID: 38104b1be5d0f72459affe591aaabb7a
+  - sceneName: SC_Game
+    sceneGUID: 38104b1be5d0f72459affe591aaabb7a
     scenePath: Assets/App/Scenes/Tests/SC_Game.unity
-  - sceneGUID: ace6104b29ff3f6498a0b286027b0335
+  - sceneName: SC_Killian
+    sceneGUID: ace6104b29ff3f6498a0b286027b0335
     scenePath: Assets/App/Scenes/Tests/Killian/SC_Killian.unity
-  - sceneGUID: d78429218b7211843bb9e9323f78d7d3
+  - sceneName: SC_Florian
+    sceneGUID: d78429218b7211843bb9e9323f78d7d3
     scenePath: Assets/App/Scenes/Tests/Florian/SC_Florian.unity
-  - sceneGUID: aa411ec8ae0e9a74e9c627903e62995f
+  - sceneName: SC_Mathias
+    sceneGUID: aa411ec8ae0e9a74e9c627903e62995f
     scenePath: Assets/App/Scenes/Tests/Mathias/SC_Mathias.unity
   rseOnLoadScene: {fileID: 11400000, guid: 4026aea2785488c4dbb1cfc161249ad5, type: 2}
   rseOnQuitGame: {fileID: 11400000, guid: da1482f85ac64b64296dc7c863d502a9, type: 2}

@@ -26,6 +26,7 @@ public class S_SceneNameAttributeEditor : PropertyDrawer
 
     public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
     {
+        SerializedProperty nameProp = property.FindPropertyRelative("sceneName");
         SerializedProperty guidProp = property.FindPropertyRelative("sceneGUID");
         SerializedProperty pathProp = property.FindPropertyRelative("scenePath");
 
@@ -57,11 +58,13 @@ public class S_SceneNameAttributeEditor : PropertyDrawer
                 string path = AssetDatabase.GetAssetPath(selectedScene);
                 string newGUID = AssetDatabase.AssetPathToGUID(path);
 
+                nameProp.stringValue = selectedScene != null ? selectedScene.name : "";
                 guidProp.stringValue = newGUID;
                 pathProp.stringValue = path;
             }
             else if (newIndex == 0)
             {
+                nameProp.stringValue = "";
                 guidProp.stringValue = "";
                 pathProp.stringValue = "";
             }
