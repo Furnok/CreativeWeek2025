@@ -84,6 +84,19 @@ public class S_InputsManager : MonoBehaviour
         _onPlayerInteractInput.Call();
     }
 
+    private void OnPauseGameInput(InputAction.CallbackContext ctx)
+    {
+        rseOnPlayerPause.Call();
+    }
+
+    #endregion
+
+    #region UI Input Callback Methods
+    private void OnPauseUIInput(InputAction.CallbackContext ctx)
+    {
+        rseOnPlayerPause.Call();
+    }
+
     #endregion
 
     private void EnableGameInputs()
@@ -93,6 +106,7 @@ public class S_InputsManager : MonoBehaviour
         game.Move.performed += OnMoveChanged;
         game.Move.canceled += OnMoveChanged;
         game.Interact.performed += OnInteractInputPerformed;
+        game.Pause.performed += OnPauseGameInput;
     }
 
     private void DisableGameInputs()
@@ -102,7 +116,21 @@ public class S_InputsManager : MonoBehaviour
         game.Move.performed -= OnMoveChanged;
         game.Move.canceled -= OnMoveChanged;
         game.Interact.performed -= OnInteractInputPerformed;
+        game.Pause.performed -= OnPauseGameInput;
+    }
 
+    private void EnableUIInputs()
+    {
+        var ui = iaInputPlayer.UI;
+
+        ui.Pause.performed += OnPauseUIInput;
+    }
+
+    private void DisableUIInputs()
+    {
+        var ui = iaInputPlayer.UI;
+
+        ui.Pause.performed -= OnPauseUIInput;
     }
 
     private void DeactivateInput()
@@ -113,20 +141,6 @@ public class S_InputsManager : MonoBehaviour
 
         rsoLastInputActionMap.Value = rsoCurrentInputActionMap.Value;
         rsoCurrentInputActionMap.Value = EnumPlayerInputActionMap.None;
-    }
-
-    private void DisableUIInputs()
-    {
-        var ui = iaInputPlayer.UI;
-
-        //ui.Pause.performed -= OnPauseUIInput;
-    }
-
-    private void EnableUIInputs()
-    {
-        var ui = iaInputPlayer.UI;
-
-        //ui.Pause.performed += OnPauseUIInput;
     }
 
     private void ActivateGameActionInput()
