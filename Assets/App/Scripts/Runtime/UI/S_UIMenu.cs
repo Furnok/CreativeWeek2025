@@ -3,6 +3,9 @@ using UnityEngine.SceneManagement;
 
 public class S_UIMenu : MonoBehaviour
 {
+    [Header("Settings")]
+    [SerializeField] private S_SceneReference sceneMainMenu;
+
     [Header("References")]
     [SerializeField] private AudioClip uiSound;
     [SerializeField] private GameObject settingsWindow;
@@ -78,7 +81,7 @@ public class S_UIMenu : MonoBehaviour
                 rseOnGamePause.Call(false);
 
                 Scene currentScene = SceneManager.GetActiveScene();
-                rseOnLoadScene.Call(currentScene.name);
+                rseOnLoadScene.Call(sceneMainMenu.Name);
             }));
         }
     }

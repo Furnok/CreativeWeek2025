@@ -17,6 +17,8 @@ public class S_SaveNameAttributeEditor : PropertyDrawer
     {
         cachedSaveNames.Clear();
 
+        cachedSaveNames.Add("None");
+
         if (haveSettings)
         {
             cachedSaveNames.Add("Settings");

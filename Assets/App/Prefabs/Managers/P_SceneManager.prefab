@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2993098812551795013
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8726563525680051403}
+  - component: {fileID: 9116008853107696192}
+  m_Layer: 0
+  m_Name: P_SceneManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8726563525680051403
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2993098812551795013}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9116008853107696192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2993098812551795013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 420e95ee8c81c674ba4740a0197824f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelsName:
+  - sceneGUID: 7145892410738c1409c06f533f734a6e
+    scenePath: Assets/App/Scenes/Tests/SC_MainMenu.unity
+  - sceneGUID: 38104b1be5d0f72459affe591aaabb7a
+    scenePath: Assets/App/Scenes/Tests/SC_Game.unity
+  - sceneGUID: ace6104b29ff3f6498a0b286027b0335
+    scenePath: Assets/App/Scenes/Tests/Killian/SC_Killian.unity
+  - sceneGUID: d78429218b7211843bb9e9323f78d7d3
+    scenePath: Assets/App/Scenes/Tests/Florian/SC_Florian.unity
+  - sceneGUID: aa411ec8ae0e9a74e9c627903e62995f
+    scenePath: Assets/App/Scenes/Tests/Mathias/SC_Mathias.unity
+  rseOnLoadScene: {fileID: 11400000, guid: 4026aea2785488c4dbb1cfc161249ad5, type: 2}
+  rseOnQuitGame: {fileID: 11400000, guid: da1482f85ac64b64296dc7c863d502a9, type: 2}
+  rsoCurrentLevel: {fileID: 11400000, guid: 6d0343710ec753a4c974a9d12b1216ab, type: 2}
