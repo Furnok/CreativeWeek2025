@@ -19,7 +19,8 @@ public class S_CursorManager : MonoBehaviour
     private void Awake()
     {
         Cursor.SetCursor(defaultCursor, Vector2.zero, CursorMode.Auto);
-        HideMouseCursor();
+        //HideMouseCursor();
+        ShowMouseCursor();
     }
 
     private void OnEnable()
