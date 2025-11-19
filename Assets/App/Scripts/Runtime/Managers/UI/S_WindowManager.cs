@@ -6,6 +6,7 @@ public class S_WindowManager : MonoBehaviour
 {
     [Header("Settings")]
     [SerializeField] private float timeFade;
+    [SerializeField] private bool isInMainMenu;
 
     [Header("References")]
     [SerializeField] private AudioClip uiSound;
@@ -88,7 +89,7 @@ public class S_WindowManager : MonoBehaviour
 
     private void PauseGame()
     {
-        if (!menuWindow.activeInHierarchy)
+        if (!menuWindow.activeInHierarchy && !isInMainMenu)
         {
             //RuntimeManager.PlayOneShot(uiSound);
 

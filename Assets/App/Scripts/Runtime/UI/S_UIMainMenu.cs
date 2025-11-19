@@ -1,14 +1,17 @@
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class S_UIMenu : MonoBehaviour
+public class S_UIMainMenu : MonoBehaviour
 {
     [Header("Settings")]
-    [SerializeField] private S_SceneReference sceneMainMenu;
+    [SerializeField] private S_SceneReference sceneGame;
+    [SerializeField] private float timeFadeSkip;
 
     [Header("References")]
     [SerializeField] private AudioClip uiSound;
     [SerializeField] private GameObject settingsWindow;
+    [SerializeField] private GameObject creditsWindow;
 
     [Header("Inputs")]
     [SerializeField] private RSE_OnPlayerPause rseOnPlayerPause;
@@ -18,47 +21,56 @@ public class S_UIMenu : MonoBehaviour
     [SerializeField] private RSE_OnCloseAllWindows rseOnCloseAllWindows;
     [SerializeField] private RSE_OnQuitGame rseOnQuitGame;
     [SerializeField] private RSE_OnLoadScene rseOnLoadScene;
-    [SerializeField] private RSE_OnGamePause rseOnGamePause;
+    [SerializeField] private RSE_OnUIInputEnabled rseOnUIInputEnabled;
     [SerializeField] private RSE_OnGameInputEnabled rseOnGameInputEnabled;
-    [SerializeField] private RSE_OnResetFocus rseOnResetFocus;
     [SerializeField] private RSE_OnFadeOut rseOnFadeOut;
-    [SerializeField] private RSO_GameInPause rsoGameInPause;
+    [SerializeField] private RSE_OnShowMouseCursor rseOnShowMouseCursor;
+    [SerializeField] private RSE_OnHideMouseCursor rseOnHideMouseCursor;
     [SerializeField] private RSO_CurrentWindows rsoCurrentWindows;
     [SerializeField] private SSO_FadeTime ssoFadeTime;
 
-    private bool isTransit = false;
+    private bool isTransit = true;
 
     private void OnEnable()
     {
-        rseOnPlayerPause.action += CloseEscape;
+        rseOnShowMouseCursor.Call();
+
+        StartCoroutine(S_Utils.DelayFrame(() => rseOnUIInputEnabled.Call()));
+
+        gameObject.GetComponent<CanvasGroup>()?.DOKill();
+
+        gameObject.GetComponent<CanvasGroup>().alpha = 0f;
+
+        StartCoroutine(S_Utils.Delay(ssoFadeTime.Value, () =>
+        {
+            gameObject.GetComponent<CanvasGroup>().DOFade(1f, timeFadeSkip).SetEase(Ease.Linear);
+        }));
 
         isTransit = false;
     }
 
     private void OnDisable()
     {
-        rseOnPlayerPause.action -= CloseEscape;
-
         isTransit = false;
     }
 
-    private void CloseEscape()
+    public void StartGame()
     {
-        if (rsoCurrentWindows.Value[^1] == gameObject)
+        if (!isTransit)
         {
-            //RuntimeManager.PlayOneShot(uiSound);
+            isTransit = true;
 
-            ResumeGame();
+            rseOnHideMouseCursor.Call();
+
+            rseOnFadeOut.Call();
+
+            StartCoroutine(S_Utils.DelayRealTime(ssoFadeTime.Value, () =>
+            {
+                rseOnCloseAllWindows.Call();
+
+                rseOnLoadScene.Call(sceneGame.Name);
+            }));
         }
-    }
-
-    public void ResumeGame()
-    {
-        rseOnGameInputEnabled.Call();
-        rseOnCloseAllWindows.Call();
-        rseOnResetFocus.Call();
-        rsoGameInPause.Value = false;
-        rseOnGamePause.Call(false);
     }
 
     public void Settings()
@@ -66,20 +78,9 @@ public class S_UIMenu : MonoBehaviour
         rseOnOpenWindow.Call(settingsWindow);
     }
 
-    public void MainMenu()
+    public void Credits()
     {
-        if (!isTransit)
-        {
-            isTransit = true;
-            rseOnFadeOut.Call();
-
-            StartCoroutine(S_Utils.DelayRealTime(ssoFadeTime.Value, () =>
-            {
-                rseOnCloseAllWindows.Call();
-
-                rseOnLoadScene.Call(sceneMainMenu.Name);
-            }));
-        }
+        rseOnOpenWindow.Call(creditsWindow);
     }
 
     public void Quit()
