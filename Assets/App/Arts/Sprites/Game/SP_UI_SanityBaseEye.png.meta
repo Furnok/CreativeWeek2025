@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 4e920f35d7eda0f43a1b8b17a20b2d6b
+guid: db1a892ff4583294ea4e41249dbbdeec
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4739150145505394811
-    second: SP_UI_SettingsSlider 1_0
+      213: -6753623620853597635
+    second: SP_UI_SanityBaseEye_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -72,7 +72,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 512
+    maxTextureSize: 256
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SP_UI_SettingsSlider 1_0
+      name: SP_UI_SanityBaseEye_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 396
-        height: 59
+        width: 231
+        height: 157
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 58ff8ef3d082b3eb0800000000000000
-      internalID: -4739150145505394811
+      spriteID: d3a755c591f4642a0800000000000000
+      internalID: -6753623620853597635
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      SP_UI_SettingsSlider 1_0: -4739150145505394811
+      SP_UI_SanityBaseEye_0: -6753623620853597635
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
