@@ -1,5 +1,88 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1333642234603431973
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3046687448969200512}
+  - component: {fileID: 4870618197159415526}
+  - component: {fileID: 4363836909353131486}
+  m_Layer: 0
+  m_Name: MentalObstacleDetector
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3046687448969200512
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1333642234603431973}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3955797854102122825}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4870618197159415526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1333642234603431973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8961f0d3c496394f96724502860ba0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _currentMentalHealthRso: {fileID: 11400000, guid: 4a28f472a326a5e47b639bb7a8806063, type: 2}
+  _playerStatsSso: {fileID: 11400000, guid: cea7641025dd6dc4fa869ec1ab8595d3, type: 2}
+--- !u!58 &4363836909353131486
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1333642234603431973}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 1.75
 --- !u!1 &1738629218903043453
 GameObject:
   m_ObjectHideFlags: 0
@@ -369,6 +452,7 @@ Transform:
   - {fileID: 474780440738427881}
   - {fileID: 3080222585679911057}
   - {fileID: 3008353501911742174}
+  - {fileID: 3046687448969200512}
   m_Father: {fileID: 3974165760102176259}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5565953048677716841
@@ -452,6 +536,7 @@ MonoBehaviour:
   _playerStatsSso: {fileID: 11400000, guid: cea7641025dd6dc4fa869ec1ab8595d3, type: 2}
   _GlowstickPrefab: {fileID: 8551651062807599050, guid: 31470cc78b2f55d418c2a014be3dfdd8, type: 3}
   _onPlaceGlowStickInputRse: {fileID: 11400000, guid: 7c4a160b9990f1c43b339a615b8a0449, type: 2}
+  _OnAddGlowStickRse: {fileID: 11400000, guid: 986334ba8d20f8346bcae1f6acb53d23, type: 2}
 --- !u!58 &5626098334542762810
 CircleCollider2D:
   m_ObjectHideFlags: 0

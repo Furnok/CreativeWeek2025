@@ -12,6 +12,7 @@ public class S_PlayerGlowstickManager : MonoBehaviour
 
     [Header("Inputs")]
     [SerializeField] RSE_OnPlaceGlowStickInput _onPlaceGlowStickInputRse;
+    [SerializeField] RSE_OnAddGlowStick _OnAddGlowStickRse;
 
     //[Header("Outputs")]
 
@@ -22,11 +23,19 @@ public class S_PlayerGlowstickManager : MonoBehaviour
         _currentAmmountGlowStickRso.Value = _playerStatsSso.Value.StartingGlowsticks;
 
         _onPlaceGlowStickInputRse.action += PlaceOrRemoveGlowStick;
+        _OnAddGlowStickRse.action += AddGlowSticks;
     }
 
     void OnDisable()
     {
         _onPlaceGlowStickInputRse.action -= PlaceOrRemoveGlowStick;
+        _OnAddGlowStickRse.action -= AddGlowSticks;
+    }
+
+    void AddGlowSticks(int amount) //Call it when interact with interactible who give glowstick and veif before call if the maxGlowStickkAlready reached
+    {
+        var newAmount = _currentAmmountGlowStickRso.Value + amount;
+        _currentAmmountGlowStickRso.Value = Mathf.Clamp(newAmount, 0, _playerStatsSso.Value.MaxGlowsticks);
     }
 
     void PlaceOrRemoveGlowStick()
