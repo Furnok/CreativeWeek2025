@@ -7,8 +7,15 @@ public struct GameSettingsData
     public float TimerDuration;
     public float StartingTemperature;
     public float TemperatureTresholdToLoseMentalHealth;
-    public float MaxTemperature;
-    public float MinTemperature;
+
+    public float MaxTemperatureDay;
+    public float MaxTemperatureNight;
+    public float MinTemperatureDay;
+    public float MinTemperatureNight;
+
+    public float TemperatureLossRateDay;    // °C par seconde
+    public float TemperatureLossRateNight;  // °C par seconde
+
     public TimeOfDay StartTimeOfDay;
     public float DayCycleDuration;
     public float NightCycleDuration;

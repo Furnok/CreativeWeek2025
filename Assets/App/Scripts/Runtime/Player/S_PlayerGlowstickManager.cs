@@ -3,7 +3,8 @@ using UnityEngine;
 
 public class S_PlayerGlowstickManager : MonoBehaviour
 {
-    //[Header("Settings")]
+    [Header("Settings")]
+    [SerializeField][S_TagName] string _glowStickTag;
 
     [Header("References")]
     [SerializeField] RSO_CurrentAmmountGlowStick _currentAmmountGlowStickRso;
@@ -73,7 +74,7 @@ public class S_PlayerGlowstickManager : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Glowstick"))
+        if (collision.gameObject.CompareTag(_glowStickTag))
         {
             _placedGlowsticksAround.Add(collision.gameObject);
         }
@@ -81,7 +82,7 @@ public class S_PlayerGlowstickManager : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Glowstick"))
+        if (collision.gameObject.CompareTag(_glowStickTag))
         {
             if (_placedGlowsticksAround.Contains(collision.gameObject))
             {

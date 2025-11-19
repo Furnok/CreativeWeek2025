@@ -16,8 +16,12 @@ MonoBehaviour:
     TimerDuration: 1200
     StartingTemperature: 10
     TemperatureTresholdToLoseMentalHealth: 0
-    MaxTemperature: 20
-    MinTemperature: -40
+    MaxTemperatureDay: 15
+    MaxTemperatureNight: 10
+    MinTemperatureDay: -20
+    MinTemperatureNight: -40
+    TemperatureLossRateDay: 0.5
+    TemperatureLossRateNight: 1
     StartTimeOfDay: 0
-    DayCycleDuration: 180
-    NightCycleDuration: 120
+    DayCycleDuration: 120
+    NightCycleDuration: 180
