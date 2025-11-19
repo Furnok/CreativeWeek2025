@@ -555,6 +555,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1386898821043917596, guid: 913fed59fed6bf04bb683b3b7b50c72f, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 519420031}
     - target: {fileID: 1582917729633794226, guid: 913fed59fed6bf04bb683b3b7b50c72f, type: 3}
       propertyPath: m_Name
       value: P_CanvasUIMainMenu

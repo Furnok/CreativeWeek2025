@@ -476,6 +476,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5eb897f458eec0a48b53d43e5f6a0825, type: 3}
+--- !u!20 &381296367 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 8433058940455463304, guid: 5eb897f458eec0a48b53d43e5f6a0825, type: 3}
+  m_PrefabInstance: {fileID: 381296366}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &403437598
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1633,22 +1638,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_CanvasUIGame
       objectReference: {fileID: 0}
-    - target: {fileID: 515988985778947045, guid: 45a5c878e63ef3e47b211d2f7da7c9d4, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 515988985778947045, guid: 45a5c878e63ef3e47b211d2f7da7c9d4, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 515988985778947045, guid: 45a5c878e63ef3e47b211d2f7da7c9d4, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 515988985778947045, guid: 45a5c878e63ef3e47b211d2f7da7c9d4, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 732899854656537753, guid: 45a5c878e63ef3e47b211d2f7da7c9d4, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1745,22 +1734,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7222423806416618849, guid: 45a5c878e63ef3e47b211d2f7da7c9d4, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 7222423806416618849, guid: 45a5c878e63ef3e47b211d2f7da7c9d4, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7222423806416618849, guid: 45a5c878e63ef3e47b211d2f7da7c9d4, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 7222423806416618849, guid: 45a5c878e63ef3e47b211d2f7da7c9d4, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
+    - target: {fileID: 7993474660330512491, guid: 45a5c878e63ef3e47b211d2f7da7c9d4, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 381296367}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

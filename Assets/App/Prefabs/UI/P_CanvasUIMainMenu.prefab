@@ -54,7 +54,7 @@ Canvas:
   m_GameObject: {fileID: 1582917729633794226}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -142,7 +142,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeFade: 0.2
   isInMainMenu: 1
-  uiSound: {fileID: 8300000, guid: 51b426234fd5705439c100aaad75ff62, type: 3}
   menuWindow: {fileID: 7386159720504696220}
   gameWindow: {fileID: 0}
   fadeWindow: {fileID: 3433766015692550930}
@@ -156,6 +155,7 @@ MonoBehaviour:
   rseOnDisplayUIGame: {fileID: 11400000, guid: 742cd32f2e800984cb3efa7a39862e5b, type: 2}
   rseOnUIInputEnabled: {fileID: 11400000, guid: f8900a3c295c93f478f8289c92da16ca, type: 2}
   rseOnGamePause: {fileID: 11400000, guid: e0315f5f5ac494d44a53daeca203e79b, type: 2}
+  rseOnAudioUIButton: {fileID: 0}
   rsoGameInPause: {fileID: 11400000, guid: 05cbb53d0b3a5aa439dc8a14adc343b7, type: 2}
   rsoCurrentWindows: {fileID: 11400000, guid: 3f155b301f9d9724ea0959e04e23ef25, type: 2}
   ssoFadeTime: {fileID: 11400000, guid: 54ad5b3f2ef378245a4626d5c4ce6d75, type: 2}

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 36fe286a728e9df46b9e0a468ff56589
+guid: f5fc40f141452f244b38da4b42090230
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7109311116724084562
-    second: SP_UI_Temperature2_0
+      213: -5246971500080169793
+    second: SP_UI_Button3_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -24,7 +24,7 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
     flipGreenChannel: 0
-  isReadable: 0
+  isReadable: 1
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
@@ -46,9 +46,9 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -72,7 +72,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 1024
+    maxTextureSize: 512
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -126,23 +126,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SP_UI_Temperature
+      name: SP_UI_Button3_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 110
-        height: 812
+        width: 403
+        height: 126
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 25f131e3bc859a260800000000000000
-      internalID: 7109311116724084562
+      spriteID: fbc7f1768330f27b0800000000000000
+      internalID: -5246971500080169793
       vertices: []
       indices: 
       edges: []
@@ -151,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 42969c9c353ab9941b024267619079b3
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      SP_UI_Temperature: 7109311116724084562
+      SP_UI_Button3_0: -5246971500080169793
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
