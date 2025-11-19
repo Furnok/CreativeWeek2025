@@ -681,9 +681,9 @@ MonoBehaviour:
   colorMouseDown:
     serializedVersion: 2
     rgba: 4288059030
-  uiSound: {fileID: 0}
   image: {fileID: 376736773757071837}
   image2: {fileID: 0}
+  rseOnAudioUIButton: {fileID: 11400000, guid: 012d77128a05957409295d233882f724, type: 2}
 --- !u!1 &4221306000480775588
 GameObject:
   m_ObjectHideFlags: 0
@@ -826,7 +826,6 @@ MonoBehaviour:
     sceneName: SC_MainMenu
     sceneGUID: 7145892410738c1409c06f533f734a6e
     scenePath: Assets/App/Scenes/Tests/SC_MainMenu.unity
-  uiSound: {fileID: 0}
   settingsWindow: {fileID: 0}
   rseOnPlayerPause: {fileID: 11400000, guid: d47879626944a4f4d94c3d83ad48074d, type: 2}
   rseOnOpenWindow: {fileID: 11400000, guid: e205cf7e757f88f4bb5a18b768b6478a, type: 2}
@@ -837,6 +836,9 @@ MonoBehaviour:
   rseOnGameInputEnabled: {fileID: 11400000, guid: 04e33dd8947e9f040ba0b26e21d19169, type: 2}
   rseOnResetFocus: {fileID: 11400000, guid: 399fe329dcf8906429df2d105bd55c86, type: 2}
   rseOnFadeOut: {fileID: 11400000, guid: 04361f481971a204cbdc1bd2d01954af, type: 2}
+  rseOnShowMouseCursor: {fileID: 11400000, guid: 9d8e49b25cba362429cd13ef70fa4f76, type: 2}
+  rseOnHideMouseCursor: {fileID: 11400000, guid: 6d5e981612b14c647829144701460dff, type: 2}
+  rseOnAudioUIButton: {fileID: 11400000, guid: 012d77128a05957409295d233882f724, type: 2}
   rsoGameInPause: {fileID: 11400000, guid: 05cbb53d0b3a5aa439dc8a14adc343b7, type: 2}
   rsoCurrentWindows: {fileID: 11400000, guid: 3f155b301f9d9724ea0959e04e23ef25, type: 2}
   ssoFadeTime: {fileID: 11400000, guid: 54ad5b3f2ef378245a4626d5c4ce6d75, type: 2}
@@ -1243,9 +1245,9 @@ MonoBehaviour:
   colorMouseDown:
     serializedVersion: 2
     rgba: 4288059030
-  uiSound: {fileID: 0}
   image: {fileID: 3821334021160916005}
   image2: {fileID: 0}
+  rseOnAudioUIButton: {fileID: 11400000, guid: 012d77128a05957409295d233882f724, type: 2}
 --- !u!1 &5977380287900671698
 GameObject:
   m_ObjectHideFlags: 0
@@ -1513,9 +1515,9 @@ MonoBehaviour:
   colorMouseDown:
     serializedVersion: 2
     rgba: 4288059030
-  uiSound: {fileID: 0}
   image: {fileID: 4571618277092228974}
   image2: {fileID: 0}
+  rseOnAudioUIButton: {fileID: 11400000, guid: 012d77128a05957409295d233882f724, type: 2}
 --- !u!1 &6149545787472849919
 GameObject:
   m_ObjectHideFlags: 0
@@ -1783,9 +1785,9 @@ MonoBehaviour:
   colorMouseDown:
     serializedVersion: 2
     rgba: 4288059030
-  uiSound: {fileID: 0}
   image: {fileID: 3853899381119105781}
   image2: {fileID: 0}
+  rseOnAudioUIButton: {fileID: 11400000, guid: 012d77128a05957409295d233882f724, type: 2}
 --- !u!1 &8228857256379571061
 GameObject:
   m_ObjectHideFlags: 0

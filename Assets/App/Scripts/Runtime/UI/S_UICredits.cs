@@ -3,15 +3,13 @@ using UnityEngine.InputSystem;
 
 public class S_UICredits : MonoBehaviour
 {
-    [Header("References")]
-    [SerializeField] private AudioClip uiSound;
-
     [Header("Inputs")]
     [SerializeField] private RSE_OnPlayerPause rseOnPlayerPause;
 
     [Header("Outputs")]
     [SerializeField] private RSE_OnCloseWindow rseOnCloseWindow;
     [SerializeField] private RSE_OnShowMouseCursor rseOnShowMouseCursor;
+    [SerializeField] private RSE_OnAudioUIButton rseOnAudioUIButton;
     [SerializeField] private RSO_CurrentWindows rsoCurrentWindows;
 
     private bool isClosing = false;
@@ -41,7 +39,7 @@ public class S_UICredits : MonoBehaviour
         {
             if (rsoCurrentWindows.Value[^1] == gameObject)
             {
-                //RuntimeManager.PlayOneShot(uiSound);
+                rseOnAudioUIButton.Call();
 
                 Close();
             }

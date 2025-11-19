@@ -10,9 +10,11 @@ public class S_UISelectable : MonoBehaviour
     [SerializeField] private Color32 colorMouseDown = new(150, 150, 150, 255);
 
     [Header("References")]
-    [SerializeField] private AudioClip uiSound;
     [SerializeField] private Image image;
     [SerializeField] private Image image2;
+
+    [Header("Outputs")]
+    [SerializeField] private RSE_OnAudioUIButton rseOnAudioUIButton;
 
     private Color32 colorBase = new();
     private Color32 colorBase2 = new();
@@ -104,7 +106,7 @@ public class S_UISelectable : MonoBehaviour
     {
         if (uiElement.interactable)
         {
-            //RuntimeManager.PlayOneShot(uiSound);
+            rseOnAudioUIButton.Call();
         }
     }
 
@@ -112,7 +114,7 @@ public class S_UISelectable : MonoBehaviour
     {
         if (uiElement.interactable)
         {
-            //RuntimeManager.PlayOneShot(uiSound);
+            rseOnAudioUIButton.Call();
         }
     }
 

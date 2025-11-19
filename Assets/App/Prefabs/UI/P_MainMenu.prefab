@@ -267,9 +267,9 @@ MonoBehaviour:
   colorMouseDown:
     serializedVersion: 2
     rgba: 4288059030
-  uiSound: {fileID: 0}
   image: {fileID: 1488628342060846044}
   image2: {fileID: 0}
+  rseOnAudioUIButton: {fileID: 11400000, guid: 012d77128a05957409295d233882f724, type: 2}
 --- !u!1 &1646035257188002323
 GameObject:
   m_ObjectHideFlags: 0
@@ -537,9 +537,9 @@ MonoBehaviour:
   colorMouseDown:
     serializedVersion: 2
     rgba: 4288059030
-  uiSound: {fileID: 0}
   image: {fileID: 132399642667827364}
   image2: {fileID: 0}
+  rseOnAudioUIButton: {fileID: 11400000, guid: 012d77128a05957409295d233882f724, type: 2}
 --- !u!1 &1915499548995496323
 GameObject:
   m_ObjectHideFlags: 0
@@ -608,7 +608,6 @@ MonoBehaviour:
     sceneGUID: 38104b1be5d0f72459affe591aaabb7a
     scenePath: Assets/App/Scenes/Tests/SC_Game.unity
   timeFadeSkip: 0.2
-  uiSound: {fileID: 0}
   settingsWindow: {fileID: 0}
   creditsWindow: {fileID: 0}
   rseOnPlayerPause: {fileID: 11400000, guid: d47879626944a4f4d94c3d83ad48074d, type: 2}
@@ -1026,9 +1025,9 @@ MonoBehaviour:
   colorMouseDown:
     serializedVersion: 2
     rgba: 4288059030
-  uiSound: {fileID: 0}
   image: {fileID: 2289274952436787671}
   image2: {fileID: 0}
+  rseOnAudioUIButton: {fileID: 11400000, guid: 012d77128a05957409295d233882f724, type: 2}
 --- !u!1 &3575982291040282687
 GameObject:
   m_ObjectHideFlags: 0
@@ -1432,9 +1431,9 @@ MonoBehaviour:
   colorMouseDown:
     serializedVersion: 2
     rgba: 4288059030
-  uiSound: {fileID: 0}
   image: {fileID: 5840927308402393340}
   image2: {fileID: 0}
+  rseOnAudioUIButton: {fileID: 11400000, guid: 012d77128a05957409295d233882f724, type: 2}
 --- !u!1 &4885333097546405213
 GameObject:
   m_ObjectHideFlags: 0

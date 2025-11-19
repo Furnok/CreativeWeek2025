@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class S_UIMenu : MonoBehaviour
 {
@@ -7,7 +6,6 @@ public class S_UIMenu : MonoBehaviour
     [SerializeField] private S_SceneReference sceneMainMenu;
 
     [Header("References")]
-    [SerializeField] private AudioClip uiSound;
     [SerializeField] private GameObject settingsWindow;
 
     [Header("Inputs")]
@@ -22,6 +20,9 @@ public class S_UIMenu : MonoBehaviour
     [SerializeField] private RSE_OnGameInputEnabled rseOnGameInputEnabled;
     [SerializeField] private RSE_OnResetFocus rseOnResetFocus;
     [SerializeField] private RSE_OnFadeOut rseOnFadeOut;
+    [SerializeField] private RSE_OnShowMouseCursor rseOnShowMouseCursor;
+    [SerializeField] private RSE_OnHideMouseCursor rseOnHideMouseCursor;
+    [SerializeField] private RSE_OnAudioUIButton rseOnAudioUIButton;
     [SerializeField] private RSO_GameInPause rsoGameInPause;
     [SerializeField] private RSO_CurrentWindows rsoCurrentWindows;
     [SerializeField] private SSO_FadeTime ssoFadeTime;
@@ -31,6 +32,8 @@ public class S_UIMenu : MonoBehaviour
     private void OnEnable()
     {
         rseOnPlayerPause.action += CloseEscape;
+
+        rseOnShowMouseCursor.Call();
 
         isTransit = false;
     }
@@ -46,7 +49,7 @@ public class S_UIMenu : MonoBehaviour
     {
         if (rsoCurrentWindows.Value[^1] == gameObject)
         {
-            //RuntimeManager.PlayOneShot(uiSound);
+            rseOnAudioUIButton.Call();
 
             ResumeGame();
         }
@@ -54,6 +57,8 @@ public class S_UIMenu : MonoBehaviour
 
     public void ResumeGame()
     {
+        rseOnHideMouseCursor.Call();
+
         rseOnGameInputEnabled.Call();
         rseOnCloseAllWindows.Call();
         rseOnResetFocus.Call();

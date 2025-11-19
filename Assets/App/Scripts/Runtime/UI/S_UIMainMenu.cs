@@ -1,6 +1,5 @@
 using DG.Tweening;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class S_UIMainMenu : MonoBehaviour
 {
@@ -9,7 +8,6 @@ public class S_UIMainMenu : MonoBehaviour
     [SerializeField] private float timeFadeSkip;
 
     [Header("References")]
-    [SerializeField] private AudioClip uiSound;
     [SerializeField] private GameObject settingsWindow;
     [SerializeField] private GameObject creditsWindow;
 
@@ -33,7 +31,7 @@ public class S_UIMainMenu : MonoBehaviour
 
     private void OnEnable()
     {
-        rseOnShowMouseCursor.Call();
+        StartCoroutine(S_Utils.DelayFrame(() => rseOnShowMouseCursor.Call()));
 
         StartCoroutine(S_Utils.DelayFrame(() => rseOnUIInputEnabled.Call()));
 

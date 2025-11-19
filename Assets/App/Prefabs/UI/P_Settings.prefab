@@ -267,9 +267,9 @@ MonoBehaviour:
   colorMouseDown:
     serializedVersion: 2
     rgba: 4288059030
-  uiSound: {fileID: 0}
   image: {fileID: 6930198380929767557}
   image2: {fileID: 0}
+  rseOnAudioUIButton: {fileID: 11400000, guid: 012d77128a05957409295d233882f724, type: 2}
 --- !u!1 &370714496480550732
 GameObject:
   m_ObjectHideFlags: 0
@@ -400,7 +400,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 3714810141148242986}
         m_TargetAssemblyTypeName: S_Settings, Assembly-CSharp
-        m_MethodName: UpdateMainVolume
+        m_MethodName: UpdateMusicVolume
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -554,9 +554,9 @@ MonoBehaviour:
   colorMouseDown:
     serializedVersion: 2
     rgba: 4288059030
-  uiSound: {fileID: 0}
   image: {fileID: 952778496790269264}
   image2: {fileID: 76828299031901168}
+  rseOnAudioUIButton: {fileID: 11400000, guid: 012d77128a05957409295d233882f724, type: 2}
 --- !u!1 &480550088678884797
 GameObject:
   m_ObjectHideFlags: 0
@@ -880,9 +880,9 @@ MonoBehaviour:
   colorMouseDown:
     serializedVersion: 2
     rgba: 4288059030
-  uiSound: {fileID: 0}
   image: {fileID: 1936289677769951849}
   image2: {fileID: 2532658223217566021}
+  rseOnAudioUIButton: {fileID: 11400000, guid: 012d77128a05957409295d233882f724, type: 2}
 --- !u!1 &1298745799664025576
 GameObject:
   m_ObjectHideFlags: 0
@@ -1396,9 +1396,9 @@ MonoBehaviour:
   colorMouseDown:
     serializedVersion: 2
     rgba: 4288059030
-  uiSound: {fileID: 0}
   image: {fileID: 9050298783723878908}
   image2: {fileID: 0}
+  rseOnAudioUIButton: {fileID: 11400000, guid: 012d77128a05957409295d233882f724, type: 2}
 --- !u!1 &2438570313784214131
 GameObject:
   m_ObjectHideFlags: 0
@@ -2994,9 +2994,9 @@ MonoBehaviour:
   colorMouseDown:
     serializedVersion: 2
     rgba: 4288059030
-  uiSound: {fileID: 0}
   image: {fileID: 2183378631034917562}
   image2: {fileID: 0}
+  rseOnAudioUIButton: {fileID: 11400000, guid: 012d77128a05957409295d233882f724, type: 2}
 --- !u!1 &5100492430930860496
 GameObject:
   m_ObjectHideFlags: 0
@@ -3155,7 +3155,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 3714810141148242986}
         m_TargetAssemblyTypeName: S_Settings, Assembly-CSharp
-        m_MethodName: UpdateMainVolume
+        m_MethodName: UpdateSoundsVolume
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3309,9 +3309,9 @@ MonoBehaviour:
   colorMouseDown:
     serializedVersion: 2
     rgba: 4288059030
-  uiSound: {fileID: 0}
   image: {fileID: 6542525408274133098}
   image2: {fileID: 2098339625544539057}
+  rseOnAudioUIButton: {fileID: 11400000, guid: 012d77128a05957409295d233882f724, type: 2}
 --- !u!1 &5248047079699176610
 GameObject:
   m_ObjectHideFlags: 0
@@ -3838,9 +3838,9 @@ MonoBehaviour:
   colorMouseDown:
     serializedVersion: 2
     rgba: 4288059030
-  uiSound: {fileID: 0}
   image: {fileID: 2585881460858910962}
   image2: {fileID: 0}
+  rseOnAudioUIButton: {fileID: 11400000, guid: 012d77128a05957409295d233882f724, type: 2}
 --- !u!1 &5508825779063894265
 GameObject:
   m_ObjectHideFlags: 0
@@ -4529,7 +4529,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeFadeSkip: 0.2
-  uiSound: {fileID: 0}
   dropDownResolutions: {fileID: 1339923019157601227}
   settings: {fileID: 3714810141148242986}
   listTextsVolume:
@@ -4539,6 +4538,7 @@ MonoBehaviour:
   - {fileID: 4476903550034845008}
   rseOnPlayerPause: {fileID: 11400000, guid: d47879626944a4f4d94c3d83ad48074d, type: 2}
   rseOnCloseWindow: {fileID: 11400000, guid: c636cf0cc62b7e1489a6e16eb8927d14, type: 2}
+  rseOnAudioUIButton: {fileID: 11400000, guid: 012d77128a05957409295d233882f724, type: 2}
   rsoCurrentWindows: {fileID: 11400000, guid: 3f155b301f9d9724ea0959e04e23ef25, type: 2}
 --- !u!114 &3714810141148242986
 MonoBehaviour:
@@ -5821,7 +5821,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 3714810141148242986}
         m_TargetAssemblyTypeName: S_Settings, Assembly-CSharp
-        m_MethodName: UpdateMainVolume
+        m_MethodName: UpdateUIVolume
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5975,9 +5975,9 @@ MonoBehaviour:
   colorMouseDown:
     serializedVersion: 2
     rgba: 4288059030
-  uiSound: {fileID: 0}
   image: {fileID: 7992874631483194434}
   image2: {fileID: 7188310916866239255}
+  rseOnAudioUIButton: {fileID: 11400000, guid: 012d77128a05957409295d233882f724, type: 2}
 --- !u!1 &8852438469996987456
 GameObject:
   m_ObjectHideFlags: 0
@@ -6192,6 +6192,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 7679539027994707145}
+          m_TargetAssemblyTypeName: S_UISelectable, Assembly-CSharp
+          m_MethodName: PlayAudio
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 3386893505213431680}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 3
     callback:
       m_PersistentCalls:
@@ -6199,6 +6211,18 @@ MonoBehaviour:
         - m_Target: {fileID: 7679539027994707145}
           m_TargetAssemblyTypeName: S_UISelectable, Assembly-CSharp
           m_MethodName: MouseUp
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 3386893505213431680}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 7679539027994707145}
+          m_TargetAssemblyTypeName: S_UISelectable, Assembly-CSharp
+          m_MethodName: PlayAudio
           m_Mode: 2
           m_Arguments:
             m_ObjectArgument: {fileID: 3386893505213431680}
@@ -6241,9 +6265,9 @@ MonoBehaviour:
   colorMouseDown:
     serializedVersion: 2
     rgba: 4288059030
-  uiSound: {fileID: 0}
   image: {fileID: 6172616970084455162}
   image2: {fileID: 0}
+  rseOnAudioUIButton: {fileID: 11400000, guid: 012d77128a05957409295d233882f724, type: 2}
 --- !u!1 &8881730333136484747
 GameObject:
   m_ObjectHideFlags: 0

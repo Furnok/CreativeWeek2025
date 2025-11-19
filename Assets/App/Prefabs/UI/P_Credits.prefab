@@ -736,10 +736,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65b898df633880d48bbe640d6551cbd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uiSound: {fileID: 0}
   rseOnPlayerPause: {fileID: 11400000, guid: d47879626944a4f4d94c3d83ad48074d, type: 2}
   rseOnCloseWindow: {fileID: 11400000, guid: c636cf0cc62b7e1489a6e16eb8927d14, type: 2}
   rseOnShowMouseCursor: {fileID: 11400000, guid: 9d8e49b25cba362429cd13ef70fa4f76, type: 2}
+  rseOnAudioUIButton: {fileID: 11400000, guid: 012d77128a05957409295d233882f724, type: 2}
   rsoCurrentWindows: {fileID: 11400000, guid: 3f155b301f9d9724ea0959e04e23ef25, type: 2}
 --- !u!1 &1180841009342977262
 GameObject:
@@ -1680,9 +1680,9 @@ MonoBehaviour:
   colorMouseDown:
     serializedVersion: 2
     rgba: 4288059030
-  uiSound: {fileID: 0}
   image: {fileID: 6551476089897739573}
   image2: {fileID: 0}
+  rseOnAudioUIButton: {fileID: 11400000, guid: 012d77128a05957409295d233882f724, type: 2}
 --- !u!1 &2280708667388237569
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,7 +9,6 @@ public class S_WindowManager : MonoBehaviour
     [SerializeField] private bool isInMainMenu;
 
     [Header("References")]
-    [SerializeField] private AudioClip uiSound;
     [SerializeField] private GameObject menuWindow;
     [SerializeField] private GameObject gameWindow;
     [SerializeField] private GameObject fadeWindow;
@@ -27,6 +26,7 @@ public class S_WindowManager : MonoBehaviour
     [Header("Outputs")]
     [SerializeField] private RSE_OnUIInputEnabled rseOnUIInputEnabled;
     [SerializeField] private RSE_OnGamePause rseOnGamePause;
+    [SerializeField] private RSE_OnAudioUIButton rseOnAudioUIButton;
     [SerializeField] private RSO_GameInPause rsoGameInPause;
     [SerializeField] private RSO_CurrentWindows rsoCurrentWindows;
     [SerializeField] private SSO_FadeTime ssoFadeTime;
@@ -91,7 +91,7 @@ public class S_WindowManager : MonoBehaviour
     {
         if (!menuWindow.activeInHierarchy && !isInMainMenu)
         {
-            //RuntimeManager.PlayOneShot(uiSound);
+            rseOnAudioUIButton.Call();
 
             rseOnUIInputEnabled.Call();
             OpenWindow(menuWindow);

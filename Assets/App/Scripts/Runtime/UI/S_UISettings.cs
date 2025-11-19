@@ -10,7 +10,6 @@ public class S_UISettings : MonoBehaviour
     [SerializeField] private float timeFadeSkip;
 
     [Header("References")]
-    [SerializeField] private AudioClip uiSound;
     [SerializeField] private Selectable dropDownResolutions;
     [SerializeField] private S_Settings settings;
     [SerializeField] private List<TextMeshProUGUI> listTextsVolume;
@@ -20,6 +19,7 @@ public class S_UISettings : MonoBehaviour
 
     [Header("Outputs")]
     [SerializeField] private RSE_OnCloseWindow rseOnCloseWindow;
+    [SerializeField] private RSE_OnAudioUIButton rseOnAudioUIButton;
     [SerializeField] private RSO_CurrentWindows rsoCurrentWindows;
 
     private bool isClosing = false;
@@ -60,7 +60,7 @@ public class S_UISettings : MonoBehaviour
 
     private void CloseDropDown()
     {
-        //RuntimeManager.PlayOneShot(uiSound);
+        rseOnAudioUIButton.Call();
     }
 
     private void CloseEscape()
@@ -74,7 +74,7 @@ public class S_UISettings : MonoBehaviour
         {
             if (rsoCurrentWindows.Value[^1] == gameObject)
             {
-                //RuntimeManager.PlayOneShot(uiSound);
+                rseOnAudioUIButton.Call();
 
                 Close();
             }
