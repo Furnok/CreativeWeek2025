@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _value:
     TimerDuration: 1200
+    TimePenaltyWhenMentalReachZero: 60
     StartingTemperature: 10
     TemperatureTresholdToLoseMentalHealth: 0
     MaxTemperatureDay: 10

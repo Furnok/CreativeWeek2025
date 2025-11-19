@@ -17,6 +17,7 @@ public class S_DayNightCycle : MonoBehaviour
     [Header("Inputs")]
     [SerializeField] RSE_OnStartGameTimer _onStartGameTimerRse;
     [SerializeField] RSE_OnGameTimerEnd _onGameTimerEndRse;
+    [SerializeField] RSE_OnResetAfterMentalReachZero _onResetAfterMentalReachZeroRse;
 
     [Header("Outputs")]
     [SerializeField] RSE_OnChangeFogColor _onChangeFogColorRse;
@@ -39,12 +40,14 @@ public class S_DayNightCycle : MonoBehaviour
     {
         _onStartGameTimerRse.action += StartDayCycle;
         _onGameTimerEndRse.action += StopCycle;
+        _onResetAfterMentalReachZeroRse.action += ResetCycle;
     }
 
     void OnDisable()
     {
         _onStartGameTimerRse.action -= StartDayCycle;
         _onGameTimerEndRse.action -= StopCycle;
+        _onResetAfterMentalReachZeroRse.action -= ResetCycle;
 
         if (_dayNightCycleCoroutine != null)
         {
@@ -54,6 +57,14 @@ public class S_DayNightCycle : MonoBehaviour
 
         _dayNightCycleMaterialQuad.SetColor("_FogColor", _originalColor);
         _dayNightCycleMaterial.SetColor("_FogColor", _originalColor);
+    }
+
+    void ResetCycle()
+    {
+        StopCycle();
+        _currentCycle.Value = _gameSettingsSso.Value.StartTimeOfDay;
+        _currentPhaseTime = 0f;
+        StartDayCycle();
     }
 
     void StartDayCycle()

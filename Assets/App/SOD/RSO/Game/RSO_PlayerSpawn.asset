@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02f532fc0b6990242a4675c5eb0de96e, type: 3}
-  m_Name: RSO_CurrentMentalHealth
+  m_Script: {fileID: 11500000, guid: ba0192f5fe4a9d34aba4b9995e5550b6, type: 3}
+  m_Name: RSO_PlayerSpawn
   m_EditorClassIdentifier: 
-  _value: 100
+  _value: {x: 0, y: 0}

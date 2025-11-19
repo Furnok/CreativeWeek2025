@@ -10,7 +10,9 @@ public class S_InputsManager : MonoBehaviour
     [SerializeField] private RSO_CurrentInputActionMap rsoCurrentInputActionMap;
     [SerializeField] private RSO_LastInputActionMap rsoLastInputActionMap;
 
-    //[Header("Inputs")]
+    [Header("Inputs")]
+    [SerializeField] RSE_OnMentalHealthReachZero _onMentalHealthReachZeroRse;
+    [SerializeField] RSE_OnResetAfterMentalReachZero _onResetAfterMentalReachZeroRse;
 
     [Header("Outputs")]
     [SerializeField] private RSE_OnPlayerMoveInput _onPlayerMoveInput;
@@ -57,6 +59,9 @@ public class S_InputsManager : MonoBehaviour
         rseOnGameActionInputEnabled.action += ActivateGameActionInput;
         rseOnUiActionInputEnabled.action += ActivateUIActionInput;
 
+        _onMentalHealthReachZeroRse.action += DisableGameInputs;
+        _onResetAfterMentalReachZeroRse.action += EnableGameInputs;
+
         ActivateGameActionInput();
     }
 
@@ -67,6 +72,9 @@ public class S_InputsManager : MonoBehaviour
         rseOnInputDisabled.action -= DeactivateInput;
         rseOnGameActionInputEnabled.action -= ActivateGameActionInput;
         rseOnUiActionInputEnabled.action -= ActivateUIActionInput;
+
+        _onMentalHealthReachZeroRse.action -= DisableGameInputs;
+        _onResetAfterMentalReachZeroRse.action -= EnableGameInputs;
 
         playerInput.actions.Disable();
         DisableGameInputs();

@@ -5,6 +5,8 @@ using System;
 public struct GameSettingsData
 {
     public float TimerDuration;
+    public float TimePenaltyWhenMentalReachZero;
+
     public float StartingTemperature;
     public float TemperatureTresholdToLoseMentalHealth;
 

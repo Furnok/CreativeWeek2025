@@ -12,6 +12,7 @@ public class S_TemperatureManager : MonoBehaviour
 
     [Header("Inputs")]
     [SerializeField] RSE_OnStartGameTimer _onStartGameTimerRse;
+    [SerializeField] RSE_OnResetAfterMentalReachZero _onResetAfterMentalReachZeroRse;
 
     //[Header("Outputs")]
 
@@ -20,6 +21,8 @@ public class S_TemperatureManager : MonoBehaviour
     private void Awake()
     {
         _currentTemperatureRso.Value = _gameSettingsSso.Value.StartingTemperature;
+
+        _hasStarted = false;
 
         _onStartGameTimerRse.action += GameStarted;
     }
@@ -34,6 +37,11 @@ public class S_TemperatureManager : MonoBehaviour
     void GameStarted()
     {
         _hasStarted = true;
+    }
+
+    void ResetTemperature()
+    {
+        _currentTemperatureRso.Value = _gameSettingsSso.Value.StartingTemperature;
     }
 
 

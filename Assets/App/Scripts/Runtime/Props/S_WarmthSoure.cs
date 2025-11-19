@@ -18,6 +18,7 @@ public class S_WarmthSoure : MonoBehaviour
     [SerializeField] SSO_PlayerStats _playerStatsSso;
     [SerializeField] RSO_WarmthSourcesInRange _warmthSourcesInRangeRso;
     [SerializeField] CircleCollider2D _collider;
+    [SerializeField] RSO_PlayerSpawn _playerSpawnRso;
 
     //[Header("Inputs")]
 
@@ -30,6 +31,8 @@ public class S_WarmthSoure : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            _playerSpawnRso.Value = transform.position;
+
             _isPlayerInRange = true;
             _playerTransform = collision.transform;
 

@@ -53,6 +53,7 @@ MonoBehaviour:
   _gameSettingsSso: {fileID: 11400000, guid: c0f1146d4d156984ab24c0754662a78a, type: 2}
   _warmthSourcesInRangeRso: {fileID: 11400000, guid: e1969740c3e01a441b08ad8c387f71e0, type: 2}
   _onMentalHealthReachZeroRse: {fileID: 11400000, guid: c2e65dbfe517eae46bdff4fff87548b8, type: 2}
+  _onResetAfterMentalReachZeroRse: {fileID: 11400000, guid: ae2d39befbbd88342a967bc7f3b0edfa, type: 2}
 --- !u!58 &4363836909353131486
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -170,7 +171,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rb: {fileID: 8613030264555259308}
   _playerStats: {fileID: 11400000, guid: cea7641025dd6dc4fa869ec1ab8595d3, type: 2}
+  _playerSpawnRso: {fileID: 11400000, guid: d49f7991df8afdd40a4a1487ef8adcf7, type: 2}
   _onPlayerMoveInput: {fileID: 11400000, guid: f81ab021498c6f54aa57af72b9fe7e82, type: 2}
+  _onResetAfterMentalReachZeroRse: {fileID: 11400000, guid: ae2d39befbbd88342a967bc7f3b0edfa, type: 2}
+  _onMentalHealthReachZeroRse: {fileID: 11400000, guid: c2e65dbfe517eae46bdff4fff87548b8, type: 2}
 --- !u!114 &3063215768073807451
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -533,6 +537,7 @@ MonoBehaviour:
   _animator: {fileID: 4607691457199763966}
   _playerSp: {fileID: 6412026073154286687}
   _onPlayerMoveInput: {fileID: 11400000, guid: f81ab021498c6f54aa57af72b9fe7e82, type: 2}
+  _onMentalHealthReachZeroRse: {fileID: 11400000, guid: c2e65dbfe517eae46bdff4fff87548b8, type: 2}
 --- !u!1 &6067650364411296434
 GameObject:
   m_ObjectHideFlags: 0
@@ -670,6 +675,7 @@ MonoBehaviour:
   _gameSettingsSso: {fileID: 11400000, guid: c0f1146d4d156984ab24c0754662a78a, type: 2}
   _warmthSourcesInRangeRso: {fileID: 11400000, guid: e1969740c3e01a441b08ad8c387f71e0, type: 2}
   _onStartGameTimerRse: {fileID: 11400000, guid: 5884d174c62323b4ca5836a3f61a389b, type: 2}
+  _onResetAfterMentalReachZeroRse: {fileID: 11400000, guid: ae2d39befbbd88342a967bc7f3b0edfa, type: 2}
 --- !u!58 &1236376311796260648
 CircleCollider2D:
   m_ObjectHideFlags: 0

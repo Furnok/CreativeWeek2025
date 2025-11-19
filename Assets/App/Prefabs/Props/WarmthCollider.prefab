@@ -94,3 +94,4 @@ MonoBehaviour:
   _playerStatsSso: {fileID: 11400000, guid: cea7641025dd6dc4fa869ec1ab8595d3, type: 2}
   _warmthSourcesInRangeRso: {fileID: 11400000, guid: e1969740c3e01a441b08ad8c387f71e0, type: 2}
   _collider: {fileID: 22013145802499770}
+  _playerSpawnRso: {fileID: 11400000, guid: d49f7991df8afdd40a4a1487ef8adcf7, type: 2}

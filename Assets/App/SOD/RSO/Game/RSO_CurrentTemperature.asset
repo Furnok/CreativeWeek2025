@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc02825e2c2c5db4c9e1a65f024cff8c, type: 3}
   m_Name: RSO_CurrentTemperature
   m_EditorClassIdentifier: 
-  _value: 10
+  _value: 5.933855

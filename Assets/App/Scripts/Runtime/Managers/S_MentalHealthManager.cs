@@ -18,6 +18,8 @@ public class S_MentalHealthManager : MonoBehaviour
 
     [Header("Outputs")]
     [SerializeField] RSE_OnMentalHealthReachZero _onMentalHealthReachZeroRse;
+    [SerializeField] RSE_OnResetAfterMentalReachZero _onResetAfterMentalReachZeroRse;
+
 
     private readonly List<MentalObstacleInstance> _activeObstacles = new();
     private PlayerStats Stats => _playerStatsSso.Value;
@@ -26,6 +28,16 @@ public class S_MentalHealthManager : MonoBehaviour
     private void Awake()
     {
         _currentMentalHealthRso.Value = _playerStatsSso.Value.StartingMentalHealth;
+    }
+
+    private void OnEnable()
+    {
+        _onResetAfterMentalReachZeroRse.action += ResetMentalHealth;
+    }
+
+    private void OnDisable()
+    {
+        _onResetAfterMentalReachZeroRse.action -= ResetMentalHealth;
     }
 
     private void Update()
@@ -51,6 +63,12 @@ public class S_MentalHealthManager : MonoBehaviour
                 _onMentalHealthReachZeroRse.Call();
             }
         }
+    }
+
+    void ResetMentalHealth()
+    {
+        _currentMentalHealthRso.Value = _playerStatsSso.Value.MaxMentalHealth;
+        _isLostSanaty = false;
     }
 
     private float ComputeColdMentalLoss(float dt)

@@ -47,10 +47,12 @@ MonoBehaviour:
   _dayCycleColor: {r: 0.5309719, g: 0.69656557, b: 0.7169812, a: 0.8666667}
   _nightCycleColor: {r: 0.19326274, g: 0.2781249, b: 0.4056604, a: 0.8666667}
   _originalColor: {r: 0.43137255, g: 0.49019608, b: 0.6509804, a: 0}
+  _transitionDurationPercent: 0.2
   _gameSettingsSso: {fileID: 11400000, guid: c0f1146d4d156984ab24c0754662a78a, type: 2}
   _currentCycle: {fileID: 11400000, guid: 4894bdba32aa1c94f82177e9daa4a182, type: 2}
   _dayNightCycleMaterial: {fileID: 2100000, guid: fc0713cfaf927f8448dcf5dcb5253375, type: 2}
   _dayNightCycleMaterialQuad: {fileID: 2100000, guid: b5ca9996875086c48ab099fe23a14c0a, type: 2}
   _onStartGameTimerRse: {fileID: 11400000, guid: 5884d174c62323b4ca5836a3f61a389b, type: 2}
   _onGameTimerEndRse: {fileID: 11400000, guid: e9fccb54274ac9f499dd6e15f8d358ab, type: 2}
+  _onResetAfterMentalReachZeroRse: {fileID: 11400000, guid: ae2d39befbbd88342a967bc7f3b0edfa, type: 2}
   _onChangeFogColorRse: {fileID: 11400000, guid: 3046bca212589a641a661a155e83912d, type: 2}

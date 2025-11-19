@@ -78,6 +78,8 @@ MonoBehaviour:
   playerInput: {fileID: 6855752559255237315}
   rsoCurrentInputActionMap: {fileID: 11400000, guid: 5d7f7288c2742654e92243e1e56d3b2a, type: 2}
   rsoLastInputActionMap: {fileID: 11400000, guid: df060a8548925d443b4409c9f283a3d9, type: 2}
+  _onMentalHealthReachZeroRse: {fileID: 11400000, guid: c2e65dbfe517eae46bdff4fff87548b8, type: 2}
+  _onResetAfterMentalReachZeroRse: {fileID: 11400000, guid: ae2d39befbbd88342a967bc7f3b0edfa, type: 2}
   _onPlayerMoveInput: {fileID: 11400000, guid: f81ab021498c6f54aa57af72b9fe7e82, type: 2}
   _onPlayerInteractInput: {fileID: 11400000, guid: 2fce86439600fe4499043add64355084, type: 2}
   rseOnPlayerPause: {fileID: 11400000, guid: d47879626944a4f4d94c3d83ad48074d, type: 2}

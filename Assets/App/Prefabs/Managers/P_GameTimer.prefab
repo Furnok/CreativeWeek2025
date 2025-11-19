@@ -48,6 +48,7 @@ MonoBehaviour:
   _gameSettings: {fileID: 11400000, guid: c0f1146d4d156984ab24c0754662a78a, type: 2}
   _gameTimeRemaining: {fileID: 11400000, guid: db0fc20a93467854eaee1bf26c18de58, type: 2}
   _onStartGameTimerRse: {fileID: 11400000, guid: 5884d174c62323b4ca5836a3f61a389b, type: 2}
+  _onResetAfterMentalReachZeroRse: {fileID: 11400000, guid: ae2d39befbbd88342a967bc7f3b0edfa, type: 2}
   _onGameTimerEndRse: {fileID: 11400000, guid: e9fccb54274ac9f499dd6e15f8d358ab, type: 2}
 --- !u!114 &2688779508952840892
 MonoBehaviour:

@@ -10,6 +10,7 @@ public class S_GameTimer : MonoBehaviour
 
     [Header("Inputs")]
     [SerializeField] RSE_OnStartGameTimer _onStartGameTimerRse;
+    [SerializeField] RSE_OnResetAfterMentalReachZero _onResetAfterMentalReachZeroRse;
 
     [Header("Outputs")]
     [SerializeField] RSE_OnGameTimerEnd _onGameTimerEndRse;
@@ -18,16 +19,31 @@ public class S_GameTimer : MonoBehaviour
     void OnEnable()
     {
         _onStartGameTimerRse.action += StartTimer;
+        _onResetAfterMentalReachZeroRse.action += AdvanceTimer;
     }
     void OnDisable()
     {
         _onStartGameTimerRse.action -= StartTimer;
+        _onResetAfterMentalReachZeroRse.action-= AdvanceTimer;
     }
 
     void StartTimer()
     {
         _gameTimeRemaining.Value = _gameSettings.Value.TimerDuration;
         _timerRunning = true;
+    }
+
+    void AdvanceTimer()
+    {
+        _gameTimeRemaining.Value = Mathf.Clamp(_gameSettings.Value.TimePenaltyWhenMentalReachZero, 0,_gameSettings.Value.TimerDuration);
+
+        if(_gameTimeRemaining.Value <= 0f)
+        {
+            _gameTimeRemaining.Value = 0f;
+            _timerRunning = false;
+
+            _onGameTimerEndRse.Call();
+        }
     }
 
     private void Update()

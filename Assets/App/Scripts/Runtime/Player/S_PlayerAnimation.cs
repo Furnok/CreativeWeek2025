@@ -10,6 +10,7 @@ public class S_PlayerAnimation : MonoBehaviour
 
     [Header("Inputs")]
     [SerializeField] RSE_OnPlayerMoveInput _onPlayerMoveInput;
+    [SerializeField] RSE_OnMentalHealthReachZero _onMentalHealthReachZeroRse;
 
 
     //[Header("Outputs")]
@@ -17,11 +18,13 @@ public class S_PlayerAnimation : MonoBehaviour
     void OnEnable()
     {
         _onPlayerMoveInput.action += UpdateAnimation;
+        _onMentalHealthReachZeroRse.action += StopAnimation;
     }
 
     void OnDisable()
     {
         _onPlayerMoveInput.action -= UpdateAnimation;
+        _onMentalHealthReachZeroRse.action -= StopAnimation;
     }
 
     void UpdateAnimation(Vector2 moveInput)
@@ -36,5 +39,10 @@ public class S_PlayerAnimation : MonoBehaviour
         {
             _playerSp.flipX = false;
         }
+    }
+
+    void StopAnimation()
+    {
+        _animator.SetBool("isMoving", false);
     }
 }
