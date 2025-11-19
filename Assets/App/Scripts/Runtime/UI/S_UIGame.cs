@@ -1,4 +1,5 @@
 using DG.Tweening;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,8 +9,9 @@ public class S_UIGame : MonoBehaviour
     [SerializeField] private float animationSlider;
 
     [Header("References")]
-    [SerializeField] private Slider sliderSanity;
     [SerializeField] private Slider sliderTemperature;
+    [SerializeField] private Image imageSanity;
+    [SerializeField] private List<Sprite> spriteSannity;
 
     private Tween sanityTween = null;
     private Tween temperatureTween = null;
@@ -27,9 +29,11 @@ public class S_UIGame : MonoBehaviour
 
     private void UpdateSanity(float sanity)
     {
-        sanityTween?.Kill();
+        sanity = Mathf.Clamp(sanity, 0, 100);
 
-        sanityTween = sliderSanity.DOValue(sanity, animationSlider).SetEase(Ease.OutCubic);
+        int spriteIndex = Mathf.FloorToInt((sanity - 0) / (100 - 0) * (spriteSannity.Count - 1));
+
+        imageSanity.sprite = spriteSannity[spriteIndex];
     }
 
     private void UpdateTemperature(float temperature)
