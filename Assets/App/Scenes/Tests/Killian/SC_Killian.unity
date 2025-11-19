@@ -469,7 +469,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6412026073154286687, guid: 5eb897f458eec0a48b53d43e5f6a0825, type: 3}
       propertyPath: m_WasSpriteAssigned
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1633,6 +1633,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_CanvasUIGame
       objectReference: {fileID: 0}
+    - target: {fileID: 515988985778947045, guid: 45a5c878e63ef3e47b211d2f7da7c9d4, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 515988985778947045, guid: 45a5c878e63ef3e47b211d2f7da7c9d4, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 515988985778947045, guid: 45a5c878e63ef3e47b211d2f7da7c9d4, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 515988985778947045, guid: 45a5c878e63ef3e47b211d2f7da7c9d4, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 732899854656537753, guid: 45a5c878e63ef3e47b211d2f7da7c9d4, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1727,6 +1743,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3565362711822905120, guid: 45a5c878e63ef3e47b211d2f7da7c9d4, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7222423806416618849, guid: 45a5c878e63ef3e47b211d2f7da7c9d4, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 7222423806416618849, guid: 45a5c878e63ef3e47b211d2f7da7c9d4, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7222423806416618849, guid: 45a5c878e63ef3e47b211d2f7da7c9d4, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7222423806416618849, guid: 45a5c878e63ef3e47b211d2f7da7c9d4, type: 3}
+      propertyPath: m_AnchorMin.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
