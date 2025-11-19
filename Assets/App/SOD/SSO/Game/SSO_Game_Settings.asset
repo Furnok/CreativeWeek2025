@@ -16,8 +16,8 @@ MonoBehaviour:
     TimerDuration: 1200
     StartingTemperature: 10
     TemperatureTresholdToLoseMentalHealth: 0
-    MaxTemperatureDay: 15
-    MaxTemperatureNight: 10
+    MaxTemperatureDay: 10
+    MaxTemperatureNight: 5
     MinTemperatureDay: -20
     MinTemperatureNight: -40
     TemperatureLossRateDay: 0.5

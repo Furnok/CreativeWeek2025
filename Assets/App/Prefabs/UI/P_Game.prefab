@@ -2451,3 +2451,4 @@ MonoBehaviour:
   sliderTemperature: {fileID: 2251430326936392901}
   imageSanity: {fileID: 1198701706695187719}
   spriteSannity: []
+  _currentTemperatureRso: {fileID: 11400000, guid: 3f228e86e340f7b458ee0f943119d0ec, type: 2}

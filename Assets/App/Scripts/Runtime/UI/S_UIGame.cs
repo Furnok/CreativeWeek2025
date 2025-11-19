@@ -12,19 +12,23 @@ public class S_UIGame : MonoBehaviour
     [SerializeField] private Slider sliderTemperature;
     [SerializeField] private Image imageSanity;
     [SerializeField] private List<Sprite> spriteSannity;
+    [SerializeField] RSO_CurrentTemperature _currentTemperatureRso;
+
 
     private Tween sanityTween = null;
     private Tween temperatureTween = null;
 
     private void OnEnable()
     {
-
+        _currentTemperatureRso.onValueChanged += UpdateTemperature;
     }
 
     private void OnDisable()
     {
         sanityTween?.Kill();
         temperatureTween?.Kill();
+
+        _currentTemperatureRso.onValueChanged -= UpdateTemperature;
     }
 
     private void UpdateSanity(float sanity)
