@@ -10,23 +10,37 @@ public class S_TemperatureManager : MonoBehaviour
     [SerializeField] SSO_Game_Settings _gameSettingsSso;
     [SerializeField] RSO_WarmthSourcesInRange _warmthSourcesInRangeRso;
 
-
-    //[Header("Inputs")]
+    [Header("Inputs")]
+    [SerializeField] RSE_OnStartGameTimer _onStartGameTimerRse;
 
     //[Header("Outputs")]
+
+    bool _hasStarted = false;
 
     private void Awake()
     {
         _currentTemperatureRso.Value = _gameSettingsSso.Value.StartingTemperature;
+
+        _onStartGameTimerRse.action += GameStarted;
     }
 
     private void OnDisable()
     {
         _warmthSourcesInRangeRso.Value = 0;
+
+        _onStartGameTimerRse.action -= GameStarted;
     }
+
+    void GameStarted()
+    {
+        _hasStarted = true;
+    }
+
 
     private void Update()
     {
+        if (!_hasStarted) return;
+
         var settings = _gameSettingsSso.Value;
 
         bool isDay = _currentCycleRso.Value == TimeOfDay.Day;
