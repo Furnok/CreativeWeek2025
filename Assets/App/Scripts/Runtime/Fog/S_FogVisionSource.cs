@@ -26,7 +26,11 @@ public class S_FogVisionSource : MonoBehaviour, I_FogVisionSource
         _onUnregisterVisionSourceRse.Call(GetFogVisionSourceData());
     }
 
-    //void I_FogVisionSource.FogVisionSourceData => _fogVisionSourceData;
+    public void ModifRadius(float ammount)
+    {
+        _fogVisionSourceData.Radius += ammount;
+    }
+
 
     public I_FogVisionSource GetFogVisionSourceData()
     {
