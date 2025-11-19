@@ -7,12 +7,22 @@ public class S_FixWiring : MonoBehaviour
 
     //[Header("References")]
 
-    //[Header("Inputs")]
+    [Header("Inputs")]
+    [SerializeField] private RSE_OnValidateConnection rse_OnValidateConnection;
 
     [Header("Outputs")]
     [SerializeField] private RSE_OnTaskCompleted rse_OnTaskCompleted;
 
     private int connection;
+    private void OnEnable()
+    {
+        rse_OnValidateConnection.action += ValidateConnection;
+    }
+
+    private void OnDisable()
+    {
+        rse_OnValidateConnection.action -= ValidateConnection;
+    }
 
     private void ValidateConnection()
     {
@@ -20,6 +30,7 @@ public class S_FixWiring : MonoBehaviour
 
         if(connection >= connectionMax)
         {
+            Debug.Log("Task Completed");
             rse_OnTaskCompleted.Call("Wiring");
         }
     }

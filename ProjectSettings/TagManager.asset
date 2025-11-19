@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Glowstick
   - MentalObstacle
+  - Ember
+  - Flint
+  - Log
+  - Cursor
   layers:
   - Default
   - TransparentFX
