@@ -6,6 +6,7 @@ public class S_FogOfWarControllerQuad : MonoBehaviour
     [Header("Inputs")]
     [SerializeField] private RSE_OnUnregister_VisionSource _onUnregisterVisionSourceRse;
     [SerializeField] private RSE_OnRegister_VisionSource _onRegisterVisionSourceRse;
+    [SerializeField] RSE_OnChangeFogColor _onChangeFogColorRse;
 
     [SerializeField] private Camera _camera;
     [SerializeField] private int _maxSources = 8;
@@ -33,12 +34,14 @@ public class S_FogOfWarControllerQuad : MonoBehaviour
     {
         _onRegisterVisionSourceRse.action += RegisterSource;
         _onUnregisterVisionSourceRse.action += UnregisterSource;
+        _onChangeFogColorRse.action += SetFogColor;
     }
 
     private void OnDisable()
     {
         _onRegisterVisionSourceRse.action -= RegisterSource;
         _onUnregisterVisionSourceRse.action -= UnregisterSource;
+        _onChangeFogColorRse.action -= SetFogColor;
     }
 
     private void RegisterSource(I_FogVisionSource source)
@@ -159,5 +162,10 @@ public class S_FogOfWarControllerQuad : MonoBehaviour
         float dx = viewportPos.x - 0.5f;
         float dy = viewportPos.y - 0.5f;
         return dx * dx + dy * dy;
+    }
+
+    void SetFogColor(Color c)
+    {
+        _material.SetColor("_FogColor", c);
     }
 }

@@ -102,5 +102,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _onUnregisterVisionSourceRse: {fileID: 11400000, guid: ec3be7932f5ee4548af114dae4762432, type: 2}
   _onRegisterVisionSourceRse: {fileID: 11400000, guid: 5507a31ff46bf5f4db0d51b257474935, type: 2}
+  _onChangeFogColorRse: {fileID: 11400000, guid: 3046bca212589a641a661a155e83912d, type: 2}
   _camera: {fileID: 0}
   _maxSources: 8

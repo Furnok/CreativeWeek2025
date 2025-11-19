@@ -181,6 +181,15 @@ public partial class @IA_InputPlayer: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Place Glow Stick"",
+                    ""type"": ""Button"",
+                    ""id"": ""705d558a-bd27-408b-a96d-5b01bdd0f7bd"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -579,6 +588,17 @@ public partial class @IA_InputPlayer: IInputActionCollection2, IDisposable
                     ""action"": ""Pause"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f61e994b-fc6c-4645-86dd-1853f1a8d99b"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Place Glow Stick"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -686,6 +706,7 @@ public partial class @IA_InputPlayer: IInputActionCollection2, IDisposable
         m_Player_Next = m_Player.FindAction("Next", throwIfNotFound: true);
         m_Player_Sprint = m_Player.FindAction("Sprint", throwIfNotFound: true);
         m_Player_Pause = m_Player.FindAction("Pause", throwIfNotFound: true);
+        m_Player_PlaceGlowStick = m_Player.FindAction("Place Glow Stick", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Pause = m_UI.FindAction("Pause", throwIfNotFound: true);
@@ -780,6 +801,7 @@ public partial class @IA_InputPlayer: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Next;
     private readonly InputAction m_Player_Sprint;
     private readonly InputAction m_Player_Pause;
+    private readonly InputAction m_Player_PlaceGlowStick;
     /// <summary>
     /// Provides access to input actions defined in input action map "Player".
     /// </summary>
@@ -831,6 +853,10 @@ public partial class @IA_InputPlayer: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Player/Pause".
         /// </summary>
         public InputAction @Pause => m_Wrapper.m_Player_Pause;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/PlaceGlowStick".
+        /// </summary>
+        public InputAction @PlaceGlowStick => m_Wrapper.m_Player_PlaceGlowStick;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -887,6 +913,9 @@ public partial class @IA_InputPlayer: IInputActionCollection2, IDisposable
             @Pause.started += instance.OnPause;
             @Pause.performed += instance.OnPause;
             @Pause.canceled += instance.OnPause;
+            @PlaceGlowStick.started += instance.OnPlaceGlowStick;
+            @PlaceGlowStick.performed += instance.OnPlaceGlowStick;
+            @PlaceGlowStick.canceled += instance.OnPlaceGlowStick;
         }
 
         /// <summary>
@@ -928,6 +957,9 @@ public partial class @IA_InputPlayer: IInputActionCollection2, IDisposable
             @Pause.started -= instance.OnPause;
             @Pause.performed -= instance.OnPause;
             @Pause.canceled -= instance.OnPause;
+            @PlaceGlowStick.started -= instance.OnPlaceGlowStick;
+            @PlaceGlowStick.performed -= instance.OnPlaceGlowStick;
+            @PlaceGlowStick.canceled -= instance.OnPlaceGlowStick;
         }
 
         /// <summary>
@@ -1199,6 +1231,13 @@ public partial class @IA_InputPlayer: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnPause(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Place Glow Stick" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnPlaceGlowStick(InputAction.CallbackContext context);
     }
     /// <summary>
     /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "UI" which allows adding and removing callbacks.

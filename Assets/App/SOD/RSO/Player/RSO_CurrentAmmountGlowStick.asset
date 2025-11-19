@@ -9,12 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48635a567205f92459f0dc8cbf875406, type: 3}
-  m_Name: SSO_PlayerStats
+  m_Script: {fileID: 11500000, guid: 2a2d359fee9f2464486402ed7050a284, type: 3}
+  m_Name: RSO_CurrentAmmountGlowStick
   m_EditorClassIdentifier: 
-  _value:
-    speed: 5
-    MaxMentalHealth: 100
-    StartingMentalHealth: 100
-    MaxGlowsticks: 10
-    StartingGlowsticks: 3
+  _value: 0

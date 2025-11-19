@@ -19,6 +19,7 @@ public class S_InputsManager : MonoBehaviour
     [SerializeField] private RSE_OnGameInputEnabled rseOnGameActionInputEnabled;
     [SerializeField] private RSE_OnUIInputEnabled rseOnUiActionInputEnabled;
     [SerializeField] private RSE_OnInputDisabled rseOnInputDisabled;
+    [SerializeField] RSE_OnPlaceGlowStickInput _onPlaceGlowStickInputRse;
 
     private IA_InputPlayer iaInputPlayer = null;
     private bool initialized = false;
@@ -89,6 +90,11 @@ public class S_InputsManager : MonoBehaviour
         rseOnPlayerPause.Call();
     }
 
+    void OnPlaceGlowStickInputPerformed(InputAction.CallbackContext ctx)
+    {
+        _onPlaceGlowStickInputRse.Call();
+    }
+
     #endregion
 
     #region UI Input Callback Methods
@@ -107,6 +113,7 @@ public class S_InputsManager : MonoBehaviour
         game.Move.canceled += OnMoveChanged;
         game.Interact.performed += OnInteractInputPerformed;
         game.Pause.performed += OnPauseGameInput;
+        game.PlaceGlowStick.performed += OnPlaceGlowStickInputPerformed;
     }
 
     private void DisableGameInputs()
@@ -117,6 +124,7 @@ public class S_InputsManager : MonoBehaviour
         game.Move.canceled -= OnMoveChanged;
         game.Interact.performed -= OnInteractInputPerformed;
         game.Pause.performed -= OnPauseGameInput;
+        game.PlaceGlowStick.performed -= OnPlaceGlowStickInputPerformed;
     }
 
     private void EnableUIInputs()

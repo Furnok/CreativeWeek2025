@@ -84,3 +84,4 @@ MonoBehaviour:
   rseOnGameActionInputEnabled: {fileID: 11400000, guid: 04e33dd8947e9f040ba0b26e21d19169, type: 2}
   rseOnUiActionInputEnabled: {fileID: 11400000, guid: f8900a3c295c93f478f8289c92da16ca, type: 2}
   rseOnInputDisabled: {fileID: 11400000, guid: e7fce25ce14aa104594353e4f764d977, type: 2}
+  _onPlaceGlowStickInputRse: {fileID: 11400000, guid: 7c4a160b9990f1c43b339a615b8a0449, type: 2}

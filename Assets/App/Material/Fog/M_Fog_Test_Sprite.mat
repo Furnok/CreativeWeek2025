@@ -56,7 +56,7 @@ Material:
     - _ZWrite: 0
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _FogColor: {r: 0.4313724, g: 0.490196, b: 0.6509804, a: 0.7294118}
+    - _FogColor: {r: 0.43137255, g: 0.49019608, b: 0.6509804, a: 0}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
     - _ScrollSpeed1: {r: 1, g: 0.5, b: 0, a: 0}
     - _ScrollSpeed2: {r: 0, g: 0.55, b: 0, a: 0}

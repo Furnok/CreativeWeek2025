@@ -1,0 +1,83 @@
+using System.Collections.Generic;
+using UnityEngine;
+
+public class S_PlayerGlowstickManager : MonoBehaviour
+{
+    //[Header("Settings")]
+
+    [Header("References")]
+    [SerializeField] RSO_CurrentAmmountGlowStick _currentAmmountGlowStickRso;
+    [SerializeField] SSO_PlayerStats _playerStatsSso;
+    [SerializeField] GameObject _GlowstickPrefab;
+
+    [Header("Inputs")]
+    [SerializeField] RSE_OnPlaceGlowStickInput _onPlaceGlowStickInputRse;
+
+    //[Header("Outputs")]
+
+    List<GameObject> _placedGlowsticksAround = new List<GameObject>();
+
+    void OnEnable()
+    {
+        _currentAmmountGlowStickRso.Value = _playerStatsSso.Value.StartingGlowsticks;
+
+        _onPlaceGlowStickInputRse.action += PlaceOrRemoveGlowStick;
+    }
+
+    void OnDisable()
+    {
+        _onPlaceGlowStickInputRse.action -= PlaceOrRemoveGlowStick;
+    }
+
+    void PlaceOrRemoveGlowStick()
+    {
+        GameObject closest = null;
+        float closestDist = float.PositiveInfinity;
+
+        for (int i = 0; i < _placedGlowsticksAround.Count; i++)
+        {
+            var go = _placedGlowsticksAround[i];
+            if (go == null) continue;
+
+            float dist = Vector3.Distance(transform.position, go.transform.position);
+            if (dist < closestDist)
+            {
+                closestDist = dist;
+                closest = go;
+            }
+        }
+
+        bool hasGlowstickAround = closest != null;
+
+        if (!hasGlowstickAround && _currentAmmountGlowStickRso.Value > 0)
+        {
+            Instantiate(_GlowstickPrefab, transform.position, Quaternion.identity);
+            _currentAmmountGlowStickRso.Value -= 1;
+        }
+        else if (hasGlowstickAround && _currentAmmountGlowStickRso.Value < _playerStatsSso.Value.MaxGlowsticks)
+        {
+            GameObject root = closest.transform.root.gameObject;
+            Destroy(root);
+            _currentAmmountGlowStickRso.Value += 1;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Glowstick"))
+        {
+            _placedGlowsticksAround.Add(collision.gameObject);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Glowstick"))
+        {
+            if (_placedGlowsticksAround.Contains(collision.gameObject))
+            {
+                _placedGlowsticksAround.Remove(collision.gameObject);
+            }
+        }
+    }
+}

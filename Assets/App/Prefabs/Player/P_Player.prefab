@@ -368,6 +368,7 @@ Transform:
   m_Children:
   - {fileID: 474780440738427881}
   - {fileID: 3080222585679911057}
+  - {fileID: 3008353501911742174}
   m_Father: {fileID: 3974165760102176259}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5565953048677716841
@@ -402,6 +403,91 @@ Transform:
   - {fileID: 4621909682537675208}
   m_Father: {fileID: 3974165760102176259}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6067650364411296434
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3008353501911742174}
+  - component: {fileID: 4646304460282764125}
+  - component: {fileID: 5626098334542762810}
+  m_Layer: 0
+  m_Name: GlowstickDetector
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3008353501911742174
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6067650364411296434}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3955797854102122825}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4646304460282764125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6067650364411296434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46c3893c1e9fc7341b17703cf8a4dd21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _currentAmmountGlowStickRso: {fileID: 11400000, guid: 59e381784cb6c824d8d7e323f9add8af, type: 2}
+  _playerStatsSso: {fileID: 11400000, guid: cea7641025dd6dc4fa869ec1ab8595d3, type: 2}
+  _GlowstickPrefab: {fileID: 8551651062807599050, guid: 31470cc78b2f55d418c2a014be3dfdd8, type: 3}
+  _onPlaceGlowStickInputRse: {fileID: 11400000, guid: 7c4a160b9990f1c43b339a615b8a0449, type: 2}
+--- !u!58 &5626098334542762810
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6067650364411296434}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 1
 --- !u!1 &6943340489744406749
 GameObject:
   m_ObjectHideFlags: 0
@@ -646,6 +732,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3974165760102176259}
     m_Modifications:
+    - target: {fileID: 84424738183219052, guid: 94866081aac3f604997677dfe01cc0d1, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 84424738183219052, guid: 94866081aac3f604997677dfe01cc0d1, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 84424738183219052, guid: 94866081aac3f604997677dfe01cc0d1, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2735529189910160934, guid: 94866081aac3f604997677dfe01cc0d1, type: 3}
       propertyPath: _camera
       value: 
