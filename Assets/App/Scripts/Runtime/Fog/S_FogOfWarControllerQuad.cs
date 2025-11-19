@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class S_FogOfWarControllerQuad : MonoBehaviour
@@ -58,7 +58,7 @@ public class S_FogOfWarControllerQuad : MonoBehaviour
     {
         if (_material == null || _camera == null) return;
 
-        // 1) Quad suit la cam�ra
+        // 1) Quad suit la camera
         Vector3 camPos = _camera.transform.position;
         camPos.z = _camera.transform.position.z + 1f;
         transform.position = camPos;
@@ -75,26 +75,89 @@ public class S_FogOfWarControllerQuad : MonoBehaviour
         _material.SetFloat(AspectId, _camera.aspect);
 
         // 3) Sources de vision (ton code actuel)
-        int count = Mathf.Min(_sources.Count, _maxSources);
+        //int count = Mathf.Min(_sources.Count, _maxSources);
 
         var centers = new Vector4[_maxSources];
         var radii = new float[_maxSources];
         var softness = new float[_maxSources];
 
-        for (int i = 0; i < count; i++)
+        // 4) On selectionne uniquement les sources "utiles" (proches / dans la vue)
+        //    et parmi elles, les plus proches du centre de l'ecran.
+        const float margin = 5.2f; // on accepte un peu en dehors de l'écran
+
+        // On crée une petite liste temporaire de candidats visibles
+        var candidateSources = new List<I_FogVisionSource>();
+        var candidateViewports = new List<Vector3>();
+
+        foreach (var src in _sources)
         {
-            var src = _sources[i];
             if (src == null) continue;
 
             Vector3 vp = _camera.WorldToViewportPoint(src.Transform.position);
+
+            // Derrière la camera => on ignore
+            if (vp.z < 0f) continue;
+
+            // Completement hors écran (avec marge) → on ignore
+            if (vp.x < -margin || vp.x > 1f + margin ||
+                vp.y < -margin || vp.y > 1f + margin)
+                continue;
+
+            candidateSources.Add(src);
+            candidateViewports.Add(vp);
+        }
+
+        // 5) On trie les candidats par distance au centre de l'ecran (0.5, 0.5)
+        //    pour garder les plus "importants" visuellement.
+        int candidateCount = candidateSources.Count;
+        for (int i = 0; i < candidateCount - 1; i++)
+        {
+            int bestIndex = i;
+            float bestDistSq = DistanceToCenterSq(candidateViewports[i]);
+
+            for (int j = i + 1; j < candidateCount; j++)
+            {
+                float dSq = DistanceToCenterSq(candidateViewports[j]);
+                if (dSq < bestDistSq)
+                {
+                    bestDistSq = dSq;
+                    bestIndex = j;
+                }
+            }
+
+            // Petit swap si nécessaire
+            if (bestIndex != i)
+            {
+                (candidateSources[i], candidateSources[bestIndex]) =
+                    (candidateSources[bestIndex], candidateSources[i]);
+                (candidateViewports[i], candidateViewports[bestIndex]) =
+                    (candidateViewports[bestIndex], candidateViewports[i]);
+            }
+        }
+
+        // 6) On remplit les tableaux jusqu'à _maxSources
+        int activeCount = Mathf.Min(candidateCount, _maxSources);
+        for (int i = 0; i < activeCount; i++)
+        {
+            var src = candidateSources[i];
+            var vp = candidateViewports[i];
+
             centers[i] = new Vector4(vp.x, vp.y, 0, 0);
             radii[i] = src.Data.Radius;
             softness[i] = src.Data.Softness;
         }
 
-        _material.SetInt(SourceCountId, count);
+        // 7) Envoi au shader
+        _material.SetInt(SourceCountId, activeCount);
         _material.SetVectorArray(CentersId, centers);
         _material.SetFloatArray(RadiiId, radii);
         _material.SetFloatArray(SoftnessId, softness);
+    }
+
+    private static float DistanceToCenterSq(Vector3 viewportPos)
+    {
+        float dx = viewportPos.x - 0.5f;
+        float dy = viewportPos.y - 0.5f;
+        return dx * dx + dy * dy;
     }
 }

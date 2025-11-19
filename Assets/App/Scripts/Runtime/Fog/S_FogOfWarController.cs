@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class S_FogOfWarController : MonoBehaviour
@@ -25,6 +25,7 @@ public class S_FogOfWarController : MonoBehaviour
     private static readonly int RadiiId = Shader.PropertyToID("_Radii");
     private static readonly int SoftnessId = Shader.PropertyToID("_Softness");
     private static readonly int SourceCountId = Shader.PropertyToID("_SourceCount");
+    private static readonly int AspectId = Shader.PropertyToID("_Aspect");
 
     private void Awake()
     {
@@ -84,26 +85,82 @@ public class S_FogOfWarController : MonoBehaviour
             transform.localScale = scale;
         }
 
-        int count = Mathf.Min(_sources.Count, _maxSources);
+        _material.SetFloat(AspectId, _camera.aspect);
+
+        const float margin = 5.2f;
+
+        //int count = Mathf.Min(_sources.Count, _maxSources);
 
         var centers = new Vector4[_maxSources];
         var radii = new float[_maxSources];
         var softness = new float[_maxSources];
 
-        for (int i = 0; i < count; i++)
+        var candidateSources = new List<I_FogVisionSource>();
+        var candidateViewports = new List<Vector3>();
+
+        foreach (var src in _sources)
         {
-            var src = _sources[i];
             if (src == null) continue;
 
             Vector3 vp = _camera.WorldToViewportPoint(src.Transform.position);
+
+            if (vp.z < 0f) continue;
+
+            if (vp.x < -margin || vp.x > 1f + margin ||
+                vp.y < -margin || vp.y > 1f + margin)
+                continue;
+
+            candidateSources.Add(src);
+            candidateViewports.Add(vp);
+        }
+
+        int candidateCount = candidateSources.Count;
+        for (int i = 0; i < candidateCount - 1; i++)
+        {
+            int bestIndex = i;
+            float bestDistSq = DistanceToCenterSq(candidateViewports[i]);
+
+            for (int j = i + 1; j < candidateCount; j++)
+            {
+                float dSq = DistanceToCenterSq(candidateViewports[j]);
+                if (dSq < bestDistSq)
+                {
+                    bestDistSq = dSq;
+                    bestIndex = j;
+                }
+            }
+
+            if (bestIndex != i)
+            {
+                (candidateSources[i], candidateSources[bestIndex]) =
+                    (candidateSources[bestIndex], candidateSources[i]);
+                (candidateViewports[i], candidateViewports[bestIndex]) =
+                    (candidateViewports[bestIndex], candidateViewports[i]);
+            }
+        }
+
+        int activeCount = Mathf.Min(candidateCount, _maxSources);
+
+        for (int i = 0; i < activeCount; i++)
+        {
+            var src = candidateSources[i];
+            var vp = candidateViewports[i];
+
             centers[i] = new Vector4(vp.x, vp.y, 0, 0);
             radii[i] = src.Data.Radius;
             softness[i] = src.Data.Softness;
         }
 
-        _material.SetInt(SourceCountId, count);
+        _material.SetInt(SourceCountId, activeCount);
         _material.SetVectorArray(CentersId, centers);
         _material.SetFloatArray(RadiiId, radii);
         _material.SetFloatArray(SoftnessId, softness);
+    }
+
+    private float DistanceToCenterSq(Vector3 viewportPos)
+    {
+        float dx = viewportPos.x - 0.5f;
+        float dy = viewportPos.y - 0.5f;
+        return dx * dx + dy * dy;
     }
 }
