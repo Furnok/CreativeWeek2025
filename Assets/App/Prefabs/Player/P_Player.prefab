@@ -48,7 +48,11 @@ MonoBehaviour:
   _mentalObstacleTag: MentalObstacle
   _currentMentalHealthRso: {fileID: 11400000, guid: 4a28f472a326a5e47b639bb7a8806063, type: 2}
   _currentTemperatureRso: {fileID: 11400000, guid: 3f228e86e340f7b458ee0f943119d0ec, type: 2}
+  _currentCycleRso: {fileID: 11400000, guid: 4894bdba32aa1c94f82177e9daa4a182, type: 2}
   _playerStatsSso: {fileID: 11400000, guid: cea7641025dd6dc4fa869ec1ab8595d3, type: 2}
+  _gameSettingsSso: {fileID: 11400000, guid: c0f1146d4d156984ab24c0754662a78a, type: 2}
+  _warmthSourcesInRangeRso: {fileID: 11400000, guid: e1969740c3e01a441b08ad8c387f71e0, type: 2}
+  _onMentalHealthReachZeroRse: {fileID: 11400000, guid: c2e65dbfe517eae46bdff4fff87548b8, type: 2}
 --- !u!58 &4363836909353131486
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -345,6 +349,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4621909682537675208}
   - component: {fileID: 6412026073154286687}
+  - component: {fileID: 4607691457199763966}
   m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
@@ -422,6 +427,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &4607691457199763966
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4392663673198401530}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 96547617678012843a6f580778013c0c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &5500717652266204217
 GameObject:
   m_ObjectHideFlags: 0
@@ -467,6 +494,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8970000248794604742}
+  - component: {fileID: 8765141290282772510}
   m_Layer: 0
   m_Name: Visuals
   m_TagString: Untagged
@@ -490,6 +518,21 @@ Transform:
   - {fileID: 4621909682537675208}
   m_Father: {fileID: 3974165760102176259}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8765141290282772510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5565953048677716841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48f118e5fcd54f14c9992c6a04e5b7a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 4607691457199763966}
+  _playerSp: {fileID: 6412026073154286687}
+  _onPlayerMoveInput: {fileID: 11400000, guid: f81ab021498c6f54aa57af72b9fe7e82, type: 2}
 --- !u!1 &6067650364411296434
 GameObject:
   m_ObjectHideFlags: 0

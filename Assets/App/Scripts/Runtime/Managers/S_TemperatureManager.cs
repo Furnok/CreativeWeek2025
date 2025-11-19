@@ -39,7 +39,7 @@ public class S_TemperatureManager : MonoBehaviour
 
     private void Update()
     {
-        //if (!_hasStarted) return;
+        if (!_hasStarted) return;
 
         var settings = _gameSettingsSso.Value;
 

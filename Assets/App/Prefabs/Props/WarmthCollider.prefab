@@ -85,8 +85,12 @@ MonoBehaviour:
   _maxHeatPerSecondDay: 3
   _minHeatPerSecondNight: 1.5
   _maxHeatPerSecondNight: 3.5
+  _minMentalHealthPerSecond: 3
+  _maxMentalHealthPerSecond: 5
   _currentTemperatureRso: {fileID: 11400000, guid: 3f228e86e340f7b458ee0f943119d0ec, type: 2}
+  _currentMentalHealthRso: {fileID: 11400000, guid: 4a28f472a326a5e47b639bb7a8806063, type: 2}
   _currentCycleRso: {fileID: 11400000, guid: 4894bdba32aa1c94f82177e9daa4a182, type: 2}
   _gameSettingsSso: {fileID: 11400000, guid: c0f1146d4d156984ab24c0754662a78a, type: 2}
+  _playerStatsSso: {fileID: 11400000, guid: cea7641025dd6dc4fa869ec1ab8595d3, type: 2}
   _warmthSourcesInRangeRso: {fileID: 11400000, guid: e1969740c3e01a441b08ad8c387f71e0, type: 2}
   _collider: {fileID: 22013145802499770}
