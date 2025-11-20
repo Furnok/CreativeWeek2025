@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: d93e89e66aec4d242b29fe0bc185bfa7
+guid: c9f83a600d4b81f4f90ab19ca211b91e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2334632559784490952
-    second: Icon__0
+      213: -2465289297240814436
+    second: UI_logbook_pages_back_0
+  - first:
+      213: 3354997593770423487
+    second: UI_logbook_pages_back_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +40,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -46,9 +49,9 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -72,7 +75,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 256
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -126,13 +129,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Icon__0
+      name: UI_logbook_pages_back_0
       rect:
         serializedVersion: 2
-        x: 43
+        x: 38
         y: 27
-        width: 167
-        height: 178
+        width: 637
+        height: 533
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +144,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8c7f30791f7466020800000000000000
-      internalID: 2334632559784490952
+      spriteID: c9c8361227889cdd0800000000000000
+      internalID: -2465289297240814436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_logbook_pages_back_1
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 26
+        width: 639
+        height: 536
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb4f9f639885f8e20800000000000000
+      internalID: 3354997593770423487
       vertices: []
       indices: 
       edges: []
@@ -151,7 +176,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -161,7 +186,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Icon__0: 2334632559784490952
+      UI_logbook_pages_back_0: -2465289297240814436
+      UI_logbook_pages_back_1: 3354997593770423487
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: d93e89e66aec4d242b29fe0bc185bfa7
+guid: 97d0fcf1fdd893b418da1ebfb63cc9aa
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2334632559784490952
-    second: Icon__0
+      213: -6072264334877150934
+    second: UI_logbook_rings_0
+  - first:
+      213: 1782040044384640402
+    second: UI_logbook_rings_1
+  - first:
+      213: 1523974585375353489
+    second: UI_logbook_rings_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +43,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -46,9 +52,9 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -72,7 +78,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 256
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -126,13 +132,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Icon__0
+      name: UI_logbook_rings_0
       rect:
         serializedVersion: 2
-        x: 43
-        y: 27
-        width: 167
-        height: 178
+        x: 651
+        y: 519
+        width: 101
+        height: 46
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +147,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8c7f30791f7466020800000000000000
-      internalID: 2334632559784490952
+      spriteID: a21bf5972cbfabba0800000000000000
+      internalID: -6072264334877150934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_logbook_rings_1
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 324
+        width: 97
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29d511d8af31bb810800000000000000
+      internalID: 1782040044384640402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_logbook_rings_2
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 75
+        width: 99
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19a6500afce362510800000000000000
+      internalID: 1523974585375353489
       vertices: []
       indices: 
       edges: []
@@ -151,7 +201,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -161,7 +211,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Icon__0: 2334632559784490952
+      UI_logbook_rings_0: -6072264334877150934
+      UI_logbook_rings_1: 1782040044384640402
+      UI_logbook_rings_2: 1523974585375353489
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

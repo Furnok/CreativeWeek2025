@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: d93e89e66aec4d242b29fe0bc185bfa7
+guid: 76bf47560d9f5a542b709f4b587e20f4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2334632559784490952
-    second: Icon__0
+      213: 8243197748606768469
+    second: UI_logbook_tab5_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -72,7 +72,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 256
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Icon__0
+      name: UI_logbook_tab5_0
       rect:
         serializedVersion: 2
-        x: 43
-        y: 27
-        width: 167
-        height: 178
+        x: 0
+        y: 0
+        width: 66
+        height: 52
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8c7f30791f7466020800000000000000
-      internalID: 2334632559784490952
+      spriteID: 55591039da8b56270800000000000000
+      internalID: 8243197748606768469
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Icon__0: 2334632559784490952
+      UI_logbook_tab5_0: 8243197748606768469
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

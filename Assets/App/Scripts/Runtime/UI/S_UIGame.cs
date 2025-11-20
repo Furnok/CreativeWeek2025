@@ -31,6 +31,15 @@ public class S_UIGame : MonoBehaviour
     [SerializeField] private GameObject contentBackpackInventory;
     [SerializeField] private GameObject contentBackpackMap;
     [SerializeField] private GameObject contentBackpackLogs;
+    [SerializeField] private Image imageInventory;
+    [SerializeField] private Image imageMap;
+    [SerializeField] private Image imageLogs;
+    [SerializeField] private Sprite spriteInventory;
+    [SerializeField] private Sprite spriteInventoryPress;
+    [SerializeField] private Sprite spriteMap;
+    [SerializeField] private Sprite spriteMapPress;
+    [SerializeField] private Sprite spriteLogs;
+    [SerializeField] private Sprite spriteLogsPress;
 
     [Header("Inputs")]
     [SerializeField] private RSE_OnStartGameTimer rseOnStartGameTimer;
@@ -44,6 +53,8 @@ public class S_UIGame : MonoBehaviour
     [SerializeField] private SSO_PlayerStats _playerStatsSso;
 
     [Header("Outputs")]
+    [SerializeField] private RSE_OnShowMouseCursor rseOnShowMouseCursor;
+    [SerializeField] private RSE_OnHideMouseCursor rseOnHideMouseCursor;
     [SerializeField] private RSE_OnOpenWindow rseOnOpenWindow;
 
     private Tween temperatureTween = null;
@@ -158,27 +169,42 @@ public class S_UIGame : MonoBehaviour
     {
         if (!contentBackpack.activeInHierarchy)
         {
+            rseOnShowMouseCursor.Call();
             rseOnOpenWindow.Call(contentBackpack);
 
             contentBackpackInventory.SetActive(true);
             contentBackpackMap.SetActive(false);
             contentBackpackLogs.SetActive(false);
+
+            imageInventory.sprite = spriteInventoryPress;
+            imageMap.sprite = spriteMap;
+            imageLogs.sprite = spriteLogs;
         }
         else
         {
             if (!contentBackpackInventory.activeInHierarchy)
             {
+                rseOnShowMouseCursor.Call();
                 contentBackpackInventory.SetActive(true);
                 contentBackpackMap.SetActive(false);
                 contentBackpackLogs.SetActive(false);
+
+                imageInventory.sprite = spriteInventoryPress;
+                imageMap.sprite = spriteMap;
+                imageLogs.sprite = spriteLogs;
             }
             else
             {
+                rseOnHideMouseCursor.Call();
                 rseOnOpenWindow.Call(contentBackpack);
 
                 contentBackpackInventory.SetActive(false);
                 contentBackpackMap.SetActive(false);
                 contentBackpackLogs.SetActive(false);
+
+                imageInventory.sprite = spriteInventory;
+                imageMap.sprite = spriteMap;
+                imageLogs.sprite = spriteLogs;
             }
         }
     }
@@ -187,27 +213,42 @@ public class S_UIGame : MonoBehaviour
     {
         if (!contentBackpack.activeInHierarchy)
         {
+            rseOnShowMouseCursor.Call();
             rseOnOpenWindow.Call(contentBackpack);
 
             contentBackpackInventory.SetActive(false);
             contentBackpackMap.SetActive(true);
             contentBackpackLogs.SetActive(false);
+
+            imageInventory.sprite = spriteInventory;
+            imageMap.sprite = spriteMapPress;
+            imageLogs.sprite = spriteLogs;
         }
         else
         {
             if (!contentBackpackMap.activeInHierarchy)
             {
+                rseOnShowMouseCursor.Call();
                 contentBackpackInventory.SetActive(false);
                 contentBackpackMap.SetActive(true);
                 contentBackpackLogs.SetActive(false);
+
+                imageInventory.sprite = spriteInventory;
+                imageMap.sprite = spriteMapPress;
+                imageLogs.sprite = spriteLogs;
             }
             else
             {
+                rseOnHideMouseCursor.Call();
                 rseOnOpenWindow.Call(contentBackpack);
 
                 contentBackpackInventory.SetActive(false);
                 contentBackpackMap.SetActive(false);
                 contentBackpackLogs.SetActive(false);
+
+                imageInventory.sprite = spriteInventory;
+                imageMap.sprite = spriteMap;
+                imageLogs.sprite = spriteLogs;
             }
         }
     }
@@ -216,27 +257,42 @@ public class S_UIGame : MonoBehaviour
     {
         if (!contentBackpack.activeInHierarchy)
         {
+            rseOnShowMouseCursor.Call();
             rseOnOpenWindow.Call(contentBackpack);
 
             contentBackpackInventory.SetActive(false);
             contentBackpackMap.SetActive(false);
             contentBackpackLogs.SetActive(true);
+
+            imageInventory.sprite = spriteInventory;
+            imageMap.sprite = spriteMap;
+            imageLogs.sprite = spriteLogsPress;
         }
         else
         {
             if (!contentBackpackLogs.activeInHierarchy)
             {
+                rseOnShowMouseCursor.Call();
                 contentBackpackInventory.SetActive(false);
                 contentBackpackMap.SetActive(false);
                 contentBackpackLogs.SetActive(true);
+
+                imageInventory.sprite = spriteInventory;
+                imageMap.sprite = spriteMap;
+                imageLogs.sprite = spriteLogsPress;
             }
             else
             {
+                rseOnHideMouseCursor.Call();
                 rseOnOpenWindow.Call(contentBackpack);
 
                 contentBackpackInventory.SetActive(false);
                 contentBackpackMap.SetActive(false);
                 contentBackpackLogs.SetActive(false);
+
+                imageInventory.sprite = spriteInventory;
+                imageMap.sprite = spriteMap;
+                imageLogs.sprite = spriteLogs;
             }
         }
     }

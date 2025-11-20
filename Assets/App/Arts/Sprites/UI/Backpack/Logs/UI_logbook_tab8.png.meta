@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 8077a68b72975e349b4e34e8ed9bc48d
+guid: 0d7c1c466e27c0348988788e45377b64
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8404386024453432882
-    second: Petit Poches ombre_0
+      213: -3225938725355331110
+    second: UI_logbook_tab8_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Petit Poches ombre_0
+      name: UI_logbook_tab8_0
       rect:
         serializedVersion: 2
-        x: 261
-        y: 705
-        width: 1527
-        height: 638
+        x: 0
+        y: 0
+        width: 70
+        height: 62
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 236edc69f8062a470800000000000000
-      internalID: 8404386024453432882
+      spriteID: ad1e40032d92b33d0800000000000000
+      internalID: -3225938725355331110
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Petit Poches ombre_0: 8404386024453432882
+      UI_logbook_tab8_0: -3225938725355331110
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

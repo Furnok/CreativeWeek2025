@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: d93e89e66aec4d242b29fe0bc185bfa7
+guid: 3c213a80c5970e243a28c466d3b43d69
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2334632559784490952
-    second: Icon__0
+      213: -3123203881438442823
+    second: Icon_Carte_illu1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Icon__0
+      name: Icon_Carte_illu1_0
       rect:
         serializedVersion: 2
-        x: 43
-        y: 27
-        width: 167
-        height: 178
+        x: 39
+        y: 58
+        width: 176
+        height: 125
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8c7f30791f7466020800000000000000
-      internalID: 2334632559784490952
+      spriteID: 9ba8db50e9628a4d0800000000000000
+      internalID: -3123203881438442823
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Icon__0: 2334632559784490952
+      Icon_Carte_illu1_0: -3123203881438442823
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

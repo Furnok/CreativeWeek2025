@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: d93e89e66aec4d242b29fe0bc185bfa7
+guid: 42c3dcccbfe196043a2ece27c8ae70ae
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2334632559784490952
-    second: Icon__0
+      213: -1778259947415845576
+    second: Icon_inventaire_illu1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,7 +126,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Icon__0
+      name: Icon_inventaire_illu1_0
       rect:
         serializedVersion: 2
         x: 43
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8c7f30791f7466020800000000000000
-      internalID: 2334632559784490952
+      spriteID: 83549fbdff95257e0800000000000000
+      internalID: -1778259947415845576
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Icon__0: 2334632559784490952
+      Icon_inventaire_illu1_0: -1778259947415845576
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
