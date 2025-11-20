@@ -36,7 +36,6 @@ public class S_IllustationManager : MonoBehaviour
     private void Setup(List<S_ClassIllustation> classIllustration)
     {
         panelIllu.SetActive(true);
-        panelText.SetActive(true);
 
         rseOnGamePause.Call(true);
 
@@ -50,6 +49,15 @@ public class S_IllustationManager : MonoBehaviour
             image.sprite = illu.image;
 
             text.text = illu.text;
+
+            if (illu.text != null)
+            {
+                panelText.SetActive(true);
+            }
+            else
+            {
+                panelText.SetActive(false);
+            }
 
             yield return S_Utils.DelayRealTime(0.4f);
 
