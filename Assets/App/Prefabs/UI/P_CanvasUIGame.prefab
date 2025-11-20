@@ -346,6 +346,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panelIllu: {fileID: 3984468827392345557}
+  image: {fileID: 2031942295582262124}
   rseOnIllustration: {fileID: 11400000, guid: 7695e8361d348e34ea1665af922e9783, type: 2}
 --- !u!1 &3984468827392345557
 GameObject:

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class S_IllustationManager : MonoBehaviour
 {
@@ -6,6 +7,8 @@ public class S_IllustationManager : MonoBehaviour
 
     [Header("References")]
     [SerializeField] private GameObject panelIllu;
+
+    [SerializeField] private Image image;
 
     [Header("Inputs")]
     [SerializeField] private RSE_OnIllustration rseOnIllustration;
@@ -25,5 +28,7 @@ public class S_IllustationManager : MonoBehaviour
     private void Setup(S_ClassIllustation classIllustration)
     {
         panelIllu.SetActive(true);
+
+        image.sprite = classIllustration.image;
     }
 }
