@@ -4,20 +4,49 @@ using UnityEngine;
 
 public class S_IdCodeManager : MonoBehaviour
 {
+    [Header("Settings")]
+    [SerializeField] private float timeShowText;
     [Header("UI Elements")]
     [SerializeField] private TMP_InputField codeInput;
     [SerializeField] private TextMeshProUGUI messageText;
     [SerializeField] private TextMeshProUGUI codeText;
+    [SerializeField] private GameObject card;
 
     [Header("Correct Code")]
     [SerializeField] private string correctCode;
 
     [Header("Outputs")]
     [SerializeField] private RSE_OnTaskCompleted rse_OnTaskCompleted;
+    [Header("Inputs")]
+    [SerializeField] private RSE_OnCardCollected _onCardCollected;
 
+    private bool haveCard = false;
+
+    private void OnEnable()
+    {
+        _onCardCollected.action += GetCard;
+    }
+
+    private void OnDisable()
+    {
+        _onCardCollected.action -= GetCard;
+    }
+
+    private void GetCard()
+    {
+        haveCard = true;
+    }
     private void Start()
     {
         codeText.text = correctCode;
+        if (!haveCard)
+        {
+            card.SetActive(false);
+        }
+        if (haveCard)
+        {
+            card.SetActive(true);
+        }
     }
     public void CheckCode()
     {
@@ -25,12 +54,10 @@ public class S_IdCodeManager : MonoBehaviour
 
         if (userCode == correctCode)
         {
-            messageText.text = "Code correct !";
+            messageText.text = "Correct Code!";
             messageText.color = Color.green;
 
             rse_OnTaskCompleted.Call("IdCode");
-            //  Mets ici ce qui se passe quand le code est bon
-            // Exemple : ouvrir une porte, charger une scène, etc.
         }
         else
         {
@@ -40,9 +67,9 @@ public class S_IdCodeManager : MonoBehaviour
 
     IEnumerator ShowIncorrectMessage()
     {
-        messageText.text = "Code incorrect.";
+        messageText.text = "Wrong Code!";
         messageText.color = Color.red;
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSecondsRealtime(timeShowText);
         messageText.text = "";
     }
 }

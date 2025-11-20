@@ -10,7 +10,8 @@ public class S_TaskManager : MonoBehaviour
     [Header("Inputs")]
     [SerializeField] private RSE_OnTaskCompleted rse_OnTaskCompleted;
 
-    //[Header("Outputs")]
+    [Header("Outputs")]
+    [SerializeField] private RSE_OnFinishPuzzle RSE_OnFinishPuzzle;
 
     private bool wiringCompleted;
     private bool distributorCompleted;
@@ -37,6 +38,7 @@ public class S_TaskManager : MonoBehaviour
     {
         if(wiringCompleted && distributorCompleted && idCodeCompleted)
         {
+            RSE_OnFinishPuzzle.Call("Task");
             Debug.Log("✔ Tous les mini-jeux sont terminés !");
         }
     }

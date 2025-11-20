@@ -1,27 +1,50 @@
+using System.Collections;
 using UnityEngine;
 
 public class S_FootprintManager : MonoBehaviour
 {
-    //[Header("Settings")]
+    [Header("Settings")]
+    [SerializeField] private float timeShowImage;
 
-    //[Header("References")]
+    [Header("References")]
+    [SerializeField] private GameObject startImage;
+    [SerializeField] private GameObject imageWrongWay;
 
     //[Header("Inputs")]
 
-    //[Header("Outputs")]
+    [Header("Outputs")]
+    [SerializeField] private RSE_OnFinishPuzzle RSE_OnFinishPuzzle;
 
-    public void ShowImage(GameObject nextImage)
+    public void CorrectWay(GameObject nextImage)
     {
         nextImage.SetActive(true);
     }
-    public void HideImage(GameObject nextImage)
+    public void HideImage(GameObject imageToHide)
     {
-        nextImage.SetActive(false); 
+        imageToHide.SetActive(false);
+    }
+    public void WrongWay()
+    {
+         StartCoroutine(ResetPuzzle());
+    }
+
+    IEnumerator ResetPuzzle()
+    {
+        imageWrongWay.SetActive(true);
+        yield return new WaitForSecondsRealtime(timeShowImage);
+        imageWrongWay.SetActive(false);
+        startImage.SetActive(true);
     }
 
     public void PickUp(GameObject pickUp)
     {
         pickUp.SetActive(false);
-        //RSE puzzle done
+        StartCoroutine(PuzzleFinish());
+    }
+
+    IEnumerator PuzzleFinish()
+    {
+        yield return new WaitForSecondsRealtime(1f);
+        RSE_OnFinishPuzzle.Call("Footprint");
     }
 }
