@@ -17,7 +17,9 @@ public class S_IllustationManager : MonoBehaviour
     [SerializeField] private RSE_OnFadeIn rseOnFadeIn;
     [SerializeField] private RSE_OnFadeOut rseOnFadeOut;
     [SerializeField] private RSE_OnGameInputEnabled rseOnGameInputEnabled;
+    [SerializeField] private RSE_OnGamePause rseOnGamePause;
     [SerializeField] private SSO_FadeTime ssoFadeTime;
+
 
     private void OnEnable()
     {
@@ -32,6 +34,8 @@ public class S_IllustationManager : MonoBehaviour
     private void Setup(List<S_ClassIllustation> classIllustration)
     {
         panelIllu.SetActive(true);
+
+        rseOnGamePause.Call(true);
 
         StartCoroutine(PlayIllustrations(classIllustration));
     }
@@ -53,6 +57,7 @@ public class S_IllustationManager : MonoBehaviour
             yield return S_Utils.DelayRealTime(ssoFadeTime.Value);
         }
 
+        rseOnGamePause.Call(false);
         panelIllu.SetActive(false);
         rseOnFadeIn.Call();
         rseOnGameInputEnabled.Call();
