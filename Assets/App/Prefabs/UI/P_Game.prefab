@@ -2402,7 +2402,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animationSlider: 0.4
-  sliderTemperature: {fileID: 0}
+  sliderTemperature: {fileID: 2251430326936392901}
   imageEyeLid: {fileID: 3691546613623147662}
   imageEyeIris: {fileID: 2436970908816992582}
   imageEyeVeins: {fileID: 7536381276671743655}
