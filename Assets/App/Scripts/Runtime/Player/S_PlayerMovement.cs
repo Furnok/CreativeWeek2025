@@ -8,7 +8,7 @@ public class S_PlayerMovement : MonoBehaviour
     [SerializeField] private Rigidbody2D _rb;
     [SerializeField] private SSO_PlayerStats _playerStats;
     [SerializeField] RSO_PlayerSpawn _playerSpawnRso;
-
+    [SerializeField] SpriteRenderer _spriteRenderer;
 
     [Header("Inputs")]
     [SerializeField] private RSE_OnPlayerMoveInput _onPlayerMoveInput;
@@ -45,6 +45,11 @@ public class S_PlayerMovement : MonoBehaviour
     {
         if (!_canMove) return;
         _rb.MovePosition(_rb.position + _direction * _speed * Time.fixedDeltaTime);
+    }
+
+    private void LateUpdate()
+    {
+        _spriteRenderer.sortingOrder = -(int)(transform.position.y * 10);
     }
 
     void CantMove()

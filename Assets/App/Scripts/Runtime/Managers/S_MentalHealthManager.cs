@@ -59,7 +59,11 @@ public class S_MentalHealthManager : MonoBehaviour
 
     private void Update()
     {
-        if(_isLostSanaty || _warmthSourcesInRangeRso.Value != 0) return;
+        if(_isLostSanaty || _warmthSourcesInRangeRso.Value != 0)
+        {
+            UpdateSanityParticles(0f);
+            return;
+        }
 
         float dt = Time.deltaTime;
 
@@ -159,6 +163,7 @@ public class S_MentalHealthManager : MonoBehaviour
 
         var sr = go.AddComponent<SpriteRenderer>();
         sr.sprite = _spriteWarningYellow;
+        sr.sortingLayerName = "Feedback";
         sr.sortingOrder = 100;
 
         _activeObstacles.Add(new MentalObstacleInstance

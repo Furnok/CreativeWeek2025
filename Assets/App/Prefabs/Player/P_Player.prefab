@@ -182,6 +182,7 @@ MonoBehaviour:
   _rb: {fileID: 8613030264555259308}
   _playerStats: {fileID: 11400000, guid: cea7641025dd6dc4fa869ec1ab8595d3, type: 2}
   _playerSpawnRso: {fileID: 11400000, guid: d49f7991df8afdd40a4a1487ef8adcf7, type: 2}
+  _spriteRenderer: {fileID: 6412026073154286687}
   _onPlayerMoveInput: {fileID: 11400000, guid: f81ab021498c6f54aa57af72b9fe7e82, type: 2}
   _onResetAfterMentalReachZeroRse: {fileID: 11400000, guid: ae2d39befbbd88342a967bc7f3b0edfa, type: 2}
   _onMentalHealthReachZeroRse: {fileID: 11400000, guid: c2e65dbfe517eae46bdff4fff87548b8, type: 2}
@@ -461,8 +462,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1481214961
+  m_SortingLayer: 2
   m_SortingOrder: 1
   m_Sprite: {fileID: -4779966369185780850, guid: c599d5a531c269e46b3ded7dd3dd3d74, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -5469,8 +5470,8 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -408974313
+  m_SortingLayer: 3
   m_SortingOrder: 50
   m_RenderMode: 0
   m_MeshDistribution: 0
@@ -5643,7 +5644,7 @@ MonoBehaviour:
   m_Intensity: 0.3
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 00000000
+  m_ApplyToSortingLayers: 00000000e5a5ac8f0f74b6a7
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
