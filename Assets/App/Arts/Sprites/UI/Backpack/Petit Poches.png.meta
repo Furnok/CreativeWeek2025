@@ -1,0 +1,949 @@
+fileFormatVersion: 2
+guid: a8f4d2015a15d314ca2be484d2d7bb86
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7428309652527656036
+    second: Petit Poches_0
+  - first:
+      213: 8063872290198141778
+    second: Petit Poches_1
+  - first:
+      213: -5908542015442303160
+    second: Petit Poches_2
+  - first:
+      213: 4418100282897226013
+    second: Petit Poches_3
+  - first:
+      213: -1748417872163570288
+    second: Petit Poches_4
+  - first:
+      213: 8210262791116617347
+    second: Petit Poches_5
+  - first:
+      213: -2094799310040124739
+    second: Petit Poches_6
+  - first:
+      213: -3666626878255993137
+    second: Petit Poches_7
+  - first:
+      213: -8918132163558571475
+    second: Petit Poches_8
+  - first:
+      213: -3493220334297789789
+    second: Petit Poches_9
+  - first:
+      213: 6217309528992026805
+    second: Petit Poches_10
+  - first:
+      213: -3363088151153723941
+    second: Petit Poches_11
+  - first:
+      213: -5992609421273123564
+    second: Petit Poches_12
+  - first:
+      213: -5808193779796906841
+    second: Petit Poches_13
+  - first:
+      213: 1607466201708060605
+    second: Petit Poches_14
+  - first:
+      213: -6735972273253365601
+    second: Petit Poches_15
+  - first:
+      213: 4584967117668852894
+    second: Petit Poches_16
+  - first:
+      213: 6245788962010721640
+    second: Petit Poches_17
+  - first:
+      213: -6286960933162829752
+    second: Petit Poches_18
+  - first:
+      213: -5956924120603284103
+    second: Petit Poches_19
+  - first:
+      213: 3936822673428867049
+    second: Petit Poches_20
+  - first:
+      213: -7623072247418036479
+    second: Petit Poches_21
+  - first:
+      213: 4868275675214663281
+    second: Petit Poches_22
+  - first:
+      213: -2815564482693328826
+    second: Petit Poches_23
+  - first:
+      213: 4690531613861329723
+    second: Petit Poches_24
+  - first:
+      213: -2591743034557006811
+    second: Petit Poches_25
+  - first:
+      213: 4861076255210279879
+    second: Petit Poches_26
+  - first:
+      213: -3469878674026025927
+    second: Petit Poches_27
+  - first:
+      213: -6481996454723937486
+    second: Petit Poches_28
+  - first:
+      213: 1881660575047761499
+    second: Petit Poches_29
+  - first:
+      213: -8471275596215856389
+    second: Petit Poches_30
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Petit Poches_0
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 1025
+        width: 268
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c93db775ab759e890800000000000000
+      internalID: -7428309652527656036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Petit Poches_1
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 1025
+        width: 305
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25b306baf11a8ef60800000000000000
+      internalID: 8063872290198141778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Petit Poches_2
+      rect:
+        serializedVersion: 2
+        x: 885
+        y: 1186
+        width: 22
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 847471d7754a00ea0800000000000000
+      internalID: -5908542015442303160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Petit Poches_3
+      rect:
+        serializedVersion: 2
+        x: 903
+        y: 1036
+        width: 259
+        height: 261
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1954289cce305d30800000000000000
+      internalID: 4418100282897226013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Petit Poches_4
+      rect:
+        serializedVersion: 2
+        x: 1162
+        y: 1025
+        width: 288
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09dfeb2753f5cb7e0800000000000000
+      internalID: -1748417872163570288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Petit Poches_5
+      rect:
+        serializedVersion: 2
+        x: 1435
+        y: 1023
+        width: 321
+        height: 269
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 386fc193286b0f170800000000000000
+      internalID: 8210262791116617347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Petit Poches_6
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 1024
+        width: 12
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db233515027cde2e0800000000000000
+      internalID: -2094799310040124739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Petit Poches_7
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 1024
+        width: 12
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcee6a5e7468d1dc0800000000000000
+      internalID: -3666626878255993137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Petit Poches_8
+      rect:
+        serializedVersion: 2
+        x: 901
+        y: 1025
+        width: 15
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d220b1b2c0e6c3480800000000000000
+      internalID: -8918132163558571475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Petit Poches_9
+      rect:
+        serializedVersion: 2
+        x: 1121
+        y: 1024
+        width: 12
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3aa42042d96958fc0800000000000000
+      internalID: -3493220334297789789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Petit Poches_10
+      rect:
+        serializedVersion: 2
+        x: 1419
+        y: 1024
+        width: 12
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b0983e6312584650800000000000000
+      internalID: 6217309528992026805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Petit Poches_11
+      rect:
+        serializedVersion: 2
+        x: 1716
+        y: 1022
+        width: 12
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd5382a1529e351d0800000000000000
+      internalID: -3363088151153723941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Petit Poches_12
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 742
+        width: 251
+        height: 269
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4153b574b79f5dca0800000000000000
+      internalID: -5992609421273123564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Petit Poches_13
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 995
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ac6298c786256fa0800000000000000
+      internalID: -5808193779796906841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Petit Poches_14
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 740
+        width: 249
+        height: 272
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbf51456efdde4610800000000000000
+      internalID: 1607466201708060605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Petit Poches_15
+      rect:
+        serializedVersion: 2
+        x: 863
+        y: 740
+        width: 337
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f984adbf7e40582a0800000000000000
+      internalID: -6735972273253365601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Petit Poches_16
+      rect:
+        serializedVersion: 2
+        x: 1202
+        y: 740
+        width: 249
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e94af732d4311af30800000000000000
+      internalID: 4584967117668852894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Petit Poches_17
+      rect:
+        serializedVersion: 2
+        x: 1426
+        y: 997
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86d64b628ff7da650800000000000000
+      internalID: 6245788962010721640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Petit Poches_18
+      rect:
+        serializedVersion: 2
+        x: 1498
+        y: 738
+        width: 275
+        height: 272
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 848321e475a30c8a0800000000000000
+      internalID: -6286960933162829752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Petit Poches_19
+      rect:
+        serializedVersion: 2
+        x: 1439
+        y: 920
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97d2c7dc211c45da0800000000000000
+      internalID: -5956924120603284103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Petit Poches_20
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 927
+        width: 18
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e76e610d5762a630800000000000000
+      internalID: 3936822673428867049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Petit Poches_21
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 900
+        width: 17
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10f52830e28653690800000000000000
+      internalID: -7623072247418036479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Petit Poches_22
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 900
+        width: 70
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17e48d1fee69f8340800000000000000
+      internalID: 4868275675214663281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Petit Poches_23
+      rect:
+        serializedVersion: 2
+        x: 1434
+        y: 905
+        width: 18
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6409bde350b1de8d0800000000000000
+      internalID: -2815564482693328826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Petit Poches_24
+      rect:
+        serializedVersion: 2
+        x: 1486
+        y: 900
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3bb1fbb6ad181140800000000000000
+      internalID: 4690531613861329723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Petit Poches_25
+      rect:
+        serializedVersion: 2
+        x: 1491
+        y: 900
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52cf2241177480cd0800000000000000
+      internalID: -2591743034557006811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Petit Poches_26
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 714
+        width: 12
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c315e95913067340800000000000000
+      internalID: 4861076255210279879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Petit Poches_27
+      rect:
+        serializedVersion: 2
+        x: 827
+        y: 720
+        width: 12
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93ca9fceab388dfc0800000000000000
+      internalID: -3469878674026025927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Petit Poches_28
+      rect:
+        serializedVersion: 2
+        x: 1124
+        y: 720
+        width: 12
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23b96d841925b06a0800000000000000
+      internalID: -6481996454723937486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Petit Poches_29
+      rect:
+        serializedVersion: 2
+        x: 1422
+        y: 720
+        width: 12
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5e3493d2500d1a10800000000000000
+      internalID: 1881660575047761499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Petit Poches_30
+      rect:
+        serializedVersion: 2
+        x: 1719
+        y: 720
+        width: 12
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf25e1d5abbff6a80800000000000000
+      internalID: -8471275596215856389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Petit Poches_0: -7428309652527656036
+      Petit Poches_1: 8063872290198141778
+      Petit Poches_10: 6217309528992026805
+      Petit Poches_11: -3363088151153723941
+      Petit Poches_12: -5992609421273123564
+      Petit Poches_13: -5808193779796906841
+      Petit Poches_14: 1607466201708060605
+      Petit Poches_15: -6735972273253365601
+      Petit Poches_16: 4584967117668852894
+      Petit Poches_17: 6245788962010721640
+      Petit Poches_18: -6286960933162829752
+      Petit Poches_19: -5956924120603284103
+      Petit Poches_2: -5908542015442303160
+      Petit Poches_20: 3936822673428867049
+      Petit Poches_21: -7623072247418036479
+      Petit Poches_22: 4868275675214663281
+      Petit Poches_23: -2815564482693328826
+      Petit Poches_24: 4690531613861329723
+      Petit Poches_25: -2591743034557006811
+      Petit Poches_26: 4861076255210279879
+      Petit Poches_27: -3469878674026025927
+      Petit Poches_28: -6481996454723937486
+      Petit Poches_29: 1881660575047761499
+      Petit Poches_3: 4418100282897226013
+      Petit Poches_30: -8471275596215856389
+      Petit Poches_4: -1748417872163570288
+      Petit Poches_5: 8210262791116617347
+      Petit Poches_6: -2094799310040124739
+      Petit Poches_7: -3666626878255993137
+      Petit Poches_8: -8918132163558571475
+      Petit Poches_9: -3493220334297789789
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

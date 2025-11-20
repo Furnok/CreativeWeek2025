@@ -28,6 +28,9 @@ public class S_UIGame : MonoBehaviour
     [SerializeField] private Sprite spriteEyeVeins;
     [SerializeField] private TextMeshProUGUI _textGlowstickCount;
     [SerializeField] private GameObject contentBackpack;
+    [SerializeField] private GameObject contentBackpackInventory;
+    [SerializeField] private GameObject contentBackpackMap;
+    [SerializeField] private GameObject contentBackpackLogs;
 
     [Header("Inputs")]
     [SerializeField] private RSE_OnStartGameTimer rseOnStartGameTimer;
@@ -58,9 +61,9 @@ public class S_UIGame : MonoBehaviour
     private void OnEnable()
     {
         rseOnStartGameTimer.action += DisplayDay;
-        rseOnPlayerBackpack.action += OpenBackpack;
-        rseOnPlayerMap.action += OpenBackpack;
-        rseOnPlayerLogs.action += OpenBackpack;
+        rseOnPlayerBackpack.action += OpenBackpackInventory;
+        rseOnPlayerMap.action += OpenBackpackMap;
+        rseOnPlayerLogs.action += OpenBackpackLogs;
         rsoCurrentCycle.onValueChanged += Cycle;
         _currentTemperatureRso.onValueChanged += UpdateTemperature;
         _currentMentalHealthRso.onValueChanged += UpdateSanity;
@@ -71,9 +74,9 @@ public class S_UIGame : MonoBehaviour
     private void OnDisable()
     {
         rseOnStartGameTimer.action -= DisplayDay;
-        rseOnPlayerBackpack.action -= OpenBackpack;
-        rseOnPlayerMap.action -= OpenBackpack;
-        rseOnPlayerLogs.action -= OpenBackpack;
+        rseOnPlayerBackpack.action -= OpenBackpackInventory;
+        rseOnPlayerMap.action -= OpenBackpackMap;
+        rseOnPlayerLogs.action -= OpenBackpackLogs;
         rsoCurrentCycle.onValueChanged -= Cycle;
         _currentTemperatureRso.onValueChanged -= UpdateTemperature;
         _currentMentalHealthRso.onValueChanged -= UpdateSanity;
@@ -151,8 +154,90 @@ public class S_UIGame : MonoBehaviour
         _textGlowstickCount.text = $"{count}/{_playerStatsSso.Value.MaxGlowsticks}";
     }
 
-    private void OpenBackpack()
+    private void OpenBackpackInventory()
     {
-        rseOnOpenWindow.Call(contentBackpack);
+        if (!contentBackpack.activeInHierarchy)
+        {
+            rseOnOpenWindow.Call(contentBackpack);
+
+            contentBackpackInventory.SetActive(true);
+            contentBackpackMap.SetActive(false);
+            contentBackpackLogs.SetActive(false);
+        }
+        else
+        {
+            if (!contentBackpackInventory.activeInHierarchy)
+            {
+                contentBackpackInventory.SetActive(true);
+                contentBackpackMap.SetActive(false);
+                contentBackpackLogs.SetActive(false);
+            }
+            else
+            {
+                rseOnOpenWindow.Call(contentBackpack);
+
+                contentBackpackInventory.SetActive(false);
+                contentBackpackMap.SetActive(false);
+                contentBackpackLogs.SetActive(false);
+            }
+        }
+    }
+
+    private void OpenBackpackMap()
+    {
+        if (!contentBackpack.activeInHierarchy)
+        {
+            rseOnOpenWindow.Call(contentBackpack);
+
+            contentBackpackInventory.SetActive(false);
+            contentBackpackMap.SetActive(true);
+            contentBackpackLogs.SetActive(false);
+        }
+        else
+        {
+            if (!contentBackpackMap.activeInHierarchy)
+            {
+                contentBackpackInventory.SetActive(false);
+                contentBackpackMap.SetActive(true);
+                contentBackpackLogs.SetActive(false);
+            }
+            else
+            {
+                rseOnOpenWindow.Call(contentBackpack);
+
+                contentBackpackInventory.SetActive(false);
+                contentBackpackMap.SetActive(false);
+                contentBackpackLogs.SetActive(false);
+            }
+        }
+    }
+
+    private void OpenBackpackLogs()
+    {
+        if (!contentBackpack.activeInHierarchy)
+        {
+            rseOnOpenWindow.Call(contentBackpack);
+
+            contentBackpackInventory.SetActive(false);
+            contentBackpackMap.SetActive(false);
+            contentBackpackLogs.SetActive(true);
+        }
+        else
+        {
+            if (!contentBackpackLogs.activeInHierarchy)
+            {
+                contentBackpackInventory.SetActive(false);
+                contentBackpackMap.SetActive(false);
+                contentBackpackLogs.SetActive(true);
+            }
+            else
+            {
+                rseOnOpenWindow.Call(contentBackpack);
+
+                contentBackpackInventory.SetActive(false);
+                contentBackpackMap.SetActive(false);
+                contentBackpackLogs.SetActive(false);
+            }
+        }
     }
 }

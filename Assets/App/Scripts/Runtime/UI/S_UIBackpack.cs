@@ -5,7 +5,10 @@ public class S_UIBackpack : MonoBehaviour
 {
     //[Header("Settings")]
 
-    //[Header("References")]
+    [Header("References")]
+    [SerializeField] private GameObject contentBackpackInventory;
+    [SerializeField] private GameObject contentBackpackMap;
+    [SerializeField] private GameObject contentBackpackLogs;
 
     [Header("Inputs")]
     [SerializeField] private RSE_OnPlayerPause rseOnPlayerPause;
@@ -51,6 +54,30 @@ public class S_UIBackpack : MonoBehaviour
             isClosing = true;
 
             rseOnCloseWindow.Call(gameObject);
+            contentBackpackInventory.SetActive(false);
+            contentBackpackMap.SetActive(false);
+            contentBackpackLogs.SetActive(false);
         }
+    }
+
+    public void OpenBackpackInventory()
+    {
+        contentBackpackInventory.SetActive(true);
+        contentBackpackMap.SetActive(false);
+        contentBackpackLogs.SetActive(false);
+    }
+
+    public void OpenBackpackMap()
+    {
+        contentBackpackInventory.SetActive(false);
+        contentBackpackMap.SetActive(true);
+        contentBackpackLogs.SetActive(false);
+    }
+
+    public void OpenBackpackLogs()
+    {
+        contentBackpackInventory.SetActive(false);
+        contentBackpackMap.SetActive(false);
+        contentBackpackLogs.SetActive(true);
     }
 }
