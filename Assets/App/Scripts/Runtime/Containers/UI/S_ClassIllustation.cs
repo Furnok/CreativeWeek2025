@@ -10,4 +10,7 @@ public class S_ClassIllustation
 
     [Header("Text")]
     public string text = "";
+
+    [Header("Time")]
+    public float time = 0;
 }
