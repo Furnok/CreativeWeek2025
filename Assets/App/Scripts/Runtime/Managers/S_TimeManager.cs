@@ -15,30 +15,25 @@ public class S_TimeManager : MonoBehaviour
     {
         baseFixedDelta = Time.fixedDeltaTime;
         gameTimeScale = 1f;
-        ApplyTimeScale();
+        ApplyTimeScale(false);
     }
 
     private void OnEnable()
     {
-        rseOnGamePause.action += PauseValueChange;
+        rseOnGamePause.action += ApplyTimeScale;
     }
 
     private void OnDisable()
     {
-        rseOnGamePause.action -= PauseValueChange;
+        rseOnGamePause.action -= ApplyTimeScale;
 
-        rsoGameInPause.Value = false;
-        ApplyTimeScale();
+        ApplyTimeScale(false);
     }
 
-    private void PauseValueChange(bool newPauseState)
+    private void ApplyTimeScale(bool newPauseState)
     {
-        ApplyTimeScale();
-    }
-
-    private void ApplyTimeScale()
-    {
-        float effective = rsoGameInPause.Value ? 0f : gameTimeScale;
+        rsoGameInPause.Value = newPauseState ? true : false;
+        float effective = newPauseState ? 0f : gameTimeScale;
         Time.timeScale = effective;
         Time.fixedDeltaTime = baseFixedDelta * Mathf.Max(effective, 0.01f);
     }
