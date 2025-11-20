@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -50,7 +51,7 @@ public class S_IllustationManager : MonoBehaviour
 
             text.text = illu.text;
 
-            if (illu.text != null || illu.text != "")
+            if (!string.IsNullOrWhiteSpace(illu.text))
             {
                 panelText.SetActive(true);
             }
