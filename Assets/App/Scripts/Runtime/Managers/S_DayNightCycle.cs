@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class S_DayNightCycle : MonoBehaviour
 {
@@ -7,6 +8,14 @@ public class S_DayNightCycle : MonoBehaviour
     [SerializeField] Color _nightCycleColor;
     [SerializeField] Color _originalColor;
     [SerializeField, Range(0f, 5f)] float _transitionDurationPercent = 0.2f;
+
+    [Header("Global Light Settings")]
+    [SerializeField] Light2D _globalLight2D;
+    [SerializeField] float _dayGlobalLightIntensity = 1f;
+    [SerializeField] float _nightGlobalLightIntensity = 0.2f;
+    [SerializeField] Color _dayGlobalLightColor;
+    [SerializeField] Color _nightGlobalLightColor;
+
 
     [Header("References")]
     [SerializeField] SSO_Game_Settings _gameSettingsSso;
@@ -104,14 +113,23 @@ public class S_DayNightCycle : MonoBehaviour
         }
 
         float phase01 = Mathf.Clamp01(_currentPhaseTime / Mathf.Max(_currentPhaseDuration, 0.0001f));
+        var timeOfDay = _currentCycle.Value;
 
-        Color targetColor = ComputeCurrentColor(phase01, _currentCycle.Value);
+        Color fogColor = ComputeCurrentColor(phase01, timeOfDay, _dayCycleColor, _nightCycleColor);
+        _onChangeFogColorRse.Call(fogColor);
 
-        _onChangeFogColorRse.Call(targetColor);
+        if (_globalLight2D != null)
+        {
+            Color lightColor = ComputeCurrentColor(phase01, timeOfDay, _dayGlobalLightColor, _nightGlobalLightColor);
+            float lightIntensity = ComputeCurrentFloat(phase01, timeOfDay, _dayGlobalLightIntensity, _nightGlobalLightIntensity);
+
+            _globalLight2D.color = lightColor;
+            _globalLight2D.intensity = lightIntensity;
+        }
 
     }
 
-    Color ComputeCurrentColor(float phase01, TimeOfDay timeOfDay)
+    Color ComputeCurrentColor(float phase01, TimeOfDay timeOfDay, Color dayColor, Color nightColor)
     {
         float startTransition = 1f - _transitionDurationPercent;
 
@@ -120,20 +138,46 @@ public class S_DayNightCycle : MonoBehaviour
             if (phase01 >= startTransition)
             {
                 float t = (phase01 - startTransition) / _transitionDurationPercent;
-                return Color.Lerp(_dayCycleColor, _nightCycleColor, t);
+                return Color.Lerp(dayColor, nightColor, t);
             }
 
-            return _dayCycleColor;
+            return dayColor;
         }
         else
         {
             if (phase01 >= startTransition)
             {
                 float t = (phase01 - startTransition) / _transitionDurationPercent;
-                return Color.Lerp(_nightCycleColor, _dayCycleColor, t);
+                return Color.Lerp(nightColor, dayColor, t);
             }
 
-            return _nightCycleColor;
+            return nightColor;
+        }
+    }
+
+    float ComputeCurrentFloat(float phase01, TimeOfDay timeOfDay, float dayValue, float nightValue)
+    {
+        float startTransition = 1f - _transitionDurationPercent;
+
+        if (timeOfDay == TimeOfDay.Day)
+        {
+            if (phase01 >= startTransition)
+            {
+                float t = (phase01 - startTransition) / _transitionDurationPercent;
+                return Mathf.Lerp(dayValue, nightValue, t);
+            }
+
+            return dayValue;
+        }
+        else
+        {
+            if (phase01 >= startTransition)
+            {
+                float t = (phase01 - startTransition) / _transitionDurationPercent;
+                return Mathf.Lerp(nightValue, dayValue, t);
+            }
+
+            return nightValue;
         }
     }
 }
