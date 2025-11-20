@@ -130,7 +130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _dayCycleColor: {r: 0.5309719, g: 0.69656557, b: 0.7169812, a: 0.8666667}
-  _nightCycleColor: {r: 0.19326274, g: 0.2781249, b: 0.4056604, a: 0.8666667}
+  _nightCycleColor: {r: 0.15859735, g: 0.23234837, b: 0.33962262, a: 0.91764706}
   _originalColor: {r: 0.43137255, g: 0.49019608, b: 0.6509804, a: 0}
   _transitionDurationPercent: 0.2
   _globalLight2D: {fileID: 7336583153944297435}
