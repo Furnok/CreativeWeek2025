@@ -14,6 +14,8 @@ public class S_InteractableObejctTest : MonoBehaviour, I_Interactable
 
     public int Priority => _priority;
     public Transform Transform => transform;
+    public bool IsInteractable { get; set; } = true;
+
 
     public void Interact()
     {

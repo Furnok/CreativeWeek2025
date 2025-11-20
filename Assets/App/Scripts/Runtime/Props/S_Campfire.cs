@@ -22,6 +22,8 @@ public class S_Campfire : MonoBehaviour, I_Interactable
 
     public int Priority => _priority;
     public Transform Transform => transform;
+    public bool IsInteractable => _canInteract;
+
 
     public void Interact()
     {

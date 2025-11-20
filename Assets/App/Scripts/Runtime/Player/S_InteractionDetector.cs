@@ -91,6 +91,7 @@ public class S_InteractionDetector : MonoBehaviour
         foreach (var i in _interactablesInRange)
         {
             if (i == null) continue;
+            if (!i.IsInteractable) continue;
 
             float distance = Vector2.Distance(transform.position, i.Transform.position);
             //if (distance > _detectionCollider.radius) continue;
