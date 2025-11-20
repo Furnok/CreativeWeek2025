@@ -50,7 +50,7 @@ public class S_IllustationManager : MonoBehaviour
 
             text.text = illu.text;
 
-            if (illu.text != null)
+            if (illu.text != null || illu.text != "")
             {
                 panelText.SetActive(true);
             }
