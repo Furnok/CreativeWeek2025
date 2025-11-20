@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 8262d5c80dfff764885f559688d285c3
+guid: ca5c43de85959fa4f8c3c9604de1a5f2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5011790067224469350
-    second: ui sanity iris3 scared_0
+      213: 9016969200258206110
+    second: ui sanity iris2 spooked_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -72,7 +72,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 256
+    maxTextureSize: 64
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -126,10 +126,10 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ui sanity iris3 scared_0
+      name: ui sanity iris2 spooked_0
       rect:
         serializedVersion: 2
-        x: 85
+        x: 84
         y: 49
         width: 63
         height: 63
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 66fdeb533847d8540800000000000000
-      internalID: 5011790067224469350
+      spriteID: e994704b6b5b22d70800000000000000
+      internalID: 9016969200258206110
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ui sanity iris3 scared_0: 5011790067224469350
+      ui sanity iris2 spooked_0: 9016969200258206110
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

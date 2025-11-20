@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: af4d6950456309d489417fc66623d9db
+guid: 12bdad8dbb1fce54395f1caa240bd157
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1832022934201817255
-    second: ui sanity iris1 sane_0
+      213: -4570153536982545689
+    second: Rope_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -48,7 +48,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 1
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -72,7 +72,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 256
+    maxTextureSize: 512
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ui sanity iris1 sane_0
+      name: Rope_0
       rect:
         serializedVersion: 2
-        x: 78
-        y: 44
-        width: 73
-        height: 75
+        x: 0
+        y: 0
+        width: 341
+        height: 397
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 957288a09d85396e0800000000000000
-      internalID: -1832022934201817255
+      spriteID: 7ea0923629d8390c0800000000000000
+      internalID: -4570153536982545689
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ui sanity iris1 sane_0: -1832022934201817255
+      Rope_0: -4570153536982545689
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
