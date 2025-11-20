@@ -52,7 +52,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Carte",
+                    "name": "Map",
                     "type": "Button",
                     "id": "7ea22222-6294-4096-bf58-e2f943158441",
                     "expectedControlType": "",
@@ -221,7 +221,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
-                    "action": "Carte",
+                    "action": "Map",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },

@@ -22,7 +22,10 @@ public class S_InputsManager : MonoBehaviour
     [SerializeField] private RSE_OnGameInputEnabled rseOnGameActionInputEnabled;
     [SerializeField] private RSE_OnUIInputEnabled rseOnUiActionInputEnabled;
     [SerializeField] private RSE_OnInputDisabled rseOnInputDisabled;
-    [SerializeField] RSE_OnPlaceGlowStickInput _onPlaceGlowStickInputRse;
+    [SerializeField] private RSE_OnPlaceGlowStickInput _onPlaceGlowStickInputRse;
+    [SerializeField] private RSE_OnPlayerBackpack _onPlayerBackpack;
+    [SerializeField] private RSE_OnPlayerMap _onPlayerMap;
+    [SerializeField] private RSE_OnPlayerLogs _onPlayerLogs;
 
     private IA_InputPlayer iaInputPlayer = null;
     private bool initialized = false;
@@ -105,9 +108,24 @@ public class S_InputsManager : MonoBehaviour
         rseOnPlayerPause.Call();
     }
 
-    void OnPlaceGlowStickInputPerformed(InputAction.CallbackContext ctx)
+    private void OnPlaceGlowStickInputPerformed(InputAction.CallbackContext ctx)
     {
         _onPlaceGlowStickInputRse.Call();
+    }
+
+    private void OnBackpack(InputAction.CallbackContext ctx)
+    {
+        _onPlayerBackpack.Call();
+    }
+
+    private void OnMap(InputAction.CallbackContext ctx)
+    {
+        _onPlayerMap.Call();
+    }
+
+    private void OnLogs(InputAction.CallbackContext ctx)
+    {
+        _onPlayerLogs.Call();
     }
 
     #endregion
@@ -129,6 +147,9 @@ public class S_InputsManager : MonoBehaviour
         game.Interact.performed += OnInteractInputPerformed;
         game.Pause.performed += OnPauseGameInput;
         game.PlaceGlowStick.performed += OnPlaceGlowStickInputPerformed;
+        game.Backpack.performed += OnBackpack;
+        game.Map.performed += OnMap;
+        game.Logs.performed += OnLogs;
     }
 
     private void DisableGameInputs()
@@ -140,6 +161,9 @@ public class S_InputsManager : MonoBehaviour
         game.Interact.performed -= OnInteractInputPerformed;
         game.Pause.performed -= OnPauseGameInput;
         game.PlaceGlowStick.performed -= OnPlaceGlowStickInputPerformed;
+        game.Backpack.performed -= OnBackpack;
+        game.Map.performed -= OnMap;
+        game.Logs.performed -= OnLogs;
     }
 
     private void EnableUIInputs()

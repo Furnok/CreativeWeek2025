@@ -88,3 +88,6 @@ MonoBehaviour:
   rseOnUiActionInputEnabled: {fileID: 11400000, guid: f8900a3c295c93f478f8289c92da16ca, type: 2}
   rseOnInputDisabled: {fileID: 11400000, guid: e7fce25ce14aa104594353e4f764d977, type: 2}
   _onPlaceGlowStickInputRse: {fileID: 11400000, guid: 7c4a160b9990f1c43b339a615b8a0449, type: 2}
+  _onPlayerBackpack: {fileID: 11400000, guid: cdc3fd5e908c6b7499a4b663844d886d, type: 2}
+  _onPlayerMap: {fileID: 11400000, guid: 69c680b0f99d3a64f9e62e09d854f372, type: 2}
+  _onPlayerLogs: {fileID: 11400000, guid: eee14a85c0f62bc4685adbe94b324889, type: 2}

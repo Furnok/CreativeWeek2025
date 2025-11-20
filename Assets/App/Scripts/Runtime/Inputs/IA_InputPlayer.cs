@@ -138,7 +138,7 @@ public partial class @IA_InputPlayer: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Carte"",
+                    ""name"": ""Map"",
                     ""type"": ""Button"",
                     ""id"": ""7ea22222-6294-4096-bf58-e2f943158441"",
                     ""expectedControlType"": """",
@@ -307,7 +307,7 @@ public partial class @IA_InputPlayer: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";Keyboard&Mouse"",
-                    ""action"": ""Carte"",
+                    ""action"": ""Map"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -423,7 +423,7 @@ public partial class @IA_InputPlayer: IInputActionCollection2, IDisposable
         m_Player_Pause = m_Player.FindAction("Pause", throwIfNotFound: true);
         m_Player_PlaceGlowStick = m_Player.FindAction("Place Glow Stick", throwIfNotFound: true);
         m_Player_Backpack = m_Player.FindAction("Backpack", throwIfNotFound: true);
-        m_Player_Carte = m_Player.FindAction("Carte", throwIfNotFound: true);
+        m_Player_Map = m_Player.FindAction("Map", throwIfNotFound: true);
         m_Player_Logs = m_Player.FindAction("Logs", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
@@ -514,7 +514,7 @@ public partial class @IA_InputPlayer: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Pause;
     private readonly InputAction m_Player_PlaceGlowStick;
     private readonly InputAction m_Player_Backpack;
-    private readonly InputAction m_Player_Carte;
+    private readonly InputAction m_Player_Map;
     private readonly InputAction m_Player_Logs;
     /// <summary>
     /// Provides access to input actions defined in input action map "Player".
@@ -548,9 +548,9 @@ public partial class @IA_InputPlayer: IInputActionCollection2, IDisposable
         /// </summary>
         public InputAction @Backpack => m_Wrapper.m_Player_Backpack;
         /// <summary>
-        /// Provides access to the underlying input action "Player/Carte".
+        /// Provides access to the underlying input action "Player/Map".
         /// </summary>
-        public InputAction @Carte => m_Wrapper.m_Player_Carte;
+        public InputAction @Map => m_Wrapper.m_Player_Map;
         /// <summary>
         /// Provides access to the underlying input action "Player/Logs".
         /// </summary>
@@ -596,9 +596,9 @@ public partial class @IA_InputPlayer: IInputActionCollection2, IDisposable
             @Backpack.started += instance.OnBackpack;
             @Backpack.performed += instance.OnBackpack;
             @Backpack.canceled += instance.OnBackpack;
-            @Carte.started += instance.OnCarte;
-            @Carte.performed += instance.OnCarte;
-            @Carte.canceled += instance.OnCarte;
+            @Map.started += instance.OnMap;
+            @Map.performed += instance.OnMap;
+            @Map.canceled += instance.OnMap;
             @Logs.started += instance.OnLogs;
             @Logs.performed += instance.OnLogs;
             @Logs.canceled += instance.OnLogs;
@@ -628,9 +628,9 @@ public partial class @IA_InputPlayer: IInputActionCollection2, IDisposable
             @Backpack.started -= instance.OnBackpack;
             @Backpack.performed -= instance.OnBackpack;
             @Backpack.canceled -= instance.OnBackpack;
-            @Carte.started -= instance.OnCarte;
-            @Carte.performed -= instance.OnCarte;
-            @Carte.canceled -= instance.OnCarte;
+            @Map.started -= instance.OnMap;
+            @Map.performed -= instance.OnMap;
+            @Map.canceled -= instance.OnMap;
             @Logs.started -= instance.OnLogs;
             @Logs.performed -= instance.OnLogs;
             @Logs.canceled -= instance.OnLogs;
@@ -871,12 +871,12 @@ public partial class @IA_InputPlayer: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnBackpack(InputAction.CallbackContext context);
         /// <summary>
-        /// Method invoked when associated input action "Carte" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// Method invoked when associated input action "Map" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnCarte(InputAction.CallbackContext context);
+        void OnMap(InputAction.CallbackContext context);
         /// <summary>
         /// Method invoked when associated input action "Logs" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
