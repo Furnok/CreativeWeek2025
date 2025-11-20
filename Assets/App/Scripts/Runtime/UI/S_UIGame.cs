@@ -1,14 +1,24 @@
 using DG.Tweening;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class S_UIGame : MonoBehaviour
 {
     [Header("Settings")]
+    [SerializeField] private int day;
     [SerializeField] private float animationSlider;
+    [SerializeField] private float timeFade;
+    [SerializeField] private float transition;
+    [SerializeField] private Color32 colorOn;
+    [SerializeField] private Color32 colorOff;
 
     [Header("References")]
+    [SerializeField] private GameObject panelDay;
+    [SerializeField] private Image sun;
+    [SerializeField] private Image moon;
+    [SerializeField] private TextMeshProUGUI textDay;
     [SerializeField] private Slider sliderTemperature;
     [SerializeField] private Image imageEyeLid;
     [SerializeField] private Image imageEyeIris;
@@ -16,26 +26,41 @@ public class S_UIGame : MonoBehaviour
     [SerializeField] private List<Sprite> spriteEyeLids;
     [SerializeField] private List<Sprite> spriteEyeIris;
     [SerializeField] private Sprite spriteEyeVeins;
-    [SerializeField] RSO_CurrentTemperature _currentTemperatureRso;
-    [SerializeField] RSO_CurrentMentalHealth _currentMentalHealthRso;
 
+    [Header("Inputs")]
+    [SerializeField] private RSO_CurrentCycle rsoCurrentCycle;
+    [SerializeField] private RSO_CurrentTemperature _currentTemperatureRso;
+    [SerializeField] private RSO_CurrentMentalHealth _currentMentalHealthRso;
+    [SerializeField] private RSE_OnStartGameTimer rseOnStartGameTimer;
 
-    private Tween sanityTween = null;
     private Tween temperatureTween = null;
+    private Tween colorTween = null;
+    private Tween colorTween2 = null;
+    private bool timerOn = false;
+
+    private void Awake()
+    {
+        panelDay.gameObject.SetActive(false);
+        textDay.text = "Day: " + day.ToString();
+        Cycle(rsoCurrentCycle.Value);
+    }
 
     private void OnEnable()
     {
+        rseOnStartGameTimer.action += DisplayDay;
+        rsoCurrentCycle.onValueChanged += Cycle;
         _currentTemperatureRso.onValueChanged += UpdateTemperature;
         _currentMentalHealthRso.onValueChanged += UpdateSanity;
     }
 
     private void OnDisable()
     {
-        sanityTween?.Kill();
-        temperatureTween?.Kill();
-
+        rseOnStartGameTimer.action -= DisplayDay;
+        rsoCurrentCycle.onValueChanged -= Cycle;
         _currentTemperatureRso.onValueChanged -= UpdateTemperature;
         _currentMentalHealthRso.onValueChanged -= UpdateSanity;
+
+        temperatureTween?.Kill();
     }
 
     private void UpdateSanity(float sanity)
@@ -50,15 +75,10 @@ public class S_UIGame : MonoBehaviour
         if (spriteIndex == 0)
         {
             imageEyeVeins.gameObject.SetActive(true);
-            //imageEyeVeins.sprite = spriteEyeVeins;
-            //imageEyeVeins.color = new Color(1, 1, 1, 1);
         }
         else
         {
             imageEyeVeins.gameObject.SetActive(false);
-
-            //imageEyeVeins.sprite = null;
-            //imageEyeVeins.color = new Color(1, 1, 1, 0);
         }
     }
 
@@ -67,5 +87,38 @@ public class S_UIGame : MonoBehaviour
         temperatureTween?.Kill();
 
         temperatureTween = sliderTemperature.DOValue(temperature, animationSlider).SetEase(Ease.OutCubic);
+    }
+
+    private void DisplayDay()
+    {
+        panelDay.gameObject.SetActive(true);
+
+        panelDay.GetComponent<CanvasGroup>().alpha = 0f;
+        panelDay.GetComponent<CanvasGroup>().DOFade(1f, timeFade).SetEase(Ease.Linear);
+
+        timerOn = true;
+    }
+
+    private void Cycle(TimeOfDay timeOfDay)
+    {
+        colorTween?.Kill();
+        colorTween2?.Kill();
+
+        if (timeOfDay == TimeOfDay.Day)
+        {
+            if (timerOn)
+            {
+                day += 1;
+                textDay.text = "Day: " + day.ToString();
+            }
+
+            colorTween = sun.DOColor(colorOn, transition).SetEase(Ease.Linear);
+            colorTween2 = moon.DOColor(colorOff, transition).SetEase(Ease.Linear);
+        }
+        else if (timeOfDay == TimeOfDay.Night)
+        {
+            colorTween = sun.DOColor(colorOff, transition).SetEase(Ease.Linear);
+            colorTween2 = moon.DOColor(colorOn, transition).SetEase(Ease.Linear);
+        }
     }
 }
