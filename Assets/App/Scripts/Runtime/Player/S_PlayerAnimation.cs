@@ -30,7 +30,18 @@ public class S_PlayerAnimation : MonoBehaviour
     void UpdateAnimation(Vector2 moveInput)
     {
         bool isMoving = moveInput.magnitude > 0.1f;
-        _animator.SetBool("isMoving", isMoving);
+
+        if (moveInput.y > 0.1f)
+        {
+            _animator.SetBool("isGoingTop", true);
+            _animator.SetBool("isMoving", isMoving);
+        }
+        else
+        {
+            _animator.SetBool("isGoingTop", false);
+            _animator.SetBool("isMoving", isMoving);
+        }
+
         if (moveInput.x > 0.1f)
         {
             _playerSp.flipX = true;
