@@ -11,24 +11,33 @@ public class S_PlayerAnimation : MonoBehaviour
     [Header("Inputs")]
     [SerializeField] RSE_OnPlayerMoveInput _onPlayerMoveInput;
     [SerializeField] RSE_OnMentalHealthReachZero _onMentalHealthReachZeroRse;
+    [SerializeField] RSE_OnResetAfterMentalReachZero _onResetAfterMentalReachZeroRse;
 
 
     //[Header("Outputs")]
+
+    bool _canAnim = true;
 
     void OnEnable()
     {
         _onPlayerMoveInput.action += UpdateAnimation;
         _onMentalHealthReachZeroRse.action += StopAnimation;
+        _onResetAfterMentalReachZeroRse.action += ResetAnimation;
+
+        _canAnim = true;
     }
 
     void OnDisable()
     {
         _onPlayerMoveInput.action -= UpdateAnimation;
         _onMentalHealthReachZeroRse.action -= StopAnimation;
+        _onResetAfterMentalReachZeroRse.action -= ResetAnimation;
     }
 
     void UpdateAnimation(Vector2 moveInput)
     {
+        if (!_canAnim) return;
+
         bool isMoving = moveInput.magnitude > 0.1f;
 
         if (moveInput.y > 0.1f)
@@ -54,6 +63,13 @@ public class S_PlayerAnimation : MonoBehaviour
 
     void StopAnimation()
     {
+        _canAnim = false;
         _animator.SetBool("isMoving", false);
+        _animator.SetBool("isGoingTop", false);
+    }
+
+    void ResetAnimation()
+    {
+        _canAnim = true;
     }
 }

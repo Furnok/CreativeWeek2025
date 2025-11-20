@@ -44,8 +44,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0365d88fa07707e4682d2cee641acec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _resetDelayAfterMentalHealthReachZero: 3
+  _delayWhenGardinaSpriritCome: 2
   _initialSapwnPos: {x: 0, y: 0}
+  _illuMentalReachZero:
+  - image: {fileID: -727564525578123873, guid: cc619c1e8a3b09d4e87155fee8d4c4e0, type: 3}
+    text: 
+    time: 5
   _playerSpawnRso: {fileID: 11400000, guid: d49f7991df8afdd40a4a1487ef8adcf7, type: 2}
+  _fadeTimeSso: {fileID: 11400000, guid: 54ad5b3f2ef378245a4626d5c4ce6d75, type: 2}
   _onMentalHealthReachZeroRse: {fileID: 11400000, guid: c2e65dbfe517eae46bdff4fff87548b8, type: 2}
   _onResetAfterMentalReachZeroRse: {fileID: 11400000, guid: ae2d39befbbd88342a967bc7f3b0edfa, type: 2}
+  _onIllustrationRse: {fileID: 11400000, guid: 7695e8361d348e34ea1665af922e9783, type: 2}
+  _onFadeOutRse: {fileID: 11400000, guid: 04361f481971a204cbdc1bd2d01954af, type: 2}
+  _onFadeInRse: {fileID: 11400000, guid: e989d408f82cc974e843502043f35935, type: 2}

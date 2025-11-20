@@ -583,6 +583,7 @@ MonoBehaviour:
   _playerSp: {fileID: 6412026073154286687}
   _onPlayerMoveInput: {fileID: 11400000, guid: f81ab021498c6f54aa57af72b9fe7e82, type: 2}
   _onMentalHealthReachZeroRse: {fileID: 11400000, guid: c2e65dbfe517eae46bdff4fff87548b8, type: 2}
+  _onResetAfterMentalReachZeroRse: {fileID: 11400000, guid: ae2d39befbbd88342a967bc7f3b0edfa, type: 2}
 --- !u!1 &6067650364411296434
 GameObject:
   m_ObjectHideFlags: 0
