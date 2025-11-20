@@ -95,7 +95,6 @@ public class S_WindowManager : MonoBehaviour
 
             rseOnUIInputEnabled.Call();
             OpenWindow(menuWindow);
-            rsoGameInPause.Value = true;
             rseOnGamePause.Call(true);
         }
     }

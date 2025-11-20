@@ -62,7 +62,6 @@ public class S_UIMenu : MonoBehaviour
         rseOnGameInputEnabled.Call();
         rseOnCloseAllWindows.Call();
         rseOnResetFocus.Call();
-        rsoGameInPause.Value = false;
         rseOnGamePause.Call(false);
     }
 
