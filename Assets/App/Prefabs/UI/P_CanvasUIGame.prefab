@@ -348,10 +348,10 @@ MonoBehaviour:
   test:
   - image: {fileID: -4375519713581102929, guid: 34832ed75e443aa4083832c5f4875998, type: 3}
     text: Test 1
-    time: 0
+    time: 5
   - image: {fileID: -169051582588651009, guid: 3192f1585cbe19b4294758d2661f0a60, type: 3}
     text: Test 2
-    time: 0
+    time: 5
   - image: {fileID: -3657595496625566089, guid: 0fc1d38bba210b1499318ad2ff9cd388, type: 3}
     text: Test 3
     time: 5
