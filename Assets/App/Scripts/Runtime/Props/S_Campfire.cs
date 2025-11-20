@@ -30,8 +30,7 @@ public class S_Campfire : MonoBehaviour, I_Interactable
         if (!_canInteract) return;
         _canInteract = false;
 
-        //_spCampfire.sprite = _spriteCampfireLit; // to add lit sprite
-        _spCampfire.color = Color.red; //testing
+        _spCampfire.sprite = _spriteCampfireLit;
 
         _light2D.pointLightOuterRadius = 2.5f;
         _light2D.pointLightInnerRadius = 1.0f;
