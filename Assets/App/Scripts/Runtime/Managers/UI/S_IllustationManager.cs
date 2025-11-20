@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,8 +8,9 @@ public class S_IllustationManager : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private GameObject panelIllu;
-
+    [SerializeField] private GameObject panelText;
     [SerializeField] private Image image;
+    [SerializeField] private TextMeshProUGUI text;
 
     [Header("Inputs")]
     [SerializeField] private RSE_OnIllustration rseOnIllustration;
@@ -34,6 +36,7 @@ public class S_IllustationManager : MonoBehaviour
     private void Setup(List<S_ClassIllustation> classIllustration)
     {
         panelIllu.SetActive(true);
+        panelText.SetActive(true);
 
         rseOnGamePause.Call(true);
 
@@ -48,6 +51,8 @@ public class S_IllustationManager : MonoBehaviour
 
             image.sprite = illu.image;
 
+            text.text = illu.text;
+
             rseOnFadeIn.Call();
 
             yield return S_Utils.DelayRealTime(illu.time);
@@ -59,6 +64,7 @@ public class S_IllustationManager : MonoBehaviour
 
         rseOnGamePause.Call(false);
         panelIllu.SetActive(false);
+        panelText.SetActive(false);
         rseOnFadeIn.Call();
         rseOnGameInputEnabled.Call();
     }
