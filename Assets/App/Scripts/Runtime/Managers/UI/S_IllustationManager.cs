@@ -47,11 +47,11 @@ public class S_IllustationManager : MonoBehaviour
     {
         foreach (var illu in list)
         {
-            yield return S_Utils.DelayRealTime(0.4f);
-
             image.sprite = illu.image;
 
             text.text = illu.text;
+
+            yield return S_Utils.DelayRealTime(0.4f);
 
             rseOnFadeIn.Call();
 
