@@ -55,7 +55,7 @@ Canvas:
   m_GameObject: {fileID: 45422006528313331}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -345,9 +345,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fd4951e99fc1ea4897d635f1dfec968, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  test:
+  - image: {fileID: -4375519713581102929, guid: 34832ed75e443aa4083832c5f4875998, type: 3}
+    text: Test 1
+    time: 0
+  - image: {fileID: -169051582588651009, guid: 3192f1585cbe19b4294758d2661f0a60, type: 3}
+    text: Test 2
+    time: 0
+  - image: {fileID: -3657595496625566089, guid: 0fc1d38bba210b1499318ad2ff9cd388, type: 3}
+    text: Test 3
+    time: 5
+  - image: {fileID: -732925332027724018, guid: c6a038e548a2d0049951a2e9a726af83, type: 3}
+    text: Test 4
+    time: 5
+  - image: {fileID: 3696266164893778045, guid: 5d73258598b3cd24294af417d81df8c4, type: 3}
+    text: Test 5
+    time: 5
   panelIllu: {fileID: 3984468827392345557}
   image: {fileID: 2031942295582262124}
   rseOnIllustration: {fileID: 11400000, guid: 7695e8361d348e34ea1665af922e9783, type: 2}
+  rseOnFadeIn: {fileID: 11400000, guid: e989d408f82cc974e843502043f35935, type: 2}
+  rseOnFadeOut: {fileID: 11400000, guid: 04361f481971a204cbdc1bd2d01954af, type: 2}
+  rseOnGameInputEnabled: {fileID: 11400000, guid: 04e33dd8947e9f040ba0b26e21d19169, type: 2}
+  ssoFadeTime: {fileID: 11400000, guid: 54ad5b3f2ef378245a4626d5c4ce6d75, type: 2}
 --- !u!1 &3984468827392345557
 GameObject:
   m_ObjectHideFlags: 0
@@ -365,7 +385,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7482770403423217637
 RectTransform:
   m_ObjectHideFlags: 0

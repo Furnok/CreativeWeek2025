@@ -3,7 +3,8 @@ using UnityEngine.InputSystem;
 
 public class S_InputsManager : MonoBehaviour
 {
-    //[Header("Settings")]
+    [Header("Settings")]
+    [SerializeField] private bool isTuto;
 
     [Header("References")]
     [SerializeField] private PlayerInput playerInput;
@@ -52,8 +53,11 @@ public class S_InputsManager : MonoBehaviour
     {
         if (!initialized) return;
 
-        playerInput.actions.Enable();
-        EnableGameInputs();
+        if (!isTuto)
+        {
+            playerInput.actions.Enable();
+            EnableGameInputs();
+        }
 
         rseOnInputDisabled.action += DeactivateInput;
         rseOnGameActionInputEnabled.action += ActivateGameActionInput;
@@ -62,7 +66,10 @@ public class S_InputsManager : MonoBehaviour
         _onMentalHealthReachZeroRse.action += DisableGameInputs;
         _onResetAfterMentalReachZeroRse.action += EnableGameInputs;
 
-        ActivateGameActionInput();
+        if (!isTuto)
+        {
+            ActivateGameActionInput();
+        }
     }
 
     private void OnDisable()
