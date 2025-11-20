@@ -299,5 +299,8 @@ MonoBehaviour:
   _fogVisionSourceData:
     Radius: 0.15
     Softness: 0.07
+  _radiusNightModifier: -0.025
+  _durationTransition: 3
+  _currentCycleRso: {fileID: 11400000, guid: 4894bdba32aa1c94f82177e9daa4a182, type: 2}
   _onUnregisterVisionSourceRse: {fileID: 11400000, guid: ec3be7932f5ee4548af114dae4762432, type: 2}
   _onRegisterVisionSourceRse: {fileID: 11400000, guid: 5507a31ff46bf5f4db0d51b257474935, type: 2}

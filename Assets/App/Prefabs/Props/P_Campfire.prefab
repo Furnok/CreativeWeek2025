@@ -354,6 +354,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 4854664962073328125}
     m_Modifications:
     - target: {fileID: 1452775691286049983, guid: d9198897a865eed49a75cdedc855bbdd, type: 3}
+      propertyPath: _durationTransition
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1452775691286049983, guid: d9198897a865eed49a75cdedc855bbdd, type: 3}
+      propertyPath: _radiusNightModifier
+      value: -0.025
+      objectReference: {fileID: 0}
+    - target: {fileID: 1452775691286049983, guid: d9198897a865eed49a75cdedc855bbdd, type: 3}
       propertyPath: _fogVisionSourceData.Radius
       value: 0.1
       objectReference: {fileID: 0}
