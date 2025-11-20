@@ -141,8 +141,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75f8b82928cd0d24c90b74f32ca5d9cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isTuto: 0
   timeFade: 0.2
-  isInMainMenu: 0
+  illustrations:
+  - image: {fileID: -4375519713581102929, guid: 34832ed75e443aa4083832c5f4875998, type: 3}
+    text: Test 1
+    time: 5
+  - image: {fileID: -169051582588651009, guid: 3192f1585cbe19b4294758d2661f0a60, type: 3}
+    text: Test 2
+    time: 5
+  - image: {fileID: -3657595496625566089, guid: 0fc1d38bba210b1499318ad2ff9cd388, type: 3}
+    text: Test 3
+    time: 5
+  - image: {fileID: -732925332027724018, guid: c6a038e548a2d0049951a2e9a726af83, type: 3}
+    text: Test 4
+    time: 5
+  - image: {fileID: 3696266164893778045, guid: 5d73258598b3cd24294af417d81df8c4, type: 3}
+    text: Test 5
+    time: 5
   menuWindow: {fileID: 3494801531385764360}
   gameWindow: {fileID: 8179310978939895048}
   fadeWindow: {fileID: 5672841728828208150}
@@ -157,6 +173,8 @@ MonoBehaviour:
   rseOnUIInputEnabled: {fileID: 11400000, guid: f8900a3c295c93f478f8289c92da16ca, type: 2}
   rseOnGamePause: {fileID: 11400000, guid: e0315f5f5ac494d44a53daeca203e79b, type: 2}
   rseOnAudioUIButton: {fileID: 11400000, guid: 012d77128a05957409295d233882f724, type: 2}
+  rseOnIllustration: {fileID: 11400000, guid: 7695e8361d348e34ea1665af922e9783, type: 2}
+  rseOnFadeOut: {fileID: 11400000, guid: 04361f481971a204cbdc1bd2d01954af, type: 2}
   rsoGameInPause: {fileID: 11400000, guid: 05cbb53d0b3a5aa439dc8a14adc343b7, type: 2}
   rsoCurrentWindows: {fileID: 11400000, guid: 3f155b301f9d9724ea0959e04e23ef25, type: 2}
   ssoFadeTime: {fileID: 11400000, guid: 54ad5b3f2ef378245a4626d5c4ce6d75, type: 2}
@@ -345,22 +363,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fd4951e99fc1ea4897d635f1dfec968, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  test:
-  - image: {fileID: -4375519713581102929, guid: 34832ed75e443aa4083832c5f4875998, type: 3}
-    text: Test 1
-    time: 5
-  - image: {fileID: -169051582588651009, guid: 3192f1585cbe19b4294758d2661f0a60, type: 3}
-    text: Test 2
-    time: 5
-  - image: {fileID: -3657595496625566089, guid: 0fc1d38bba210b1499318ad2ff9cd388, type: 3}
-    text: Test 3
-    time: 5
-  - image: {fileID: -732925332027724018, guid: c6a038e548a2d0049951a2e9a726af83, type: 3}
-    text: Test 4
-    time: 5
-  - image: {fileID: 3696266164893778045, guid: 5d73258598b3cd24294af417d81df8c4, type: 3}
-    text: Test 5
-    time: 5
   panelIllu: {fileID: 3984468827392345557}
   image: {fileID: 2031942295582262124}
   rseOnIllustration: {fileID: 11400000, guid: 7695e8361d348e34ea1665af922e9783, type: 2}

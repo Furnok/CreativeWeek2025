@@ -5,9 +5,6 @@ using UnityEngine.UI;
 
 public class S_IllustationManager : MonoBehaviour
 {
-    [Header("Settings")]
-    [SerializeField] private List<S_ClassIllustation> test;
-
     [Header("References")]
     [SerializeField] private GameObject panelIllu;
 
@@ -21,16 +18,6 @@ public class S_IllustationManager : MonoBehaviour
     [SerializeField] private RSE_OnFadeOut rseOnFadeOut;
     [SerializeField] private RSE_OnGameInputEnabled rseOnGameInputEnabled;
     [SerializeField] private SSO_FadeTime ssoFadeTime;
-
-    private void Start()
-    {
-        rseOnFadeOut.Call();
-
-        StartCoroutine(S_Utils.DelayRealTime(ssoFadeTime.Value, () =>
-        {
-            Setup(test);
-        }));
-    }
 
     private void OnEnable()
     {
@@ -53,6 +40,8 @@ public class S_IllustationManager : MonoBehaviour
     {
         foreach (var illu in list)
         {
+            yield return S_Utils.DelayRealTime(0.4f);
+
             image.sprite = illu.image;
 
             rseOnFadeIn.Call();
@@ -62,7 +51,6 @@ public class S_IllustationManager : MonoBehaviour
             rseOnFadeOut.Call();
 
             yield return S_Utils.DelayRealTime(ssoFadeTime.Value);
-            yield return S_Utils.DelayRealTime(1);
         }
 
         panelIllu.SetActive(false);

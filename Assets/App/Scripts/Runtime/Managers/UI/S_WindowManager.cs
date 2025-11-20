@@ -1,12 +1,14 @@
 ﻿using DG.Tweening;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class S_WindowManager : MonoBehaviour
 {
     [Header("Settings")]
+    [SerializeField] private bool isTuto;
     [SerializeField] private float timeFade;
-    [SerializeField] private bool isInMainMenu;
+    [SerializeField] private List<S_ClassIllustation> illustrations;
 
     [Header("References")]
     [SerializeField] private GameObject menuWindow;
@@ -27,6 +29,8 @@ public class S_WindowManager : MonoBehaviour
     [SerializeField] private RSE_OnUIInputEnabled rseOnUIInputEnabled;
     [SerializeField] private RSE_OnGamePause rseOnGamePause;
     [SerializeField] private RSE_OnAudioUIButton rseOnAudioUIButton;
+    [SerializeField] private RSE_OnIllustration rseOnIllustration;
+    [SerializeField] private RSE_OnFadeOut rseOnFadeOut;
     [SerializeField] private RSO_GameInPause rsoGameInPause;
     [SerializeField] private RSO_CurrentWindows rsoCurrentWindows;
     [SerializeField] private SSO_FadeTime ssoFadeTime;
@@ -63,7 +67,14 @@ public class S_WindowManager : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(S_Utils.DelayFrame(() => FadeIn()));
+        if (!isTuto)
+        {
+            StartCoroutine(S_Utils.DelayFrame(() => FadeIn()));
+        }
+        else
+        {
+            rseOnIllustration.Call(illustrations);
+        }
     }
 
     private void DisplayUIGame(bool value)
@@ -89,7 +100,7 @@ public class S_WindowManager : MonoBehaviour
 
     private void PauseGame()
     {
-        if (!menuWindow.activeInHierarchy && !isInMainMenu)
+        if (!menuWindow.activeInHierarchy)
         {
             rseOnAudioUIButton.Call();
 
