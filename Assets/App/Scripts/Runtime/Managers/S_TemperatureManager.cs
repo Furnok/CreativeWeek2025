@@ -25,6 +25,7 @@ public class S_TemperatureManager : MonoBehaviour
         _hasStarted = false;
 
         _onStartGameTimerRse.action += GameStarted;
+        _onResetAfterMentalReachZeroRse.action += ResetTemperature;
     }
 
     private void OnDisable()
@@ -32,6 +33,7 @@ public class S_TemperatureManager : MonoBehaviour
         _warmthSourcesInRangeRso.Value = 0;
 
         _onStartGameTimerRse.action -= GameStarted;
+        _onResetAfterMentalReachZeroRse.action -= ResetTemperature;
     }
 
     void GameStarted()
@@ -42,6 +44,11 @@ public class S_TemperatureManager : MonoBehaviour
     void ResetTemperature()
     {
         _currentTemperatureRso.Value = _gameSettingsSso.Value.StartingTemperature;
+    }
+
+    private void Start()
+    {
+        //GameStarted(); //Testing
     }
 
 

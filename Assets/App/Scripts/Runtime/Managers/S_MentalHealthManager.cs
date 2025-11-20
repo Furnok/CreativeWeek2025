@@ -6,6 +6,10 @@ public class S_MentalHealthManager : MonoBehaviour
     [Header("Settings")]
     [SerializeField][S_TagName] string _mentalObstacleTag;
     [SerializeField] float _warningSpacing;
+    [SerializeField] float _maxLossForMaxParticles;
+    [SerializeField] float _minLossForMinParticles;
+    [SerializeField] float _maxEmissionRate = 100f;
+    [SerializeField] float _minEmissionRate = 20f;
 
 
     [Header("References")]
@@ -15,10 +19,11 @@ public class S_MentalHealthManager : MonoBehaviour
     [SerializeField] SSO_PlayerStats _playerStatsSso;
     [SerializeField] SSO_Game_Settings _gameSettingsSso;
     [SerializeField] RSO_WarmthSourcesInRange _warmthSourcesInRangeRso;
-    //[SerializeField] SpriteRenderer _spriteRenderer;
     [SerializeField] Transform _transformParentWarning;
     [SerializeField] Sprite _spriteWarningYellow;
     [SerializeField] Sprite _spriteWarningRed;
+    [SerializeField] ParticleSystem _particleSystemLooseSanityEffect;
+
     //[Header("Inputs")]
 
     [Header("Outputs")]
@@ -64,6 +69,8 @@ public class S_MentalHealthManager : MonoBehaviour
 
         totalLoss += ComputeObstacleMentalLoss(dt);
 
+        UpdateSanityParticles(totalLoss);
+
         if (totalLoss > 0f)
         {
             _currentMentalHealthRso.Value -= totalLoss;
@@ -98,8 +105,8 @@ public class S_MentalHealthManager : MonoBehaviour
         t = 1f - t;
 
         float lossRate = Mathf.Lerp(
-            Stats.MentalLossMinCold,
             Stats.MentalLossMaxCold,
+            Stats.MentalLossMinCold,
             t
         );
 
@@ -200,6 +207,45 @@ public class S_MentalHealthManager : MonoBehaviour
             float x = startX + i * _warningSpacing;
             obs.warningRenderer.transform.localPosition = new Vector3(x, 0f, 0f);
         }
+    }
+
+    void UpdateSanityParticles(float loss)
+    {
+        if (_particleSystemLooseSanityEffect == null) return;
+
+        var emission = _particleSystemLooseSanityEffect.emission;
+
+        if (loss <= 0f)
+        {
+            emission.rateOverTime = 0f;
+            return;
+        }
+        if (loss < _minLossForMinParticles)
+        {
+            emission.rateOverTime = 0f;
+            return;
+        }
+
+        if (Mathf.Approximately(loss, _minLossForMinParticles))
+        {
+            emission.rateOverTime = _minEmissionRate;
+            return;
+        }
+
+        if (loss >= _maxLossForMaxParticles)
+        {
+            emission.rateOverTime = _maxEmissionRate;
+            return;
+        }
+
+        float t = Mathf.InverseLerp(
+            _minLossForMinParticles,
+            _maxLossForMaxParticles,
+            loss
+        );
+
+        float rate = Mathf.Lerp(_minEmissionRate, _maxEmissionRate, t);
+        emission.rateOverTime = rate;
     }
 }
 
