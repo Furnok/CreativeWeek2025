@@ -922,6 +922,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3782018713095136046}
   - component: {fileID: 7152635644759387613}
+  - component: {fileID: 9015046332453531164}
   m_Layer: 5
   m_Name: ContentBackpack
   m_TagString: Untagged
@@ -961,6 +962,22 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &9015046332453531164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2468076293586511794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 418ef9b804ff79647befe2d54999c886, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rseOnPlayerPause: {fileID: 11400000, guid: d47879626944a4f4d94c3d83ad48074d, type: 2}
+  rseOnAudioUIButton: {fileID: 11400000, guid: 012d77128a05957409295d233882f724, type: 2}
+  rseOnCloseWindow: {fileID: 11400000, guid: c636cf0cc62b7e1489a6e16eb8927d14, type: 2}
+  rsoCurrentWindows: {fileID: 11400000, guid: 3f155b301f9d9724ea0959e04e23ef25, type: 2}
 --- !u!1 &2474310421189069722
 GameObject:
   m_ObjectHideFlags: 0
@@ -4056,12 +4073,17 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 729813ac808df7b4f8f73f4a4e108b33, type: 3}
   spriteEyeVeins: {fileID: 21300000, guid: b9eace8f0142b7e4393e23ea19e3d9d1, type: 3}
   _textGlowstickCount: {fileID: 7359257113464486438}
+  contentBackpack: {fileID: 2468076293586511794}
+  rseOnStartGameTimer: {fileID: 11400000, guid: 5884d174c62323b4ca5836a3f61a389b, type: 2}
+  rseOnPlayerBackpack: {fileID: 11400000, guid: cdc3fd5e908c6b7499a4b663844d886d, type: 2}
+  rseOnPlayerMap: {fileID: 11400000, guid: 69c680b0f99d3a64f9e62e09d854f372, type: 2}
+  rseOnPlayerLogs: {fileID: 11400000, guid: eee14a85c0f62bc4685adbe94b324889, type: 2}
   rsoCurrentCycle: {fileID: 11400000, guid: 4894bdba32aa1c94f82177e9daa4a182, type: 2}
   _currentTemperatureRso: {fileID: 11400000, guid: 3f228e86e340f7b458ee0f943119d0ec, type: 2}
   _currentMentalHealthRso: {fileID: 11400000, guid: 4a28f472a326a5e47b639bb7a8806063, type: 2}
-  rseOnStartGameTimer: {fileID: 11400000, guid: 5884d174c62323b4ca5836a3f61a389b, type: 2}
   _currentAmmountGlowStickRso: {fileID: 11400000, guid: 59e381784cb6c824d8d7e323f9add8af, type: 2}
   _playerStatsSso: {fileID: 11400000, guid: cea7641025dd6dc4fa869ec1ab8595d3, type: 2}
+  rseOnOpenWindow: {fileID: 11400000, guid: e205cf7e757f88f4bb5a18b768b6478a, type: 2}
 --- !u!1 &8858451692189581658
 GameObject:
   m_ObjectHideFlags: 0

@@ -100,13 +100,17 @@ public class S_WindowManager : MonoBehaviour
 
     private void PauseGame()
     {
-        if (!menuWindow.activeInHierarchy)
+        if (rsoCurrentWindows.Value.Count < 1)
         {
-            rseOnAudioUIButton.Call();
+            if (!menuWindow.activeInHierarchy)
+            {
+                rseOnAudioUIButton.Call();
 
-            rseOnUIInputEnabled.Call();
-            OpenWindow(menuWindow);
-            rseOnGamePause.Call(true);
+                rseOnUIInputEnabled.Call();
+                OpenWindow(menuWindow);
+                rsoGameInPause.Value = true;
+                rseOnGamePause.Call(true);
+            }
         }
     }
 

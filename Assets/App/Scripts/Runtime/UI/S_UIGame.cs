@@ -27,14 +27,21 @@ public class S_UIGame : MonoBehaviour
     [SerializeField] private List<Sprite> spriteEyeIris;
     [SerializeField] private Sprite spriteEyeVeins;
     [SerializeField] private TextMeshProUGUI _textGlowstickCount;
+    [SerializeField] private GameObject contentBackpack;
 
     [Header("Inputs")]
+    [SerializeField] private RSE_OnStartGameTimer rseOnStartGameTimer;
+    [SerializeField] private RSE_OnPlayerBackpack rseOnPlayerBackpack;
+    [SerializeField] private RSE_OnPlayerMap rseOnPlayerMap;
+    [SerializeField] private RSE_OnPlayerLogs rseOnPlayerLogs;
     [SerializeField] private RSO_CurrentCycle rsoCurrentCycle;
     [SerializeField] private RSO_CurrentTemperature _currentTemperatureRso;
     [SerializeField] private RSO_CurrentMentalHealth _currentMentalHealthRso;
-    [SerializeField] private RSE_OnStartGameTimer rseOnStartGameTimer;
     [SerializeField] private RSO_CurrentAmmountGlowStick _currentAmmountGlowStickRso;
     [SerializeField] private SSO_PlayerStats _playerStatsSso;
+
+    [Header("Outputs")]
+    [SerializeField] private RSE_OnOpenWindow rseOnOpenWindow;
 
     private Tween temperatureTween = null;
     private Tween colorTween = null;
@@ -51,15 +58,22 @@ public class S_UIGame : MonoBehaviour
     private void OnEnable()
     {
         rseOnStartGameTimer.action += DisplayDay;
+        rseOnPlayerBackpack.action += OpenBackpack;
+        rseOnPlayerMap.action += OpenBackpack;
+        rseOnPlayerLogs.action += OpenBackpack;
         rsoCurrentCycle.onValueChanged += Cycle;
         _currentTemperatureRso.onValueChanged += UpdateTemperature;
         _currentMentalHealthRso.onValueChanged += UpdateSanity;
         _currentAmmountGlowStickRso.onValueChanged += UpdateGlowStickCountText;
+        
     }
 
     private void OnDisable()
     {
         rseOnStartGameTimer.action -= DisplayDay;
+        rseOnPlayerBackpack.action -= OpenBackpack;
+        rseOnPlayerMap.action -= OpenBackpack;
+        rseOnPlayerLogs.action -= OpenBackpack;
         rsoCurrentCycle.onValueChanged -= Cycle;
         _currentTemperatureRso.onValueChanged -= UpdateTemperature;
         _currentMentalHealthRso.onValueChanged -= UpdateSanity;
@@ -132,8 +146,13 @@ public class S_UIGame : MonoBehaviour
         }
     }
 
-    void UpdateGlowStickCountText(int count)
+    private void UpdateGlowStickCountText(int count)
     {
         _textGlowstickCount.text = $"{count}/{_playerStatsSso.Value.MaxGlowsticks}";
+    }
+
+    private void OpenBackpack()
+    {
+        rseOnOpenWindow.Call(contentBackpack);
     }
 }
