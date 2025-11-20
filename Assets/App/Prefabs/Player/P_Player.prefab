@@ -46,12 +46,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _mentalObstacleTag: MentalObstacle
+  _warningSpacing: 50
   _currentMentalHealthRso: {fileID: 11400000, guid: 4a28f472a326a5e47b639bb7a8806063, type: 2}
   _currentTemperatureRso: {fileID: 11400000, guid: 3f228e86e340f7b458ee0f943119d0ec, type: 2}
   _currentCycleRso: {fileID: 11400000, guid: 4894bdba32aa1c94f82177e9daa4a182, type: 2}
   _playerStatsSso: {fileID: 11400000, guid: cea7641025dd6dc4fa869ec1ab8595d3, type: 2}
   _gameSettingsSso: {fileID: 11400000, guid: c0f1146d4d156984ab24c0754662a78a, type: 2}
   _warmthSourcesInRangeRso: {fileID: 11400000, guid: e1969740c3e01a441b08ad8c387f71e0, type: 2}
+  _transformParentWarning: {fileID: 6650341308673377942}
+  _spriteWarningYellow: {fileID: 21300000, guid: 34485f8f5e75e6f48bfca407b095a4d9, type: 3}
+  _spriteWarningRed: {fileID: 21300000, guid: c389b9201fc068d4d914e9b2e088f6cd, type: 3}
   _onMentalHealthReachZeroRse: {fileID: 11400000, guid: c2e65dbfe517eae46bdff4fff87548b8, type: 2}
   _onResetAfterMentalReachZeroRse: {fileID: 11400000, guid: ae2d39befbbd88342a967bc7f3b0edfa, type: 2}
 --- !u!58 &4363836909353131486
@@ -209,6 +213,37 @@ MonoBehaviour:
   _currentCycleRso: {fileID: 11400000, guid: 4894bdba32aa1c94f82177e9daa4a182, type: 2}
   _onUnregisterVisionSourceRse: {fileID: 11400000, guid: ec3be7932f5ee4548af114dae4762432, type: 2}
   _onRegisterVisionSourceRse: {fileID: 11400000, guid: 5507a31ff46bf5f4db0d51b257474935, type: 2}
+--- !u!1 &2206935080053195593
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6650341308673377942}
+  m_Layer: 0
+  m_Name: Warning
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6650341308673377942
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2206935080053195593}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.25, z: 0}
+  m_LocalScale: {x: 0.005, y: 0.005, z: 0.005}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 8970000248794604742}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2218141830865391732
 GameObject:
   m_ObjectHideFlags: 0
@@ -523,6 +558,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4621909682537675208}
+  - {fileID: 6650341308673377942}
   m_Father: {fileID: 3974165760102176259}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8765141290282772510

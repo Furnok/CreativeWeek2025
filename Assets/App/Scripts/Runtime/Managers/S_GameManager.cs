@@ -19,11 +19,15 @@ public class S_GameManager : MonoBehaviour
     void OnEnable()
     {
         _onMentalHealthReachZeroRse.action += MakeTransition;
+
+        _playerSpawnRso.Value = _initialSapwnPos;
     }
 
     void OnDisable()
     {
         _onMentalHealthReachZeroRse.action -= MakeTransition;
+
+        _playerSpawnRso.Value = _initialSapwnPos;
     }
 
     void MakeTransition()

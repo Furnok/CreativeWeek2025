@@ -5,6 +5,8 @@ public class S_MentalHealthManager : MonoBehaviour
 {
     [Header("Settings")]
     [SerializeField][S_TagName] string _mentalObstacleTag;
+    [SerializeField] float _warningSpacing;
+
 
     [Header("References")]
     [SerializeField] RSO_CurrentMentalHealth _currentMentalHealthRso;
@@ -13,7 +15,10 @@ public class S_MentalHealthManager : MonoBehaviour
     [SerializeField] SSO_PlayerStats _playerStatsSso;
     [SerializeField] SSO_Game_Settings _gameSettingsSso;
     [SerializeField] RSO_WarmthSourcesInRange _warmthSourcesInRangeRso;
-
+    //[SerializeField] SpriteRenderer _spriteRenderer;
+    [SerializeField] Transform _transformParentWarning;
+    [SerializeField] Sprite _spriteWarningYellow;
+    [SerializeField] Sprite _spriteWarningRed;
     //[Header("Inputs")]
 
     [Header("Outputs")]
@@ -38,6 +43,13 @@ public class S_MentalHealthManager : MonoBehaviour
     private void OnDisable()
     {
         _onResetAfterMentalReachZeroRse.action -= ResetMentalHealth;
+
+        foreach (var obs in _activeObstacles)
+        {
+            if (obs.warningRenderer != null)
+                Destroy(obs.warningRenderer.gameObject);
+        }
+        _activeObstacles.Clear();
     }
 
     private void Update()
@@ -104,11 +116,20 @@ public class S_MentalHealthManager : MonoBehaviour
 
             if (obs.collider == null)
             {
+                if (obs.warningRenderer != null)
+                    Destroy(obs.warningRenderer.gameObject);
+
                 _activeObstacles.RemoveAt(i);
                 continue;
             }
 
             obs.timer += dt;
+
+            if (obs.warningRenderer != null)
+            {
+                bool inDelay = obs.timer < Stats.MentalObstacleDelay;
+                obs.warningRenderer.sprite = inDelay ? _spriteWarningYellow : _spriteWarningRed;
+            }
 
             _activeObstacles[i] = obs;
 
@@ -125,11 +146,22 @@ public class S_MentalHealthManager : MonoBehaviour
     {
         if (!collision.CompareTag(_mentalObstacleTag)) return;
 
+        var go = new GameObject("MentalWarning");
+        go.transform.SetParent(_transformParentWarning, worldPositionStays: false);
+        go.transform.localPosition = Vector3.zero;
+
+        var sr = go.AddComponent<SpriteRenderer>();
+        sr.sprite = _spriteWarningYellow;
+        sr.sortingOrder = 100;
+
         _activeObstacles.Add(new MentalObstacleInstance
         {
             collider = collision,
-            timer = 0f
+            timer = 0f,
+            warningRenderer = sr
         });
+
+        UpdateWarningLayout();
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -140,9 +172,33 @@ public class S_MentalHealthManager : MonoBehaviour
         {
             if (_activeObstacles[i].collider == collision)
             {
+                var obs = _activeObstacles[i];
+
+                if (obs.warningRenderer != null)
+                    Destroy(obs.warningRenderer.gameObject);
+
                 _activeObstacles.RemoveAt(i);
+                UpdateWarningLayout();
                 break;
             }
+        }
+    }
+
+    private void UpdateWarningLayout()
+    {
+        int count = _activeObstacles.Count;
+        if (count == 0) return;
+
+        float totalWidth = (count - 1) * _warningSpacing;
+        float startX = -totalWidth * 0.5f;
+
+        for (int i = 0; i < count; i++)
+        {
+            var obs = _activeObstacles[i];
+            if (obs.warningRenderer == null) continue;
+
+            float x = startX + i * _warningSpacing;
+            obs.warningRenderer.transform.localPosition = new Vector3(x, 0f, 0f);
         }
     }
 }
@@ -151,4 +207,5 @@ public struct MentalObstacleInstance
 {
     public Collider2D collider;
     public float timer;
+    public SpriteRenderer warningRenderer;
 }

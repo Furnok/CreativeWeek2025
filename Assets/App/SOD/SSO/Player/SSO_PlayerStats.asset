@@ -18,7 +18,7 @@ MonoBehaviour:
     StartingMentalHealth: 100
     MentalLossMinCold: 1
     MentalLossMaxCold: 4
-    MentalLossPerObstacle: 1
+    MentalLossPerObstacle: 5
     MentalObstacleDelay: 0.5
     MaxGlowsticks: 10
     StartingGlowsticks: 3
