@@ -26,12 +26,15 @@ public class S_UIGame : MonoBehaviour
     [SerializeField] private List<Sprite> spriteEyeLids;
     [SerializeField] private List<Sprite> spriteEyeIris;
     [SerializeField] private Sprite spriteEyeVeins;
+    [SerializeField] private TextMeshProUGUI _textGlowstickCount;
 
     [Header("Inputs")]
     [SerializeField] private RSO_CurrentCycle rsoCurrentCycle;
     [SerializeField] private RSO_CurrentTemperature _currentTemperatureRso;
     [SerializeField] private RSO_CurrentMentalHealth _currentMentalHealthRso;
     [SerializeField] private RSE_OnStartGameTimer rseOnStartGameTimer;
+    [SerializeField] private RSO_CurrentAmmountGlowStick _currentAmmountGlowStickRso;
+    [SerializeField] private SSO_PlayerStats _playerStatsSso;
 
     private Tween temperatureTween = null;
     private Tween colorTween = null;
@@ -51,6 +54,7 @@ public class S_UIGame : MonoBehaviour
         rsoCurrentCycle.onValueChanged += Cycle;
         _currentTemperatureRso.onValueChanged += UpdateTemperature;
         _currentMentalHealthRso.onValueChanged += UpdateSanity;
+        _currentAmmountGlowStickRso.onValueChanged += UpdateGlowStickCountText;
     }
 
     private void OnDisable()
@@ -59,8 +63,14 @@ public class S_UIGame : MonoBehaviour
         rsoCurrentCycle.onValueChanged -= Cycle;
         _currentTemperatureRso.onValueChanged -= UpdateTemperature;
         _currentMentalHealthRso.onValueChanged -= UpdateSanity;
+        _currentAmmountGlowStickRso.onValueChanged -= UpdateGlowStickCountText;
 
         temperatureTween?.Kill();
+    }
+
+    private void Start()
+    {
+        UpdateGlowStickCountText(_currentAmmountGlowStickRso.Value);
     }
 
     private void UpdateSanity(float sanity)
@@ -120,5 +130,10 @@ public class S_UIGame : MonoBehaviour
             colorTween = sun.DOColor(colorOff, transition).SetEase(Ease.Linear);
             colorTween2 = moon.DOColor(colorOn, transition).SetEase(Ease.Linear);
         }
+    }
+
+    void UpdateGlowStickCountText(int count)
+    {
+        _textGlowstickCount.text = $"{count}/{_playerStatsSso.Value.MaxGlowsticks}";
     }
 }
