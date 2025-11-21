@@ -21,6 +21,7 @@ public class S_Base : MonoBehaviour, I_Interactable
 
     [Header("Outputs")]
     [SerializeField] private RSE_OnStartPuzzle RSE_OnStartPuzzle;
+    [SerializeField] private RSE_OnStartGameTimer RSE_OnStartGameTimer;
 
     bool _canInteract = true;
 
@@ -64,6 +65,7 @@ public class S_Base : MonoBehaviour, I_Interactable
             _light2D.pointLightInnerRadius = 1.0f;
             _fogVisionSource.ModifRadius(_newRadiusVisionAfterInteract);
             _warmthCollider.enabled = true;
+            RSE_OnStartGameTimer.Call();
         }
     }
 }
