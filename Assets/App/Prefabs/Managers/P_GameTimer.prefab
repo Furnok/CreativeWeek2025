@@ -45,11 +45,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 047f32262c07ed24185a7a0593aa9b9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _illuMentalReachZero:
+  - image: {fileID: 6317762655293103745, guid: c4ea8756c8da57b4ab8b8c68ae2aac82, type: 3}
+    text: 
+    time: 5
   _gameSettings: {fileID: 11400000, guid: c0f1146d4d156984ab24c0754662a78a, type: 2}
   _gameTimeRemaining: {fileID: 11400000, guid: db0fc20a93467854eaee1bf26c18de58, type: 2}
+  _fadeTimeSso: {fileID: 11400000, guid: 54ad5b3f2ef378245a4626d5c4ce6d75, type: 2}
   _onStartGameTimerRse: {fileID: 11400000, guid: 5884d174c62323b4ca5836a3f61a389b, type: 2}
   _onResetAfterMentalReachZeroRse: {fileID: 11400000, guid: ae2d39befbbd88342a967bc7f3b0edfa, type: 2}
   _onGameTimerEndRse: {fileID: 11400000, guid: e9fccb54274ac9f499dd6e15f8d358ab, type: 2}
+  _onIllustrationRse: {fileID: 11400000, guid: 7695e8361d348e34ea1665af922e9783, type: 2}
+  _onFadeOutRse: {fileID: 11400000, guid: 04361f481971a204cbdc1bd2d01954af, type: 2}
+  _onFadeInRse: {fileID: 11400000, guid: e989d408f82cc974e843502043f35935, type: 2}
 --- !u!114 &2688779508952840892
 MonoBehaviour:
   m_ObjectHideFlags: 0
