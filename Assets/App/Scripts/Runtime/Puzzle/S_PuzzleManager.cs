@@ -7,7 +7,6 @@ public class S_PuzzleManager : MonoBehaviour
 {
     [Header("Settings")]
     [SerializeField] private float puzzleMax;
-    [SerializeField] private float timeAfterClose;
     [SerializeField] private float timeShowText;
 
     private float puzzleDone;
@@ -72,11 +71,16 @@ public class S_PuzzleManager : MonoBehaviour
 
         StartCoroutine(S_Utils.DelayRealTime(ssoFadeTime.Value, () =>
         {
-            onIllustrationRse.Call(illuMentalReachZero);
+            List<S_ClassIllustation> temp = new();
+            temp.Add(illuMentalReachZero[index]);
+
+            onIllustrationRse.Call(temp);
 
             StartCoroutine(S_Utils.DelayRealTime(illuMentalReachZero[index].time + ssoFadeTime.Value, () =>
             {
                 rsoLogs.Value[index] = true;
+
+                ClosePuzzle(name);
 
                 StartCoroutine(DisplayText(name));
 
@@ -88,9 +92,6 @@ public class S_PuzzleManager : MonoBehaviour
 
     IEnumerator DisplayText(string name)
     {
-        ClosePuzzle(name);
-        yield return new WaitForSecondsRealtime(timeAfterClose);
-
         puzzleCountText.text = "Memories unlocked " + puzzleDone + " / " + puzzleMax;
         yield return new WaitForSecondsRealtime(timeShowText);
         puzzleCountText.text = "";
