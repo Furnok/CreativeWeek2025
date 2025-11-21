@@ -2585,11 +2585,16 @@ MonoBehaviour:
   spriteMapPress: {fileID: -3123203881438442823, guid: 3c213a80c5970e243a28c466d3b43d69, type: 3}
   spriteLogs: {fileID: 2334632559784490952, guid: d93e89e66aec4d242b29fe0bc185bfa7, type: 3}
   spriteLogsPress: {fileID: -1778259947415845576, guid: 42c3dcccbfe196043a2ece27c8ae70ae, type: 3}
+  dragImage: {fileID: 0}
+  uiPrefab: {fileID: 0}
+  textPose: {fileID: 0}
+  textDelete: {fileID: 0}
   rseOnPlayerPause: {fileID: 11400000, guid: d47879626944a4f4d94c3d83ad48074d, type: 2}
   rseOnHideMouseCursor: {fileID: 11400000, guid: 6d5e981612b14c647829144701460dff, type: 2}
   rseOnAudioUIButton: {fileID: 11400000, guid: 012d77128a05957409295d233882f724, type: 2}
   rseOnCloseWindow: {fileID: 11400000, guid: c636cf0cc62b7e1489a6e16eb8927d14, type: 2}
   rsoCurrentWindows: {fileID: 11400000, guid: 3f155b301f9d9724ea0959e04e23ef25, type: 2}
+  isDeleting: 0
 --- !u!1 &2474310421189069722
 GameObject:
   m_ObjectHideFlags: 0
@@ -9664,6 +9669,7 @@ MonoBehaviour:
   spriteMapPress: {fileID: -3123203881438442823, guid: 3c213a80c5970e243a28c466d3b43d69, type: 3}
   spriteLogs: {fileID: 2334632559784490952, guid: d93e89e66aec4d242b29fe0bc185bfa7, type: 3}
   spriteLogsPress: {fileID: -1778259947415845576, guid: 42c3dcccbfe196043a2ece27c8ae70ae, type: 3}
+  uiBackpack: {fileID: 9015046332453531164}
   rseOnStartGameTimer: {fileID: 11400000, guid: 5884d174c62323b4ca5836a3f61a389b, type: 2}
   rseOnPlayerBackpack: {fileID: 11400000, guid: cdc3fd5e908c6b7499a4b663844d886d, type: 2}
   rseOnPlayerMap: {fileID: 11400000, guid: 69c680b0f99d3a64f9e62e09d854f372, type: 2}

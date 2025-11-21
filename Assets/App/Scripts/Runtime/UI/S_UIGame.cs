@@ -40,6 +40,7 @@ public class S_UIGame : MonoBehaviour
     [SerializeField] private Sprite spriteMapPress;
     [SerializeField] private Sprite spriteLogs;
     [SerializeField] private Sprite spriteLogsPress;
+    [SerializeField] private S_UIBackpack uiBackpack;
 
     [Header("Inputs")]
     [SerializeField] private RSE_OnStartGameTimer rseOnStartGameTimer;
@@ -179,6 +180,8 @@ public class S_UIGame : MonoBehaviour
             imageInventory.sprite = spriteInventoryPress;
             imageMap.sprite = spriteMap;
             imageLogs.sprite = spriteLogs;
+
+            uiBackpack.ResetAll();
         }
         else
         {
@@ -192,6 +195,8 @@ public class S_UIGame : MonoBehaviour
                 imageInventory.sprite = spriteInventoryPress;
                 imageMap.sprite = spriteMap;
                 imageLogs.sprite = spriteLogs;
+
+                uiBackpack.ResetAll();
             }
             else
             {
@@ -223,6 +228,8 @@ public class S_UIGame : MonoBehaviour
             imageInventory.sprite = spriteInventory;
             imageMap.sprite = spriteMapPress;
             imageLogs.sprite = spriteLogs;
+
+            uiBackpack.ResetAll();
         }
         else
         {
@@ -236,6 +243,8 @@ public class S_UIGame : MonoBehaviour
                 imageInventory.sprite = spriteInventory;
                 imageMap.sprite = spriteMapPress;
                 imageLogs.sprite = spriteLogs;
+
+                uiBackpack.ResetAll();
             }
             else
             {
@@ -267,6 +276,8 @@ public class S_UIGame : MonoBehaviour
             imageInventory.sprite = spriteInventory;
             imageMap.sprite = spriteMap;
             imageLogs.sprite = spriteLogsPress;
+
+            uiBackpack.ResetAll();
         }
         else
         {
@@ -280,6 +291,8 @@ public class S_UIGame : MonoBehaviour
                 imageInventory.sprite = spriteInventory;
                 imageMap.sprite = spriteMap;
                 imageLogs.sprite = spriteLogsPress;
+
+                uiBackpack.ResetAll();
             }
             else
             {

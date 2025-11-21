@@ -10,6 +10,10 @@ TagManager:
   - Flint
   - Log
   - Cursor
+  - Placeable
+  - Point
+  - ButtonDel
+  - ButtonAdd
   layers:
   - Default
   - TransparentFX
