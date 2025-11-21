@@ -1,4 +1,3 @@
-using UnityEditor.MemoryProfiler;
 using UnityEngine;
 
 public class S_DocumentManager : MonoBehaviour

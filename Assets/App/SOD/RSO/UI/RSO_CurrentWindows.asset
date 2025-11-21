@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7aec669a10b87c4458856aeb729ff053, type: 3}
   m_Name: RSO_CurrentWindows
   m_EditorClassIdentifier: 
-  _value: []
+  _value:
+  - {fileID: 0}

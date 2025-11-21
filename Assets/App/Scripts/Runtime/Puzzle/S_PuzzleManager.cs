@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -19,6 +20,7 @@ public class S_PuzzleManager : MonoBehaviour
     [SerializeField] private GameObject footprintPanel;
     [SerializeField] private GameObject documentPanel;
     [SerializeField] private GameObject digPanel;
+    [SerializeField] List<S_ClassIllustation> illuMentalReachZero = new();
 
     [Header("Inputs")]
     [SerializeField] private RSE_OnStartPuzzle RSE_OnStartPuzzle;
@@ -34,9 +36,16 @@ public class S_PuzzleManager : MonoBehaviour
     [SerializeField] private RSE_OnGameInputEnabled rseOnGameInputEnabled;
     [SerializeField] private RSE_OnShowMouseCursor rseOnShowMouseCursor;
     [SerializeField] private RSE_OnHideMouseCursor rseOnHideMouseCursor;
+    [SerializeField] private RSE_OnFadeOut rseOnFadeOut;
+    [SerializeField] private RSE_OnFadeIn rseOnFadeIn;
+    [SerializeField] private RSE_OnIllustration onIllustrationRse;
     [SerializeField] private RSO_CurrentWindows rsoCurrentWindows;
+    [SerializeField] private RSO_Logs rsoLogs;
+    [SerializeField] private SSO_Logs ssoLogs;
+    [SerializeField] private SSO_FadeTime ssoFadeTime;
 
     private bool isInPuzzle = false;
+    private int index = 0;
 
     private void OnEnable()
     {
@@ -58,9 +67,23 @@ public class S_PuzzleManager : MonoBehaviour
     private void PuzzleFinish(string name)
     {
         puzzleDone++;
-        rseOnGamePause.Call(false);
-        StartCoroutine(DisplayText(name));
-        CheckPuzzleAllDone();
+
+        rseOnFadeOut.Call();
+
+        StartCoroutine(S_Utils.DelayRealTime(ssoFadeTime.Value, () =>
+        {
+            onIllustrationRse.Call(illuMentalReachZero);
+
+            StartCoroutine(S_Utils.DelayRealTime(illuMentalReachZero[index].time + ssoFadeTime.Value, () =>
+            {
+                rsoLogs.Value[index] = true;
+
+                StartCoroutine(DisplayText(name));
+
+                CheckPuzzleAllDone();
+            }));
+
+        }));
     }
 
     IEnumerator DisplayText(string name)

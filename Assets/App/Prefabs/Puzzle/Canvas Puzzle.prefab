@@ -1811,7 +1811,7 @@ RectTransform:
   m_GameObject: {fileID: 778464907733672508}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2618552469533652658}
@@ -1914,6 +1914,25 @@ MonoBehaviour:
   footprintPanel: {fileID: 6742174446890281343}
   documentPanel: {fileID: 4288580847588127957}
   digPanel: {fileID: 745680327330246193}
+  illuMentalReachZero:
+  - image: {fileID: 3696266164893778045, guid: 5d73258598b3cd24294af417d81df8c4, type: 3}
+    text: Test 1
+    time: 5
+  - image: {fileID: 3696266164893778045, guid: 5d73258598b3cd24294af417d81df8c4, type: 3}
+    text: Test 2
+    time: 5
+  - image: {fileID: 4561756501862891284, guid: 48b50c79164b0d34f83df342249b53e4, type: 3}
+    text: Test 3
+    time: 5
+  - image: {fileID: 2495574982434560350, guid: 37979fdf65e653740bfb698a594e7b60, type: 3}
+    text: Test 4
+    time: 5
+  - image: {fileID: -5508045269076349496, guid: 3d3086468bac59749840a29c75a669a6, type: 3}
+    text: Test 5
+    time: 5
+  - image: {fileID: -4713966909541415033, guid: 8090d3c73200cf040ae8fc5aaa0ddded, type: 3}
+    text: Test 6
+    time: 5
   RSE_OnStartPuzzle: {fileID: 11400000, guid: 52c1d972e9bac9149be397fb89a64814, type: 2}
   RSE_OnFinishPuzzle: {fileID: 11400000, guid: 3d476e9b414ee6a49b6f3f599bd5d003, type: 2}
   rseOnPlayerPause: {fileID: 11400000, guid: d47879626944a4f4d94c3d83ad48074d, type: 2}
@@ -1925,7 +1944,13 @@ MonoBehaviour:
   rseOnGameInputEnabled: {fileID: 11400000, guid: 04e33dd8947e9f040ba0b26e21d19169, type: 2}
   rseOnShowMouseCursor: {fileID: 11400000, guid: 9d8e49b25cba362429cd13ef70fa4f76, type: 2}
   rseOnHideMouseCursor: {fileID: 11400000, guid: 6d5e981612b14c647829144701460dff, type: 2}
+  rseOnFadeOut: {fileID: 11400000, guid: 04361f481971a204cbdc1bd2d01954af, type: 2}
+  rseOnFadeIn: {fileID: 11400000, guid: e989d408f82cc974e843502043f35935, type: 2}
+  onIllustrationRse: {fileID: 11400000, guid: 7695e8361d348e34ea1665af922e9783, type: 2}
   rsoCurrentWindows: {fileID: 11400000, guid: 3f155b301f9d9724ea0959e04e23ef25, type: 2}
+  rsoLogs: {fileID: 11400000, guid: 78eb9fe1c4644a441b264169a3c3e337, type: 2}
+  ssoLogs: {fileID: 11400000, guid: 205e0ced6f394084b815bc189a646393, type: 2}
+  ssoFadeTime: {fileID: 11400000, guid: 54ad5b3f2ef378245a4626d5c4ce6d75, type: 2}
 --- !u!1 &794751728552435438
 GameObject:
   m_ObjectHideFlags: 0
