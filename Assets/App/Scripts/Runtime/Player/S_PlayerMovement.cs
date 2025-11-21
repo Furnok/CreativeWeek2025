@@ -37,6 +37,11 @@ public class S_PlayerMovement : MonoBehaviour
         _onMentalHealthReachZeroRse.action -= CantMove;
     }
 
+    private void Start()
+    {
+        transform.position = _playerSpawnRso.Value;
+    }
+
     private void Move(Vector2 input)
     {
         _direction = input;
