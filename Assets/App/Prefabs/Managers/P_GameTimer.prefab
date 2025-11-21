@@ -49,6 +49,10 @@ MonoBehaviour:
   - image: {fileID: 6317762655293103745, guid: c4ea8756c8da57b4ab8b8c68ae2aac82, type: 3}
     text: 
     time: 5
+  _sceneToLoadOnTimerEnd:
+    sceneName: SC_MainMenu
+    sceneGUID: 7145892410738c1409c06f533f734a6e
+    scenePath: Assets/App/Scenes/Tests/SC_MainMenu.unity
   _gameSettings: {fileID: 11400000, guid: c0f1146d4d156984ab24c0754662a78a, type: 2}
   _gameTimeRemaining: {fileID: 11400000, guid: db0fc20a93467854eaee1bf26c18de58, type: 2}
   _fadeTimeSso: {fileID: 11400000, guid: 54ad5b3f2ef378245a4626d5c4ce6d75, type: 2}

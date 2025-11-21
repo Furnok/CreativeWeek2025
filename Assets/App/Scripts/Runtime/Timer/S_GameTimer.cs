@@ -1,10 +1,12 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class S_GameTimer : MonoBehaviour
 {
     [Header("Settings")]
     [SerializeField] List<S_ClassIllustation> _illuMentalReachZero = new();
+    [SerializeField] S_SceneReference _sceneToLoadOnTimerEnd;
 
     [Header("References")]
     [SerializeField] SSO_Game_Settings _gameSettings;
@@ -84,6 +86,8 @@ public class S_GameTimer : MonoBehaviour
             _onIllustrationRse.Call(_illuMentalReachZero);
             StartCoroutine(S_Utils.DelayRealTime(_illuMentalReachZero[0].time, () =>
             {
+                SceneManager.LoadScene(_sceneToLoadOnTimerEnd.Name);
+
                 // Restart the game/scene or go to main menu
             }));
         }));
