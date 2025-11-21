@@ -146,19 +146,27 @@ MonoBehaviour:
   timeFade: 0.2
   illustrations:
   - image: {fileID: -4375519713581102929, guid: 34832ed75e443aa4083832c5f4875998, type: 3}
-    text: Test 1
+    text: A new island off the coast of Antarctica has appeared on our radar. Crew
+      Alpha has been tasked with reporting from this uncharted horizon. The continent
+      is isolated in the center of the ocean, undeclared in the computer system.
+      The temperature is so frigid it could freeze a beating heart.
     time: 5
   - image: {fileID: -169051582588651009, guid: 3192f1585cbe19b4294758d2661f0a60, type: 3}
-    text: Test 2
+    text: A research base was successfully established. We then began a more detailed
+      exploration of the surrounding environment. These explorations proceeded without
+      major incident for the first few days. However, contact with the research team
+      was abruptly lost.
     time: 5
   - image: {fileID: -3657595496625566089, guid: 0fc1d38bba210b1499318ad2ff9cd388, type: 3}
-    text: Test 3
+    text: A rescue team was formed and sent by ship to re-establish contact with
+      the Alpha search team.
     time: 5
   - image: {fileID: -732925332027724018, guid: c6a038e548a2d0049951a2e9a726af83, type: 3}
-    text: Test 4
+    text: The ship was able to approach the coast without incident despite unstable
+      weather conditions and unpredictable sea currents.
     time: 5
   - image: {fileID: 3696266164893778045, guid: 5d73258598b3cd24294af417d81df8c4, type: 3}
-    text: Test 5
+    text: Contact has been lost with the rescue team.
     time: 5
   menuWindow: {fileID: 3494801531385764360}
   gameWindow: {fileID: 8179310978939895048}
@@ -1312,6 +1320,14 @@ PrefabInstance:
     - target: {fileID: 778464907733672508, guid: 57c09888d5db623479beb245e5db8e5a, type: 3}
       propertyPath: m_Name
       value: Canvas Puzzle
+      objectReference: {fileID: 0}
+    - target: {fileID: 878175976557635069, guid: 57c09888d5db623479beb245e5db8e5a, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4047477297918621481, guid: 57c09888d5db623479beb245e5db8e5a, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7036273850389695415, guid: 57c09888d5db623479beb245e5db8e5a, type: 3}
       propertyPath: m_Pivot.x

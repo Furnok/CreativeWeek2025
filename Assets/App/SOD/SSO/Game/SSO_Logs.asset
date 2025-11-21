@@ -14,20 +14,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _value:
   - name: Memory 1
-    description: Test 1
-    image: {fileID: 0}
-  - name: Memory 2
-    description: Test 2
-    image: {fileID: 4561756501862891284, guid: 48b50c79164b0d34f83df342249b53e4, type: 3}
-  - name: Memory 3
-    description: Test 3
-    image: {fileID: 2495574982434560350, guid: 37979fdf65e653740bfb698a594e7b60, type: 3}
-  - name: Memory 4
-    description: Test 4
-    image: {fileID: -5508045269076349496, guid: 3d3086468bac59749840a29c75a669a6, type: 3}
-  - name: Memory 5
-    description: Test 5
-    image: {fileID: -4713966909541415033, guid: 8090d3c73200cf040ae8fc5aaa0ddded, type: 3}
-  - name: Memory 6
-    description: Test 6
+    description: I remember... but what happened...
     image: {fileID: 3696266164893778045, guid: 5d73258598b3cd24294af417d81df8c4, type: 3}
+  - name: Memory 2
+    description: After repairing the weather station, the device indicates a particularly
+      violent blizzard approaching the island. I only have a few days to find Alpha
+      Team and escape from here.
+    image: {fileID: -6532317324647301593, guid: 2a34eb3a491c9284aa659a3e71ccddb0, type: 3}
+  - name: Memory 3
+    description: Ah! That's it... The exploration involved studying the local wildlife.
+      What happened to the research team?
+    image: {fileID: 4561756501862891284, guid: 48b50c79164b0d34f83df342249b53e4, type: 3}
+  - name: Memory 4
+    description: Alpha Team's supplies and equipment have suddenly disappeared...
+      But how? Could it be wildlife or something else?
+    image: {fileID: 2495574982434560350, guid: 37979fdf65e653740bfb698a594e7b60, type: 3}
+  - name: Memory 5
+    description: "What a strange creature! Alpha Team's files indicate the presence
+      of a species unknown to science on this island. Is this the creature that attacked
+      these two researchers? What happened to the rest of Alpha Team? I hope the
+      rest of the team is safe and sound\u2026"
+    image: {fileID: -5508045269076349496, guid: 3d3086468bac59749840a29c75a669a6, type: 3}
+  - name: Memory 6
+    description: "But where are they all\u2026? Are they dead? I must be the only
+      survivor. I have to leave this island as soon as possible."
+    image: {fileID: -4713966909541415033, guid: 8090d3c73200cf040ae8fc5aaa0ddded, type: 3}
