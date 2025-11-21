@@ -87,6 +87,12 @@ public class S_UIBackpack : MonoBehaviour
     {
         if (!isClosing)
         {
+            if (isDragging || isDeleting)
+            {
+                ResetAll();
+                return;
+            }
+            
             if (rsoCurrentWindows.Value[^1] == gameObject)
             {
                 rseOnAudioUIButton.Call();
