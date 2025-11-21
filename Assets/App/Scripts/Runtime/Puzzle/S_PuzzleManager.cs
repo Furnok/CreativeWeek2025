@@ -1,4 +1,5 @@
 using DG.Tweening.Core.Easing;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -45,7 +46,7 @@ public class S_PuzzleManager : MonoBehaviour
     [SerializeField] private SSO_FadeTime ssoFadeTime;
 
     private bool isInPuzzle = false;
-    private int index = 0;
+    private int index = -1;
 
     private void OnEnable()
     {
@@ -61,6 +62,8 @@ public class S_PuzzleManager : MonoBehaviour
         RSE_OnStartPuzzle.action -= OpenPuzzle;
         RSE_OnFinishPuzzle.action -= PuzzleFinish;
         rseOnPlayerPause.action -= CloseEscape;
+
+        index = -1;
     }
     private void Start()
     {
@@ -148,6 +151,8 @@ public class S_PuzzleManager : MonoBehaviour
             rseOnCloseWindow.Call(digPanel);
         }
 
+        index = -1;
+
         rseOnHideMouseCursor.Call();
 
         isInPuzzle = false;
@@ -165,6 +170,8 @@ public class S_PuzzleManager : MonoBehaviour
             rseOnUIInputEnabled.Call();
             rseOnOpenWindow.Call(campfirePanel);
             rseOnGamePause.Call(true);
+
+            index = 0;
         }
         else if (puzzleName == "Document")
         {
@@ -172,6 +179,8 @@ public class S_PuzzleManager : MonoBehaviour
             rseOnUIInputEnabled.Call();
             rseOnOpenWindow.Call(documentPanel);
             rseOnGamePause.Call(true);
+
+            index = 1;
         }
         else if (puzzleName == "Task")
         {
@@ -179,6 +188,8 @@ public class S_PuzzleManager : MonoBehaviour
             rseOnUIInputEnabled.Call();
             rseOnOpenWindow.Call(taskPanel);
             rseOnGamePause.Call(true);
+
+            index = 2;
         }
         else if (puzzleName == "Gear")
         {
@@ -186,6 +197,8 @@ public class S_PuzzleManager : MonoBehaviour
             rseOnUIInputEnabled.Call();
             rseOnOpenWindow.Call(gearPanel);
             rseOnGamePause.Call(true);
+
+            index = 3;
         }
         else if (puzzleName == "Footprint")
         {
@@ -193,6 +206,8 @@ public class S_PuzzleManager : MonoBehaviour
             rseOnUIInputEnabled.Call();
             rseOnOpenWindow.Call(footprintPanel);
             rseOnGamePause.Call(true);
+
+            index = 4;
         }
         else if (puzzleName == "Dig")
         {
@@ -200,6 +215,8 @@ public class S_PuzzleManager : MonoBehaviour
             rseOnUIInputEnabled.Call();
             rseOnOpenWindow.Call(digPanel);
             rseOnGamePause.Call(true);
+
+            index = 5;
         }
     }
 

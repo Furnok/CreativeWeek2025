@@ -469,7 +469,7 @@ MonoBehaviour:
   _light2D: {fileID: 2756482850972608992}
   _fogVisionSource: {fileID: 7900217716266125617}
   _spBase: {fileID: 8951614564230869822}
-  _spriteBase: {fileID: 0}
+  _spriteBase: {fileID: 1875977734472072088, guid: 317d78617db86ed49aef129621ae8d44, type: 3}
   _warmthCollider: {fileID: 6487229863965953081}
   RSE_OnFinishPuzzle: {fileID: 11400000, guid: 3d476e9b414ee6a49b6f3f599bd5d003, type: 2}
   RSE_OnStartPuzzle: {fileID: 11400000, guid: 52c1d972e9bac9149be397fb89a64814, type: 2}
