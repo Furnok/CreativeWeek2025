@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3415257330985714479}
-  - component: {fileID: 6359172784692283904}
+  - component: {fileID: 6390986657620606269}
   m_Layer: 0
   m_Name: MentalObstacleCollider
   m_TagString: MentalObstacle
@@ -32,8 +32,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 232656478321075261}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &6359172784692283904
-CircleCollider2D:
+--- !u!70 &6390986657620606269
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -67,7 +67,8 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.3
+  m_Size: {x: 0.5, y: 1}
+  m_Direction: 0
 --- !u!1 &1988718158012420645
 GameObject:
   m_ObjectHideFlags: 0
@@ -276,7 +277,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7100868224754599534}
-  - component: {fileID: 741657133698440812}
+  - component: {fileID: 4828691608691053492}
   m_Layer: 0
   m_Name: Collider
   m_TagString: Untagged
@@ -299,8 +300,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 232656478321075261}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &741657133698440812
-CircleCollider2D:
+--- !u!70 &4828691608691053492
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -334,4 +335,5 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
+  m_Size: {x: 0.5, y: 1}
+  m_Direction: 0
