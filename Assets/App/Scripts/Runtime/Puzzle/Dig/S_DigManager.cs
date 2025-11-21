@@ -18,44 +18,36 @@ public class S_DigManager : MonoBehaviour
 
     [Header("Outputs")]
     [SerializeField] private RSE_OnFinishPuzzle RSE_OnFinishPuzzle;
+    [SerializeField] private RSO_Inventory rsoInventory;
 
-    private bool haveShovel = false;
+    private bool isFinish = false;
 
     private void OnEnable()
     {
-        _onShovelCollected.action += GetShovel;
-    }
-
-    private void OnDisable()
-    {
-        _onShovelCollected.action -= GetShovel;
-    }
-
-    private void Start()
-    {
-        errorText.text = "";
-        if (!haveShovel)
-        {
-            shovel.SetActive(false);
-        }
-        if (haveShovel)
+        if (rsoInventory.Value[2])
         {
             shovel.SetActive(true);
         }
-    }
-    private void GetShovel()
-    {
-        haveShovel = true;
-    }
-    public void Dig(GameObject layer)
-    {
-        if (haveShovel)
-        {
-            layer.SetActive(false);
-        }
         else
         {
-            StartCoroutine(ShowErrorMessage());
+            shovel.SetActive(false);
+        }
+
+        errorText.text = "";
+    }
+
+    public void Dig(GameObject layer)
+    {
+        if (!isFinish)
+        {
+            if (rsoInventory.Value[2])
+            {
+                layer.SetActive(false);
+            }
+            else
+            {
+                StartCoroutine(ShowErrorMessage());
+            }
         }
     }
 
@@ -72,6 +64,7 @@ public class S_DigManager : MonoBehaviour
     }
     IEnumerator PuzzleFinish()
     {
+        isFinish = true;
         yield return new WaitForSecondsRealtime(1f);
         RSE_OnFinishPuzzle.Call("Dig");
     }

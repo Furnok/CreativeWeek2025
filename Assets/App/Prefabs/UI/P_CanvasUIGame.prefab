@@ -1313,10 +1313,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas Puzzle
       objectReference: {fileID: 0}
-    - target: {fileID: 878175976557635069, guid: 57c09888d5db623479beb245e5db8e5a, type: 3}
-      propertyPath: m_hasFontAssetChanged
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7036273850389695415, guid: 57c09888d5db623479beb245e5db8e5a, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
