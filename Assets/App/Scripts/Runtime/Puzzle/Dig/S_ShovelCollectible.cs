@@ -13,6 +13,7 @@ public class S_ShovelCollectible : MonoBehaviour, I_Interactable
 
     [Header("Outputs")]
     [SerializeField] private RSE_OnShovelCollected _onShovelCollected;
+    [SerializeField] private RSO_Inventory rsoInventory;
     public int Priority => _priority;
 
     public Transform Transform => transform;
@@ -24,6 +25,8 @@ public class S_ShovelCollectible : MonoBehaviour, I_Interactable
         _onShovelCollected.Call();
         _spriteRenderer.enabled = false;
         _collider.enabled = false;
+
+        rsoInventory.Value[2] = true;
 
         Destroy(gameObject, 0.3f);
     }

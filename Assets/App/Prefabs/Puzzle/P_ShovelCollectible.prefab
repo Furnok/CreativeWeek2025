@@ -595,3 +595,4 @@ MonoBehaviour:
   _collider: {fileID: 5072881921103457557}
   ui: {fileID: 5725928229945972866}
   _onShovelCollected: {fileID: 11400000, guid: a6e33d6984247894f8fcc3347dd1cb65, type: 2}
+  rsoInventory: {fileID: 11400000, guid: 4a551648ad6520d43a8a186f38ae9a5e, type: 2}
