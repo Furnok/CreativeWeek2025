@@ -8,6 +8,7 @@ public class S_CardCollectible : MonoBehaviour, I_Interactable
     [Header("References")]
     [SerializeField] SpriteRenderer _spriteRenderer;
     [SerializeField] Collider2D _collider;
+    [SerializeField] private GameObject ui;
     //[Header("Inputs")]
 
     [Header("Outputs")]
@@ -29,6 +30,6 @@ public class S_CardCollectible : MonoBehaviour, I_Interactable
 
     public void Display(bool value)
     {
-
+        ui.SetActive(value);
     }
 }

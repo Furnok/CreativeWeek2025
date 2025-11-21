@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
-public class S_Base : MonoBehaviour
+public class S_Base : MonoBehaviour, I_Interactable
 {
     [Header("Settings")]
     [SerializeField] private int _priority = 0;
@@ -9,6 +9,7 @@ public class S_Base : MonoBehaviour
     [SerializeField] private string puzzleName;
 
     [Header("References")]
+    [SerializeField] private GameObject ui;
     [SerializeField] Light2D _light2D;
     [SerializeField] S_FogVisionSource _fogVisionSource;
     [SerializeField] SpriteRenderer _spBase;
@@ -43,10 +44,19 @@ public class S_Base : MonoBehaviour
         RSE_OnStartPuzzle.Call(puzzleName);
     }
 
+    public void Display(bool value)
+    {
+        if (_canInteract)
+        {
+            ui.SetActive(value);
+        }
+    }
+
     private void SetZoneWarmth(string puzzle)
     {
         if(puzzle == puzzleName)
         {
+            Display(false);
             _canInteract = false;
             _spBase.sprite = _spriteBase;
             _light2D.pointLightOuterRadius = 2.5f;

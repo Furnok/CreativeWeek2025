@@ -1,3 +1,5 @@
+using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class S_Cursor : MonoBehaviour
@@ -9,10 +11,24 @@ public class S_Cursor : MonoBehaviour
 
     private float angle = 0f;
     public bool isRotating = true;
+    private Coroutine rotate = null;
 
-    void Update()
+    private void OnEnable()
     {
-        if (isRotating)
+        rotate = StartCoroutine(Rotate());
+    }
+
+    private void OnDisable()
+    {
+        isRotating = false;
+
+        StopCoroutine(rotate);
+        rotate = null;
+    }
+
+    IEnumerator Rotate()
+    {
+        while(isRotating)
         {
             // On incrémente l'angle
             angle += speed * Time.deltaTime;
@@ -26,6 +42,8 @@ public class S_Cursor : MonoBehaviour
 
             // On met à jour la position du curseur
             cursor.anchoredPosition = new Vector2(x, y);
+
+            yield return null;
         }
     }
 }
