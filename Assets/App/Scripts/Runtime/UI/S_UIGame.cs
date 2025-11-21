@@ -41,6 +41,7 @@ public class S_UIGame : MonoBehaviour
     [SerializeField] private Sprite spriteLogs;
     [SerializeField] private Sprite spriteLogsPress;
     [SerializeField] private S_UIBackpack uiBackpack;
+    [SerializeField] private TextMeshProUGUI textDebug;
 
     [Header("Inputs")]
     [SerializeField] private RSE_OnStartGameTimer rseOnStartGameTimer;
@@ -52,6 +53,8 @@ public class S_UIGame : MonoBehaviour
     [SerializeField] private RSO_CurrentMentalHealth _currentMentalHealthRso;
     [SerializeField] private RSO_CurrentAmmountGlowStick _currentAmmountGlowStickRso;
     [SerializeField] private SSO_PlayerStats _playerStatsSso;
+    [SerializeField] private RSE_OnTextError rseOnTextError;
+
 
     [Header("Outputs")]
     [SerializeField] private RSE_OnShowMouseCursor rseOnShowMouseCursor;
@@ -92,7 +95,9 @@ public class S_UIGame : MonoBehaviour
         _currentTemperatureRso.onValueChanged += UpdateTemperature;
         _currentMentalHealthRso.onValueChanged += UpdateSanity;
         _currentAmmountGlowStickRso.onValueChanged += UpdateGlowStickCountText;
-        
+        rseOnTextError.action += UpdateTextError;
+
+        textDebug.gameObject.SetActive(false);
     }
 
     private void OnDisable()
@@ -105,6 +110,7 @@ public class S_UIGame : MonoBehaviour
         _currentTemperatureRso.onValueChanged -= UpdateTemperature;
         _currentMentalHealthRso.onValueChanged -= UpdateSanity;
         _currentAmmountGlowStickRso.onValueChanged -= UpdateGlowStickCountText;
+        rseOnTextError.action -= UpdateTextError;
 
         temperatureTween?.Kill();
     }
@@ -112,6 +118,16 @@ public class S_UIGame : MonoBehaviour
     private void Start()
     {
         UpdateGlowStickCountText(_currentAmmountGlowStickRso.Value);
+    }
+
+    void UpdateTextError(string text)
+    {
+
+        textDebug.text = text;
+        textDebug.gameObject.SetActive(true);
+
+
+        StartCoroutine(S_Utils.Delay(1f, () => textDebug.gameObject.SetActive(false)));
     }
 
     private void UpdateSanity(float sanity)

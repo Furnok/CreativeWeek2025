@@ -600,6 +600,7 @@ MonoBehaviour:
   _onIllustrationRse: {fileID: 11400000, guid: 7695e8361d348e34ea1665af922e9783, type: 2}
   _onFadeOutRse: {fileID: 11400000, guid: 04361f481971a204cbdc1bd2d01954af, type: 2}
   _onFadeInRse: {fileID: 11400000, guid: e989d408f82cc974e843502043f35935, type: 2}
+  rseOnTextError: {fileID: 11400000, guid: 6f4bc03329cffc04f9b7923273b317ae, type: 2}
 --- !u!114 &1417002779366693174
 MonoBehaviour:
   m_ObjectHideFlags: 0

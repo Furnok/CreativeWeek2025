@@ -21,6 +21,7 @@ public class S_BoatInteractible : MonoBehaviour, I_Interactable
     [SerializeField] RSE_OnIllustration _onIllustrationRse;
     [SerializeField] RSE_OnFadeOut _onFadeOutRse;
     [SerializeField] RSE_OnFadeIn _onFadeInRse;
+    [SerializeField] private RSE_OnTextError rseOnTextError;
 
     bool _canInteract = true;
 
@@ -35,11 +36,10 @@ public class S_BoatInteractible : MonoBehaviour, I_Interactable
 
         if (!RSO_AllPuzzleCompleted.Value)
         {
-            Debug.Log("Boat cannot be used, puzzles not completed.");
+            rseOnTextError.Call("I still have things to do");
         }
         else
         {
-            Debug.Log("All puzzles completed, boat can be used.");
             TriggerGameOverSequence();
 
             Display(false);
