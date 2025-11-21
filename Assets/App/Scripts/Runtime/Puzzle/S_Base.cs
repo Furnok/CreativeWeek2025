@@ -31,6 +31,7 @@ public class S_Base : MonoBehaviour, I_Interactable
     private void OnEnable()
     {
         RSE_OnFinishPuzzle.action += SetZoneWarmth;
+        _warmthCollider.enabled = false;
     }
 
     private void OnDisable()
