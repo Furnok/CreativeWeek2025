@@ -23,9 +23,24 @@ public class S_FootprintManager : MonoBehaviour
     [Header("Outputs")]
     [SerializeField] private RSE_OnFinishPuzzle RSE_OnFinishPuzzle;
 
+    private GameObject currentImage = null;
+
+    private void OnEnable()
+    {
+        if (currentImage == null)
+        {
+            currentImage = startImage;
+        }
+        else
+        {
+            currentImage.SetActive(true);
+        }
+    }
+
     public void CorrectWay(GameObject nextImage)
     {
         nextImage.SetActive(true);
+        currentImage = nextImage;
     }
     public void HideImage(GameObject imageToHide)
     {
@@ -34,6 +49,20 @@ public class S_FootprintManager : MonoBehaviour
     public void WrongWay()
     {
          StartCoroutine(ResetPuzzle());
+    }
+
+    private void OnDisable()
+    {
+        imageWrongWay.SetActive(false);
+        image2.SetActive(false);
+        image3.SetActive(false);
+        image4.SetActive(false);
+        image5.SetActive(false);
+        image6.SetActive(false);
+        image7.SetActive(false);
+        image8.SetActive(false);
+        endImage.SetActive(false);
+        startImage.SetActive(false);
     }
 
     IEnumerator ResetPuzzle()
@@ -50,6 +79,7 @@ public class S_FootprintManager : MonoBehaviour
         yield return new WaitForSecondsRealtime(timeShowImage);
         imageWrongWay.SetActive(false);
         startImage.SetActive(true);
+        currentImage = startImage;
     }
 
     public void PickUp(GameObject pickUp)
