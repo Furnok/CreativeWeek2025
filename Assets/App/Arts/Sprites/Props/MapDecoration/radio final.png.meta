@@ -1,0 +1,297 @@
+fileFormatVersion: 2
+guid: 032350052d9270640a049e2bba34cf4b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7026170044418614415
+    second: radio final_0
+  - first:
+      213: -1686614752481670288
+    second: radio final_1
+  - first:
+      213: -8793256297352420565
+    second: radio final_2
+  - first:
+      213: -4870901532817447434
+    second: radio final_3
+  - first:
+      213: -8500719922257536879
+    second: radio final_4
+  - first:
+      213: -3740323029904676006
+    second: radio final_5
+  - first:
+      213: -4861410632152431299
+    second: radio final_6
+  - first:
+      213: 4938884270312602827
+    second: radio final_7
+  - first:
+      213: 1129167468127835220
+    second: radio final_8
+  - first:
+      213: -1780971747917673053
+    second: radio final_9
+  - first:
+      213: -7787240039347853566
+    second: radio final_10
+  - first:
+      213: 5582882188757355215
+    second: radio final_11
+  - first:
+      213: 3992285514833776357
+    second: radio final_12
+  - first:
+      213: 8410285067123896746
+    second: radio final_13
+  - first:
+      213: -1235439600826134744
+    second: radio final_14
+  - first:
+      213: -8317164711345971222
+    second: radio final_15
+  - first:
+      213: 9053709602752970643
+    second: radio final_16
+  - first:
+      213: -7003435606285887382
+    second: radio final_17
+  - first:
+      213: -169036493130083204
+    second: radio final_18
+  - first:
+      213: -1964472869783966806
+    second: radio final_19
+  - first:
+      213: -6274834277040797406
+    second: radio final_20
+  - first:
+      213: -2004417095138440342
+    second: radio final_21
+  - first:
+      213: 3166727628697537670
+    second: radio final_22
+  - first:
+      213: 4336776746889269690
+    second: radio final_23
+  - first:
+      213: -3830189005784187890
+    second: radio final_24
+  - first:
+      213: 3727740262156151610
+    second: radio final_25
+  - first:
+      213: 719270795261143204
+    second: radio final_26
+  - first:
+      213: 7362740203766239142
+    second: radio final_27
+  - first:
+      213: -8085441630566613617
+    second: radio final_28
+  - first:
+      213: 4889201904799132752
+    second: radio final_29
+  - first:
+      213: 4601053521839997270
+    second: radio final_30
+  - first:
+      213: -2460785963266674452
+    second: radio final_31
+  - first:
+      213: -3482396808841150677
+    second: radio final_32
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: radio final_2
+      rect:
+        serializedVersion: 2
+        x: 1052
+        y: 132
+        width: 870
+        height: 1856
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b23a7597cf318f580800000000000000
+      internalID: -8793256297352420565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: c8812784d5a7ee144a22663d5388137e
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      radio final_0: 7026170044418614415
+      radio final_1: -1686614752481670288
+      radio final_10: -7787240039347853566
+      radio final_11: 5582882188757355215
+      radio final_12: 3992285514833776357
+      radio final_13: 8410285067123896746
+      radio final_14: -1235439600826134744
+      radio final_15: -8317164711345971222
+      radio final_16: 9053709602752970643
+      radio final_17: -7003435606285887382
+      radio final_18: -169036493130083204
+      radio final_19: -1964472869783966806
+      radio final_2: -8793256297352420565
+      radio final_20: -6274834277040797406
+      radio final_21: -2004417095138440342
+      radio final_22: 3166727628697537670
+      radio final_23: 4336776746889269690
+      radio final_24: -3830189005784187890
+      radio final_25: 3727740262156151610
+      radio final_26: 719270795261143204
+      radio final_27: 7362740203766239142
+      radio final_28: -8085441630566613617
+      radio final_29: 4889201904799132752
+      radio final_3: -4870901532817447434
+      radio final_30: 4601053521839997270
+      radio final_31: -2460785963266674452
+      radio final_32: -3482396808841150677
+      radio final_4: -8500719922257536879
+      radio final_5: -3740323029904676006
+      radio final_6: -4861410632152431299
+      radio final_7: 4938884270312602827
+      radio final_8: 1129167468127835220
+      radio final_9: -1780971747917673053
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
