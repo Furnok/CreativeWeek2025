@@ -15,7 +15,7 @@ public class S_FogOfWarController : MonoBehaviour
     //[Header("Outputs")]
 
     [SerializeField] private Camera _camera;
-    [SerializeField] private int _maxSources = 8;
+    [SerializeField] private int _maxSources = 16;
 
     private SpriteRenderer _renderer;
     private Material _material;

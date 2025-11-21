@@ -42,9 +42,9 @@ Shader "Custom/FogOfWar2D_Blizzard_Quad"
             float4    _FogColor;
 
             int    _SourceCount;
-            float4 _Centers[8];
-            float  _Radii[8];
-            float  _Softness[8];
+            float4 _Centers[16];
+            float  _Radii[16];
+            float  _Softness[16];
 
             float4 _ScrollSpeed1;
             float4 _ScrollSpeed2;

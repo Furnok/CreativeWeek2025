@@ -9,7 +9,7 @@ public class S_FogOfWarControllerQuad : MonoBehaviour
     [SerializeField] RSE_OnChangeFogColor _onChangeFogColorRse;
 
     [SerializeField] private Camera _camera;
-    [SerializeField] private int _maxSources = 8;
+    [SerializeField] private int _maxSources = 16;
 
     private Renderer _renderer;   // MeshRenderer ou autre
     private Material _material;

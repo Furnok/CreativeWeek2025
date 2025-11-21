@@ -38,10 +38,25 @@ public class S_FogVisionSource : MonoBehaviour, I_FogVisionSource
         _currentCycleRso.onValueChanged -= OnCycleChanged;
     }
 
-    public void ModifRadius(float ammount)
+    public void ModifRadius(float amount)
     {
-        _fogVisionSourceData.Radius += ammount;
-        _baseRadius = _fogVisionSourceData.Radius;
+        _baseRadius += amount;
+        _baseRadius = Mathf.Clamp01(_baseRadius);
+
+        if (_radiusCoroutine != null)
+        {
+            StopCoroutine(_radiusCoroutine);
+            _radiusCoroutine = null;
+        }
+
+        float targetRadius =
+            _currentCycleRso.Value == TimeOfDay.Day
+                ? _baseRadius
+                : _baseRadius + _radiusNightModifier;
+
+        targetRadius = Mathf.Clamp01(targetRadius);
+
+        _radiusCoroutine = StartCoroutine(AnimateRadius(targetRadius));
     }
 
     void OnCycleChanged(TimeOfDay timeOfDay)
@@ -50,6 +65,8 @@ public class S_FogVisionSource : MonoBehaviour, I_FogVisionSource
             timeOfDay == TimeOfDay.Day
             ? _baseRadius
             : _baseRadius + _radiusNightModifier;
+
+        targetRadius = Mathf.Clamp01(targetRadius);
 
         if (_radiusCoroutine != null)
         {
