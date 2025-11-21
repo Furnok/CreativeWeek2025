@@ -45,8 +45,9 @@ public class S_DistributorManager : MonoBehaviour
         validationBar1.color = Color.black;
         validationBar2.color = Color.black;
         validationBar3.color = Color.black;
-        cursor1.isRotating = true;
-        cursor2.isRotating = true;
-        cursor3.isRotating = true;
+
+        cursor1.Restart();
+        cursor2.Restart();
+        cursor3.Restart();
     }
 }

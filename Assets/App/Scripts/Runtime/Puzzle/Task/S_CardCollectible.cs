@@ -13,6 +13,7 @@ public class S_CardCollectible : MonoBehaviour, I_Interactable
 
     [Header("Outputs")]
     [SerializeField] private RSE_OnCardCollected _onCardCollected;
+    [SerializeField] private RSO_Inventory rsoInventory;
     public int Priority => _priority;
 
     public Transform Transform => transform;
@@ -24,6 +25,8 @@ public class S_CardCollectible : MonoBehaviour, I_Interactable
         _onCardCollected.Call();
         _spriteRenderer.enabled = false;
         _collider.enabled = false;
+
+        rsoInventory.Value[1] = true;
 
         Destroy(gameObject, 0.3f);
     }

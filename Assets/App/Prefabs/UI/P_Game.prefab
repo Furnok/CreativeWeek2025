@@ -13746,6 +13746,7 @@ MonoBehaviour:
   rseOnHideMouseCursor: {fileID: 11400000, guid: 6d5e981612b14c647829144701460dff, type: 2}
   rseOnOpenWindow: {fileID: 11400000, guid: e205cf7e757f88f4bb5a18b768b6478a, type: 2}
   rsoLogs: {fileID: 11400000, guid: 78eb9fe1c4644a441b264169a3c3e337, type: 2}
+  rsoInventory: {fileID: 11400000, guid: 4a551648ad6520d43a8a186f38ae9a5e, type: 2}
 --- !u!1 &7904875527225491374
 GameObject:
   m_ObjectHideFlags: 0

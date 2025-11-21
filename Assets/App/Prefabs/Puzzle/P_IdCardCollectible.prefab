@@ -595,3 +595,4 @@ MonoBehaviour:
   _collider: {fileID: 5416434242120786258}
   ui: {fileID: 1279772208500995063}
   _onCardCollected: {fileID: 11400000, guid: 59171399798092b418a9244ae90a8332, type: 2}
+  rsoInventory: {fileID: 11400000, guid: 4a551648ad6520d43a8a186f38ae9a5e, type: 2}

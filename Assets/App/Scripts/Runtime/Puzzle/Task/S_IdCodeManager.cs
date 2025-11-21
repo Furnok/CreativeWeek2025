@@ -17,39 +17,42 @@ public class S_IdCodeManager : MonoBehaviour
 
     [Header("Outputs")]
     [SerializeField] private RSE_OnTaskCompleted rse_OnTaskCompleted;
+    [SerializeField] private RSO_Inventory rsoInventory;
     [Header("Inputs")]
     [SerializeField] private RSE_OnCardCollected _onCardCollected;
 
-    private bool haveCard = true;
+    private Coroutine temps = null;
 
     private void OnEnable()
     {
-        _onCardCollected.action += GetCard;
+        if (rsoInventory.Value[1])
+        {
+            card.SetActive(true);
+        }
+        else
+        {
+            card.SetActive(false);
+        }
     }
 
     private void OnDisable()
     {
-        _onCardCollected.action -= GetCard;
+        messageText.color = Color.red;
+        messageText.text = "";
     }
 
-    private void GetCard()
-    {
-        haveCard = true;
-    }
     private void Start()
     {
         codeText.text = correctCode;
-        if (!haveCard)
-        {
-            card.SetActive(false);
-        }
-        if (haveCard)
-        {
-            card.SetActive(true);
-        }
     }
+
     public void CheckCode()
     {
+        if (string.IsNullOrWhiteSpace(codeInput.text))
+        {
+            return;
+        }
+
         string userCode = codeInput.text;
 
         if (userCode == correctCode)
@@ -61,7 +64,7 @@ public class S_IdCodeManager : MonoBehaviour
         }
         else
         {
-            StartCoroutine(ShowIncorrectMessage());
+            temps = StartCoroutine(ShowIncorrectMessage());
         }
     }
 

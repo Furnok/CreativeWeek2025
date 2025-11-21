@@ -22,12 +22,14 @@ public class S_DistributorButton : MonoBehaviour
         if (_cursorHandler.cursorInside)
         {
             _Cursor.isRotating = false;
+            _Cursor.isFinish = true;
             rse_OnValidateCursorInside.Call();
             validationBar.color = Color.green;
         }
         else
         {
             _Cursor.isRotating = false;
+            _Cursor.isFinish = false;
             validationBar.color = Color.red;
             StartCoroutine(ResetGame());
         }
@@ -35,7 +37,7 @@ public class S_DistributorButton : MonoBehaviour
 
     IEnumerator ResetGame()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSecondsRealtime(0.2f);
         _distributorManager.ResetValidation();
     }
 }
