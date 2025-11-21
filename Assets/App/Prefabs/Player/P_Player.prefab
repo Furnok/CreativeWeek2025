@@ -183,6 +183,7 @@ MonoBehaviour:
   _playerStats: {fileID: 11400000, guid: cea7641025dd6dc4fa869ec1ab8595d3, type: 2}
   _playerSpawnRso: {fileID: 11400000, guid: d49f7991df8afdd40a4a1487ef8adcf7, type: 2}
   _spriteRenderer: {fileID: 6412026073154286687}
+  _currentPlayerPos: {fileID: 11400000, guid: 0c7a32ac51519914783f17cc0baa5c45, type: 2}
   _onPlayerMoveInput: {fileID: 11400000, guid: f81ab021498c6f54aa57af72b9fe7e82, type: 2}
   _onResetAfterMentalReachZeroRse: {fileID: 11400000, guid: ae2d39befbbd88342a967bc7f3b0edfa, type: 2}
   _onMentalHealthReachZeroRse: {fileID: 11400000, guid: c2e65dbfe517eae46bdff4fff87548b8, type: 2}
@@ -5644,7 +5645,7 @@ MonoBehaviour:
   m_Intensity: 0.3
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 00000000e5a5ac8f0f74b6a7
+  m_ApplyToSortingLayers: 00000000e5a5ac8f0f74b6a7178c9fe7
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -5848,6 +5849,14 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 84424738183219052, guid: 94866081aac3f604997677dfe01cc0d1, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 84424738183219052, guid: 94866081aac3f604997677dfe01cc0d1, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -408974313
+      objectReference: {fileID: 0}
     - target: {fileID: 2735529189910160934, guid: 94866081aac3f604997677dfe01cc0d1, type: 3}
       propertyPath: _camera
       value: 
@@ -5891,6 +5900,10 @@ PrefabInstance:
     - target: {fileID: 3063502259263956367, guid: 94866081aac3f604997677dfe01cc0d1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3717490321953099917, guid: 94866081aac3f604997677dfe01cc0d1, type: 3}
+      propertyPath: m_Layer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5828631451952654982, guid: 94866081aac3f604997677dfe01cc0d1, type: 3}
       propertyPath: m_Name

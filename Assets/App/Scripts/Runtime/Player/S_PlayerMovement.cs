@@ -9,6 +9,7 @@ public class S_PlayerMovement : MonoBehaviour
     [SerializeField] private SSO_PlayerStats _playerStats;
     [SerializeField] RSO_PlayerSpawn _playerSpawnRso;
     [SerializeField] SpriteRenderer _spriteRenderer;
+    [SerializeField] RSO_CurrentPlayerPos _currentPlayerPos;
 
     [Header("Inputs")]
     [SerializeField] private RSE_OnPlayerMoveInput _onPlayerMoveInput;
@@ -45,6 +46,7 @@ public class S_PlayerMovement : MonoBehaviour
     {
         if (!_canMove) return;
         _rb.MovePosition(_rb.position + _direction * _speed * Time.fixedDeltaTime);
+        _currentPlayerPos.Value = _rb.position;
     }
 
     private void LateUpdate()

@@ -50,8 +50,15 @@ MonoBehaviour:
   - image: {fileID: -727564525578123873, guid: cc619c1e8a3b09d4e87155fee8d4c4e0, type: 3}
     text: 
     time: 5
+  _spritObject01: {fileID: 3593218591076259312, guid: 0a7567de0c71f3044b456d4c06833608, type: 3}
+  _spritObject02: {fileID: 8508329930588878522, guid: 5d4aa52dab2cfaf4eb25969e9f98bc54, type: 3}
+  _spritObject03: {fileID: 4432551237007868019, guid: dae389eb4e8d3984899ae00ec192f060, type: 3}
+  _offsetSpritObject01: {x: -1.007, y: 0.858}
+  _offsetSpritObject02: {x: 0.83, y: 0.78}
+  _offsetSpritObject03: {x: 0.062, y: -0.933}
   _playerSpawnRso: {fileID: 11400000, guid: d49f7991df8afdd40a4a1487ef8adcf7, type: 2}
   _fadeTimeSso: {fileID: 11400000, guid: 54ad5b3f2ef378245a4626d5c4ce6d75, type: 2}
+  _currentPlayerPos: {fileID: 11400000, guid: 0c7a32ac51519914783f17cc0baa5c45, type: 2}
   _onMentalHealthReachZeroRse: {fileID: 11400000, guid: c2e65dbfe517eae46bdff4fff87548b8, type: 2}
   _onResetAfterMentalReachZeroRse: {fileID: 11400000, guid: ae2d39befbbd88342a967bc7f3b0edfa, type: 2}
   _onIllustrationRse: {fileID: 11400000, guid: 7695e8361d348e34ea1665af922e9783, type: 2}
