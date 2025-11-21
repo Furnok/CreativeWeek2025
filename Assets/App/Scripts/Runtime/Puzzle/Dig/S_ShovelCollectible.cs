@@ -26,4 +26,9 @@ public class S_ShovelCollectible : MonoBehaviour, I_Interactable
 
         Destroy(gameObject, 0.3f);
     }
+
+    public void Display(bool value)
+    {
+
+    }
 }

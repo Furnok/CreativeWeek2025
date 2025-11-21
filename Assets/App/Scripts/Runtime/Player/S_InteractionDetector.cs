@@ -54,6 +54,8 @@ public class S_InteractionDetector : MonoBehaviour
 
         if (interactable == null) return;
 
+        interactable.Display(true);
+
         if (!_interactablesInRange.Contains(interactable))
         {
             _interactablesInRange.Add(interactable);
@@ -75,6 +77,8 @@ public class S_InteractionDetector : MonoBehaviour
         }
 
         if (interactable == null) return;
+
+        interactable.Display(false);
 
         if (_interactablesInRange.Remove(interactable))
         {

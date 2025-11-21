@@ -1,5 +1,7 @@
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
+using static UnityEngine.Rendering.DebugUI;
 
 public class S_Campfire : MonoBehaviour, I_Interactable
 {
@@ -13,6 +15,7 @@ public class S_Campfire : MonoBehaviour, I_Interactable
     [SerializeField] SpriteRenderer _spCampfire;
     [SerializeField] Sprite _spriteCampfireLit;
     [SerializeField] Collider2D _warmthCollider;
+    [SerializeField] private GameObject ui;
 
     //[Header("Inputs")]
 
@@ -28,6 +31,7 @@ public class S_Campfire : MonoBehaviour, I_Interactable
     public void Interact()
     {
         if (!_canInteract) return;
+        Display(false);
         _canInteract = false;
 
         _spCampfire.sprite = _spriteCampfireLit;
@@ -36,5 +40,13 @@ public class S_Campfire : MonoBehaviour, I_Interactable
         _light2D.pointLightInnerRadius = 1.0f;
         _fogVisionSource.ModifRadius(_newRadiusVisionAfterInteract);
         _warmthCollider.enabled = true;
+    }
+
+    public void Display(bool value)
+    {
+        if (_canInteract)
+        {
+            ui.SetActive(value);
+        }
     }
 }

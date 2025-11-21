@@ -12,6 +12,7 @@ public class S_GlowstickCollectible : MonoBehaviour, I_Interactable
     [SerializeField] SSO_PlayerStats _playerStatsSso;
     [SerializeField] SpriteRenderer _spriteRenderer;
     [SerializeField] Collider2D _collider;
+    [SerializeField] private GameObject ui;
 
     //[Header("Inputs")]
 
@@ -33,5 +34,10 @@ public class S_GlowstickCollectible : MonoBehaviour, I_Interactable
         _collider.enabled = false;
         
         Destroy(gameObject, 0.3f);
+    }
+
+    public void Display(bool value)
+    {
+        ui.SetActive(value);
     }
 }

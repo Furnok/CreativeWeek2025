@@ -77,6 +77,12 @@ public class S_PlayerGlowstickManager : MonoBehaviour
         if (collision.gameObject.CompareTag(_glowStickTag))
         {
             _placedGlowsticksAround.Add(collision.gameObject);
+
+            S_GlowStickInput collider = collision.GetComponent<S_GlowStickInput>();
+            if (collider != null)
+            {
+                collider.Display(true);
+            }
         }
     }
 
@@ -87,6 +93,12 @@ public class S_PlayerGlowstickManager : MonoBehaviour
             if (_placedGlowsticksAround.Contains(collision.gameObject))
             {
                 _placedGlowsticksAround.Remove(collision.gameObject);
+
+                S_GlowStickInput collider = collision.GetComponent<S_GlowStickInput>();
+                if (collider != null)
+                {
+                    collider.Display(false);
+                }
             }
         }
     }

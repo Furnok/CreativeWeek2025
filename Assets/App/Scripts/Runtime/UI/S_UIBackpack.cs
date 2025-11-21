@@ -49,7 +49,6 @@ public class S_UIBackpack : MonoBehaviour
     private bool isDragging = false;
     [HideInInspector] public bool isDeleting = false;
 
-
     private void OnEnable()
     {
         rseOnPlayerPause.action += CloseEscape;

@@ -7,4 +7,5 @@ public interface I_Interactable
     public Transform Transform { get; }
     bool IsInteractable { get; }
     public void Interact();
+    public void Display(bool value);
 }
