@@ -11,7 +11,7 @@ public class S_SortingLayerWorld : MonoBehaviour
 
     //[Header("Outputs")]
 
-    void OnEnbale()
+    void OnEnable()
     {
         _spriteRenderer.sortingOrder = -(int)(transform.position.y * 10);
     }
