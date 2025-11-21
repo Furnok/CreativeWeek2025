@@ -1917,22 +1917,30 @@ MonoBehaviour:
   digPanel: {fileID: 745680327330246193}
   illuMentalReachZero:
   - image: {fileID: 3696266164893778045, guid: 5d73258598b3cd24294af417d81df8c4, type: 3}
-    text: Test 1
+    text: 
     time: 5
-  - image: {fileID: 3696266164893778045, guid: 5d73258598b3cd24294af417d81df8c4, type: 3}
-    text: Test 2
+  - image: {fileID: 1993438380341011329, guid: edd80fd27ae066c488424e840d63b1c7, type: 3}
+    text: After repairing the weather station, the device indicates that a particularly
+      violent blizzard is approaching the island. I only have a few days to find
+      the Alpha team and get out of here.
     time: 5
   - image: {fileID: 4561756501862891284, guid: 48b50c79164b0d34f83df342249b53e4, type: 3}
-    text: Test 3
+    text: Ah! I remember now... The expedition involved studying the local wildlife.
+      What happened to the research team?
     time: 5
   - image: {fileID: 2495574982434560350, guid: 37979fdf65e653740bfb698a594e7b60, type: 3}
-    text: Test 4
+    text: Alpha Team's supplies and equipment suddenly disappeared... But how? Could
+      it be the wildlife, or something else?
     time: 5
   - image: {fileID: -5508045269076349496, guid: 3d3086468bac59749840a29c75a669a6, type: 3}
-    text: Test 5
+    text: What a strange creature! The Alpha team's files indicate the presence of
+      a species unknown to science on this island. Is this the creature that attacked
+      the two researchers? What happened to the rest of the Alpha team? I hope the
+      rest of the team is safe and sound...
     time: 5
   - image: {fileID: -4713966909541415033, guid: 8090d3c73200cf040ae8fc5aaa0ddded, type: 3}
-    text: Test 6
+    text: But where are they all...? So they're dead? That means I'm the only survivor.
+      I have to get off this island as soon as possible.
     time: 5
   RSE_OnStartPuzzle: {fileID: 11400000, guid: 52c1d972e9bac9149be397fb89a64814, type: 2}
   RSE_OnFinishPuzzle: {fileID: 11400000, guid: 3d476e9b414ee6a49b6f3f599bd5d003, type: 2}
