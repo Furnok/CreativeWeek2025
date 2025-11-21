@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _delayWhenGardinaSpriritCome: 2
-  _initialSapwnPos: {x: 0, y: 0}
+  _initialSapwnPos: {x: -48, y: 16}
   _illuMentalReachZero:
   - image: {fileID: -727564525578123873, guid: cc619c1e8a3b09d4e87155fee8d4c4e0, type: 3}
     text: NO...Nah!..y...Y...You won't get me....GO!!... AAAAAAH!
