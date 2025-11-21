@@ -1,3 +1,4 @@
+using DG.Tweening.Core.Easing;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -51,6 +52,9 @@ public class S_PuzzleManager : MonoBehaviour
         RSE_OnStartPuzzle.action += OpenPuzzle;
         RSE_OnFinishPuzzle.action += PuzzleFinish;
         rseOnPlayerPause.action += CloseEscape;
+
+        RSO_AllPuzzleCompleted.Value = false;
+
     }
     private void OnDisable()
     {

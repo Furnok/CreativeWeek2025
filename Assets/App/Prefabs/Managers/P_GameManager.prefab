@@ -48,7 +48,7 @@ MonoBehaviour:
   _initialSapwnPos: {x: 0, y: 0}
   _illuMentalReachZero:
   - image: {fileID: -727564525578123873, guid: cc619c1e8a3b09d4e87155fee8d4c4e0, type: 3}
-    text: 
+    text: NO...Nah!..y...Y...You won't get me....GO!!... AAAAAAH!
     time: 5
   _spritObject01: {fileID: 3593218591076259312, guid: 0a7567de0c71f3044b456d4c06833608, type: 3}
   _spritObject02: {fileID: 8508329930588878522, guid: 5d4aa52dab2cfaf4eb25969e9f98bc54, type: 3}

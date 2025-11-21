@@ -47,7 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _illuMentalReachZero:
   - image: {fileID: 6317762655293103745, guid: c4ea8756c8da57b4ab8b8c68ae2aac82, type: 3}
-    text: 
+    text: I wasn't fast enough... I'm getting tired... It's so cold...
     time: 5
   _sceneToLoadOnTimerEnd:
     sceneName: SC_MainMenu

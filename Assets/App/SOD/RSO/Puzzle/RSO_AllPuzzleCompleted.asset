@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a41bc13dfaa25204a85332ddd062377d, type: 3}
   m_Name: RSO_AllPuzzleCompleted
   m_EditorClassIdentifier: 
-  _value: 0
+  _value: 1

@@ -87,8 +87,6 @@ public class S_GameTimer : MonoBehaviour
             StartCoroutine(S_Utils.DelayRealTime(_illuMentalReachZero[0].time, () =>
             {
                 SceneManager.LoadScene(_sceneToLoadOnTimerEnd.Name);
-
-                // Restart the game/scene or go to main menu
             }));
         }));
     }
