@@ -23,27 +23,42 @@ public class S_PuzzleManager : MonoBehaviour
     [Header("Inputs")]
     [SerializeField] private RSE_OnStartPuzzle RSE_OnStartPuzzle;
     [SerializeField] private RSE_OnFinishPuzzle RSE_OnFinishPuzzle;
+    [SerializeField] private RSE_OnPlayerPause rseOnPlayerPause;
 
-    //[Header("Outputs")]
-    [SerializeField] private RSE_OnGamePause RSE_OnGamePause;
+    [Header("Outputs")]
+    [SerializeField] private RSE_OnOpenWindow rseOnOpenWindow;
+    [SerializeField] private RSE_OnCloseWindow rseOnCloseWindow;
+    [SerializeField] private RSE_OnGamePause rseOnGamePause;
+    [SerializeField] private RSE_OnAudioUIButton rseOnAudioUIButton;
+    [SerializeField] private RSE_OnUIInputEnabled rseOnUIInputEnabled;
+    [SerializeField] private RSE_OnGameInputEnabled rseOnGameInputEnabled;
+    [SerializeField] private RSE_OnShowMouseCursor rseOnShowMouseCursor;
+    [SerializeField] private RSE_OnHideMouseCursor rseOnHideMouseCursor;
+    [SerializeField] private RSO_CurrentWindows rsoCurrentWindows;
+
+    private bool isInPuzzle = false;
+
     private void OnEnable()
     {
         RSE_OnStartPuzzle.action += OpenPuzzle;
         RSE_OnFinishPuzzle.action += PuzzleFinish;
+        rseOnPlayerPause.action += CloseEscape;
     }
     private void OnDisable()
     {
         RSE_OnStartPuzzle.action -= OpenPuzzle;
         RSE_OnFinishPuzzle.action -= PuzzleFinish;
+        rseOnPlayerPause.action -= CloseEscape;
     }
     private void Start()
     {
         puzzleCountText.text = "";
     }
+
     private void PuzzleFinish(string name)
     {
         puzzleDone++;
-        RSE_OnGamePause.Call(false);
+        rseOnGamePause.Call(false);
         StartCoroutine(DisplayText(name));
         CheckPuzzleAllDone();
     }
@@ -65,62 +80,105 @@ public class S_PuzzleManager : MonoBehaviour
         }
     }
 
+    private void CloseEscape()
+    {
+        if (isInPuzzle && (rsoCurrentWindows.Value[^1] == campfirePanel || rsoCurrentWindows.Value[^1] == documentPanel || rsoCurrentWindows.Value[^1] == taskPanel || rsoCurrentWindows.Value[^1] == gearPanel || rsoCurrentWindows.Value[^1] == footprintPanel || rsoCurrentWindows.Value[^1] == digPanel))
+        {
+            rseOnAudioUIButton.Call();
+
+            StartCoroutine(S_Utils.DelayFrame(() => CloseAll()));
+        }
+    }
+
+    private void CloseAll()
+    {
+        rseOnGamePause.Call(false);
+        rseOnGameInputEnabled.Call();
+
+        if (campfirePanel.activeInHierarchy)
+        {
+            rseOnCloseWindow.Call(campfirePanel);
+        }
+        else if (documentPanel.activeInHierarchy)
+        {
+            rseOnCloseWindow.Call(documentPanel);
+        }
+        else if (taskPanel.activeInHierarchy)
+        {
+            rseOnCloseWindow.Call(taskPanel);
+        }
+        else if (gearPanel.activeInHierarchy)
+        {
+            rseOnCloseWindow.Call(gearPanel);
+        }
+        else if (footprintPanel.activeInHierarchy)
+        {
+            rseOnCloseWindow.Call(footprintPanel);
+        }
+        else if (digPanel.activeInHierarchy)
+        {
+            rseOnCloseWindow.Call(digPanel);
+        }
+
+        rseOnHideMouseCursor.Call();
+
+        isInPuzzle = false;
+    }
+
     private void OpenPuzzle(string puzzleName)
     {
-        RSE_OnGamePause.Call(true);
+        isInPuzzle = true;
+
+        rseOnShowMouseCursor.Call();
 
         if (puzzleName == "Campfire")
         {
-            campfirePanel.SetActive(true);
+            rseOnAudioUIButton.Call();
+            rseOnUIInputEnabled.Call();
+            rseOnOpenWindow.Call(campfirePanel);
+            rseOnGamePause.Call(true);
         }
         else if (puzzleName == "Document")
         {
-            documentPanel.SetActive(true);
+            rseOnAudioUIButton.Call();
+            rseOnUIInputEnabled.Call();
+            rseOnOpenWindow.Call(documentPanel);
+            rseOnGamePause.Call(true);
         }
         else if (puzzleName == "Task")
         {
-            taskPanel.SetActive(true);
+            rseOnAudioUIButton.Call();
+            rseOnUIInputEnabled.Call();
+            rseOnOpenWindow.Call(taskPanel);
+            rseOnGamePause.Call(true);
         }
         else if (puzzleName == "Gear")
         {
-            gearPanel.SetActive(true);
+            rseOnAudioUIButton.Call();
+            rseOnUIInputEnabled.Call();
+            rseOnOpenWindow.Call(gearPanel);
+            rseOnGamePause.Call(true);
         }
         else if (puzzleName == "Footprint")
         {
-            footprintPanel.SetActive(true);
+            rseOnAudioUIButton.Call();
+            rseOnUIInputEnabled.Call();
+            rseOnOpenWindow.Call(footprintPanel);
+            rseOnGamePause.Call(true);
         }
         else if (puzzleName == "Dig")
         {
-            digPanel.SetActive(true);
+            rseOnAudioUIButton.Call();
+            rseOnUIInputEnabled.Call();
+            rseOnOpenWindow.Call(digPanel);
+            rseOnGamePause.Call(true);
         }
     }
+
     private void ClosePuzzle(string puzzleName)
     {
-        RSE_OnGamePause.Call(false);
+        rseOnAudioUIButton.Call();
 
-        if (puzzleName == "Campfire")
-        {
-            campfirePanel.SetActive(false);
-        }
-        else if (puzzleName == "Document")
-        {
-            documentPanel.SetActive(false);
-        }
-        else if(puzzleName == "Task")
-        {
-            taskPanel.SetActive(false);
-        }
-        else if (puzzleName == "Gear")
-        {
-            gearPanel.SetActive(false);
-        }
-        else if (puzzleName == "Footprint")
-        {
-            footprintPanel.SetActive(false);
-        }
-        else if (puzzleName == "Dig")
-        {
-            digPanel.SetActive(false);
-        }
+        CloseAll();
     }
 }

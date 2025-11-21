@@ -1718,6 +1718,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6793647524224470110}
   - component: {fileID: 1262148104837291172}
+  - component: {fileID: 7364614608629275223}
   m_Layer: 5
   m_Name: Dig
   m_TagString: Untagged
@@ -1769,6 +1770,18 @@ MonoBehaviour:
   errorText: {fileID: 516482449490382920}
   _onShovelCollected: {fileID: 11400000, guid: a6e33d6984247894f8fcc3347dd1cb65, type: 2}
   RSE_OnFinishPuzzle: {fileID: 11400000, guid: 3d476e9b414ee6a49b6f3f599bd5d003, type: 2}
+--- !u!225 &7364614608629275223
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 745680327330246193}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &778464907733672508
 GameObject:
   m_ObjectHideFlags: 0
@@ -1903,7 +1916,16 @@ MonoBehaviour:
   digPanel: {fileID: 745680327330246193}
   RSE_OnStartPuzzle: {fileID: 11400000, guid: 52c1d972e9bac9149be397fb89a64814, type: 2}
   RSE_OnFinishPuzzle: {fileID: 11400000, guid: 3d476e9b414ee6a49b6f3f599bd5d003, type: 2}
-  RSE_OnGamePause: {fileID: 11400000, guid: e0315f5f5ac494d44a53daeca203e79b, type: 2}
+  rseOnPlayerPause: {fileID: 11400000, guid: d47879626944a4f4d94c3d83ad48074d, type: 2}
+  rseOnOpenWindow: {fileID: 11400000, guid: e205cf7e757f88f4bb5a18b768b6478a, type: 2}
+  rseOnCloseWindow: {fileID: 11400000, guid: c636cf0cc62b7e1489a6e16eb8927d14, type: 2}
+  rseOnGamePause: {fileID: 11400000, guid: e0315f5f5ac494d44a53daeca203e79b, type: 2}
+  rseOnAudioUIButton: {fileID: 11400000, guid: 012d77128a05957409295d233882f724, type: 2}
+  rseOnUIInputEnabled: {fileID: 11400000, guid: f8900a3c295c93f478f8289c92da16ca, type: 2}
+  rseOnGameInputEnabled: {fileID: 11400000, guid: 04e33dd8947e9f040ba0b26e21d19169, type: 2}
+  rseOnShowMouseCursor: {fileID: 11400000, guid: 9d8e49b25cba362429cd13ef70fa4f76, type: 2}
+  rseOnHideMouseCursor: {fileID: 11400000, guid: 6d5e981612b14c647829144701460dff, type: 2}
+  rsoCurrentWindows: {fileID: 11400000, guid: 3f155b301f9d9724ea0959e04e23ef25, type: 2}
 --- !u!1 &794751728552435438
 GameObject:
   m_ObjectHideFlags: 0
@@ -6634,6 +6656,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4045160006982603116}
   - component: {fileID: 8523720871572416597}
+  - component: {fileID: 1222690578600480488}
   m_Layer: 5
   m_Name: Gear
   m_TagString: Untagged
@@ -6694,6 +6717,18 @@ MonoBehaviour:
   - {fileID: 4482434022006568921}
   RSE_OnValidatePieceRotation: {fileID: 11400000, guid: 39e060469c6019c438e503fed99c40ad, type: 2}
   RSE_OnFinishPuzzle: {fileID: 11400000, guid: 3d476e9b414ee6a49b6f3f599bd5d003, type: 2}
+--- !u!225 &1222690578600480488
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2533798008869154394}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &2552856884089001457
 GameObject:
   m_ObjectHideFlags: 0
@@ -10454,6 +10489,7 @@ GameObject:
   m_Component:
   - component: {fileID: 273542513099396008}
   - component: {fileID: 9156652357589814245}
+  - component: {fileID: 1994299143767021920}
   m_Layer: 5
   m_Name: Document
   m_TagString: Untagged
@@ -10500,6 +10536,18 @@ MonoBehaviour:
   puzzlePieceMax: 20
   rse_OnValidatePiecePos: {fileID: 11400000, guid: 7ed10626d2eb5fb49a8cf8bb88df5abd, type: 2}
   RSE_OnFinishPuzzle: {fileID: 11400000, guid: 3d476e9b414ee6a49b6f3f599bd5d003, type: 2}
+--- !u!225 &1994299143767021920
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4288580847588127957}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &4322777298792637151
 GameObject:
   m_ObjectHideFlags: 0
@@ -11162,6 +11210,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9058837878794762798}
   - component: {fileID: 8765622671760472830}
+  - component: {fileID: 1180458147688763612}
   m_Layer: 5
   m_Name: ElectricTask
   m_TagString: Untagged
@@ -11206,6 +11255,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rse_OnTaskCompleted: {fileID: 11400000, guid: 5d189b36e2437cf4a8c4af3b804b82b8, type: 2}
   RSE_OnFinishPuzzle: {fileID: 11400000, guid: 3d476e9b414ee6a49b6f3f599bd5d003, type: 2}
+--- !u!225 &1180458147688763612
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4896866355402525609}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &4897548166611536967
 GameObject:
   m_ObjectHideFlags: 0
@@ -13856,6 +13917,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5918529901855711125}
   - component: {fileID: 6771166380467441315}
+  - component: {fileID: 4395377426672021}
   m_Layer: 5
   m_Name: Footprint
   m_TagString: Untagged
@@ -13916,6 +13978,18 @@ MonoBehaviour:
   endImage: {fileID: 2878437637437210132}
   imageWrongWay: {fileID: 8287276158745566912}
   RSE_OnFinishPuzzle: {fileID: 11400000, guid: 3d476e9b414ee6a49b6f3f599bd5d003, type: 2}
+--- !u!225 &4395377426672021
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6742174446890281343}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &6755464250277683581
 GameObject:
   m_ObjectHideFlags: 0
@@ -17981,6 +18055,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2630715026951882380}
+  - component: {fileID: 6115925410478444040}
   m_Layer: 5
   m_Name: Campfire
   m_TagString: Untagged
@@ -18016,6 +18091,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!225 &6115925410478444040
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8752972827262866772}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &8816937147357607432
 GameObject:
   m_ObjectHideFlags: 0

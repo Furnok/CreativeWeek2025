@@ -28,22 +28,21 @@ public class S_Cursor : MonoBehaviour
 
     IEnumerator Rotate()
     {
-        while(isRotating)
-        {
-            // On incrémente l'angle
-            angle += speed * Time.deltaTime;
+        // On incrémente l'angle
+        angle += speed * Time.deltaTime;
 
-            // On le convertit en radians
-            float rad = angle * Mathf.Deg2Rad;
+        // On le convertit en radians
+        float rad = angle * Mathf.Deg2Rad;
 
-            // Calcul de la position du curseur autour du centre
-            float x = centerPoint.anchoredPosition.x + Mathf.Cos(rad) * radius;
-            float y = centerPoint.anchoredPosition.y + Mathf.Sin(rad) * radius;
+        // Calcul de la position du curseur autour du centre
+        float x = centerPoint.anchoredPosition.x + Mathf.Cos(rad) * radius;
+        float y = centerPoint.anchoredPosition.y + Mathf.Sin(rad) * radius;
 
-            // On met à jour la position du curseur
-            cursor.anchoredPosition = new Vector2(x, y);
+        // On met à jour la position du curseur
+        cursor.anchoredPosition = new Vector2(x, y);
 
-            yield return null;
-        }
+        yield return null;
+
+        rotate = StartCoroutine(Rotate());
     }
 }
