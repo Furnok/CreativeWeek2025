@@ -57,6 +57,7 @@ public class S_UIGame : MonoBehaviour
     [SerializeField] private RSE_OnShowMouseCursor rseOnShowMouseCursor;
     [SerializeField] private RSE_OnHideMouseCursor rseOnHideMouseCursor;
     [SerializeField] private RSE_OnOpenWindow rseOnOpenWindow;
+    [SerializeField] private RSO_Logs rsoLogs;
 
     private Tween temperatureTween = null;
     private Tween colorTween = null;
@@ -65,6 +66,11 @@ public class S_UIGame : MonoBehaviour
 
     private void Awake()
     {
+        for (int i = 0; i < rsoLogs.Value.Count; i++)
+        {
+            rsoLogs.Value[i] = false;
+        }
+
         panelDay.gameObject.SetActive(false);
         textDay.text = "Day: " + day.ToString();
         Cycle(rsoCurrentCycle.Value);

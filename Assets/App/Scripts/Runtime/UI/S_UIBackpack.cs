@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -23,6 +25,12 @@ public class S_UIBackpack : MonoBehaviour
     [SerializeField] private RectTransform uiPrefab;
     [SerializeField] private TextMeshProUGUI textPose;
     [SerializeField] private TextMeshProUGUI textDelete;
+    [SerializeField] private GameObject panelInfo;
+    [SerializeField] private GameObject panelimageInfo;
+    [SerializeField] private Image imageInfo;
+    [SerializeField] private TextMeshProUGUI textInfo;
+    [SerializeField] private List<Button> buttonList;
+    [SerializeField] private List<TextMeshProUGUI> textList;
 
     [Header("Inputs")]
     [SerializeField] private RSE_OnPlayerPause rseOnPlayerPause;
@@ -32,7 +40,11 @@ public class S_UIBackpack : MonoBehaviour
     [SerializeField] private RSE_OnAudioUIButton rseOnAudioUIButton;
     [SerializeField] private RSE_OnCloseWindow rseOnCloseWindow;
     [SerializeField] private RSO_CurrentWindows rsoCurrentWindows;
+    [SerializeField] private RSO_Logs rsoLogs;
+    [SerializeField] private SSO_Logs ssoLogs;
 
+    private bool isLog = false;
+    private int index = -1;
     private bool isClosing = false;
     private bool isDragging = false;
     [HideInInspector] public bool isDeleting = false;
@@ -42,18 +54,34 @@ public class S_UIBackpack : MonoBehaviour
     {
         rseOnPlayerPause.action += CloseEscape;
 
+        isLog = false;
+        index = -1;
         isClosing = false;
         isDragging = false;
         isDeleting = false;
         textPose.color = Color.white;
         textDelete.color = Color.white;
         dragImage.gameObject.SetActive(false);
+
+        for (int i = 0; i < rsoLogs.Value.Count; i++)
+        {
+            if (rsoLogs.Value[i])
+            {
+                buttonList[i].gameObject.SetActive(true);
+            }
+            else
+            {
+                buttonList[i].gameObject.SetActive(false);
+            }
+        }
     }
 
     private void OnDisable()
     {
         rseOnPlayerPause.action -= CloseEscape;
 
+        isLog = false;
+        index = -1;
         isClosing = false;
         isDragging = false;
         isDeleting = false;
@@ -87,12 +115,12 @@ public class S_UIBackpack : MonoBehaviour
     {
         if (!isClosing)
         {
-            if (isDragging || isDeleting)
+            if (isDragging || isDeleting || isLog)
             {
                 ResetAll();
                 return;
             }
-            
+
             if (rsoCurrentWindows.Value[^1] == gameObject)
             {
                 rseOnAudioUIButton.Call();
@@ -125,6 +153,8 @@ public class S_UIBackpack : MonoBehaviour
         imageInventory.sprite = spriteInventoryPress;
         imageMap.sprite = spriteMap;
         imageLogs.sprite = spriteLogs;
+
+        ResetAll();
     }
 
     public void OpenBackpackMap()
@@ -136,6 +166,8 @@ public class S_UIBackpack : MonoBehaviour
         imageInventory.sprite = spriteInventory;
         imageMap.sprite = spriteMapPress;
         imageLogs.sprite = spriteLogs;
+
+        ResetAll();
     }
 
     public void OpenBackpackLogs()
@@ -147,6 +179,8 @@ public class S_UIBackpack : MonoBehaviour
         imageInventory.sprite = spriteInventory;
         imageMap.sprite = spriteMap;
         imageLogs.sprite = spriteLogsPress;
+
+        ResetAll();
     }
 
     public void StartDrag()
@@ -246,5 +280,54 @@ public class S_UIBackpack : MonoBehaviour
 
         isDeleting = false;
         textDelete.color = Color.white;
+
+        isLog = false;
+        index = -1;
+
+        panelInfo.SetActive(false);
+        panelimageInfo.SetActive(false);
+        imageInfo.sprite = null;
+
+        for (int i = 0; i < textList.Count; i++)
+        {
+            textList[i].color = Color.white;
+        }
+
+        textInfo.text = "";
+    }
+
+    public void Memory(int newIndex)
+    {
+        if (index != newIndex)
+        {
+            isLog = true;
+            index = newIndex;
+
+            for (int i = 0; i < textList.Count; i++)
+            {
+                textList[i].color = Color.white;
+            }
+
+            textList[index].color = Color.red;
+
+            panelInfo.SetActive(true);
+
+            if (ssoLogs.Value[index].image != null)
+            {
+                panelimageInfo.SetActive(true);
+                imageInfo.sprite = ssoLogs.Value[index].image;
+            }
+            else
+            {
+                panelimageInfo.SetActive(false);
+                imageInfo.sprite = null;
+            }
+
+            textInfo.text = ssoLogs.Value[index].description;
+        }
+        else
+        {
+            ResetAll();
+        }
     }
 }
