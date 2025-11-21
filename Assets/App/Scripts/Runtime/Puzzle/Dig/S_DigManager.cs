@@ -62,12 +62,17 @@ public class S_DigManager : MonoBehaviour
     public void PickUp(GameObject objectPick)
     {
         objectPick.SetActive(false);
-        RSE_OnFinishPuzzle.Call("Dig");
+        StartCoroutine(PuzzleFinish());
     }
     IEnumerator ShowErrorMessage()
     {
         errorText.text = errorMessage;
         yield return new WaitForSecondsRealtime(timeDisplayText);
         errorText.text = "";
+    }
+    IEnumerator PuzzleFinish()
+    {
+        yield return new WaitForSecondsRealtime(1f);
+        RSE_OnFinishPuzzle.Call("Dig");
     }
 }

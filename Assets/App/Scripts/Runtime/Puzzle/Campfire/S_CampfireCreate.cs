@@ -1,11 +1,14 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class S_CampfireCreate : MonoBehaviour
 {
     //[Header("Settings")]
 
-    //[Header("References")]
+    [Header("References")]
+    [SerializeField] Image _image;
+    [SerializeField] Sprite _sprite;
 
     //[Header("Inputs")]
 
@@ -19,6 +22,7 @@ public class S_CampfireCreate : MonoBehaviour
 
     IEnumerator PuzzleFinish()
     {
+        _image.sprite = _sprite;
         yield return new WaitForSecondsRealtime(1f);
         RSE_OnFinishPuzzle.Call("Campfire");
     }

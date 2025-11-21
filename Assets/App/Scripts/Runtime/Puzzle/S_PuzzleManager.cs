@@ -11,6 +11,7 @@ public class S_PuzzleManager : MonoBehaviour
 
     private float puzzleDone;
     [Header("References")]
+    [SerializeField] private RSO_AllPuzzleCompleted RSO_AllPuzzleCompleted;
     [SerializeField] private TextMeshProUGUI puzzleCountText;
     [SerializeField] private GameObject campfirePanel;
     [SerializeField] private GameObject taskPanel;
@@ -50,17 +51,17 @@ public class S_PuzzleManager : MonoBehaviour
     IEnumerator DisplayText(string name)
     {
         ClosePuzzle(name);
-        yield return new WaitForSeconds(timeAfterClose);
+        yield return new WaitForSecondsRealtime(timeAfterClose);
 
         puzzleCountText.text = "Memories unlocked " + puzzleDone + " / " + puzzleMax;
-        yield return new WaitForSeconds(timeShowText);
+        yield return new WaitForSecondsRealtime(timeShowText);
         puzzleCountText.text = "";
     }
     private void CheckPuzzleAllDone()
     {
         if(puzzleDone == puzzleMax)
         {
-            //Set RSO Bool true
+            RSO_AllPuzzleCompleted.Value = true;
         }
     }
 

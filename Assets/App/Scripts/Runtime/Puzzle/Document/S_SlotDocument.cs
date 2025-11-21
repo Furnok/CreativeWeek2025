@@ -16,9 +16,9 @@ public class S_SlotDocument : MonoBehaviour, IDropHandler
     {
         var wire = eventData.pointerDrag.GetComponent<S_DocumentPiece>();
 
-        wire.LockToPosition(transform.position);
         if (wire != null && wire.pieceId == slotId)
         {
+            wire.LockToPosition(transform.position);
             rse_OnValidatePiecePos.Call();
         }
     }

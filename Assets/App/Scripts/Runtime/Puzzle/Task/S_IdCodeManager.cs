@@ -20,7 +20,7 @@ public class S_IdCodeManager : MonoBehaviour
     [Header("Inputs")]
     [SerializeField] private RSE_OnCardCollected _onCardCollected;
 
-    private bool haveCard = false;
+    private bool haveCard = true;
 
     private void OnEnable()
     {

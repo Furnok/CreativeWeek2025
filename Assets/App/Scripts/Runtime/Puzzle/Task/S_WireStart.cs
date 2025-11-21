@@ -25,7 +25,7 @@ public class S_WireStart : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     {
         if (locked) return;
         canvasGroup.blocksRaycasts = false;
-        canvasGroup.alpha = 0.6f;
+        canvasGroup.alpha = 0f;
         wireVisual.StartDrag();
     }
 

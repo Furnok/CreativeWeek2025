@@ -1,35 +1,51 @@
+using NUnit.Framework;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class S_GearManager : MonoBehaviour
 {
     [Header("Settings")]
-    [SerializeField] private float puzzlePieceMax;
-
-    private float puzzlePieceCorrect;
-    //[Header("References")]
+    [SerializeField] private List<S_GearButton> listGear = new List<S_GearButton>();
 
     [Header("Inputs")]
-    [SerializeField] private RSE_OnValidatePieceRotation rse_OnValidatePieceRotation;
+    [SerializeField] private RSE_OnValidatePieceRotation RSE_OnValidatePieceRotation;
 
     [Header("Outputs")]
     [SerializeField] private RSE_OnFinishPuzzle RSE_OnFinishPuzzle;
 
     private void OnEnable()
     {
-        rse_OnValidatePieceRotation.action += ValidatePosition;
+        RSE_OnValidatePieceRotation.action += ValidateRotation;
     }
+
     private void OnDisable()
     {
-        rse_OnValidatePieceRotation.action -= ValidatePosition;
+        RSE_OnValidatePieceRotation.action -= ValidateRotation;
     }
-    private void ValidatePosition()
-    {
-        puzzlePieceCorrect++;
 
-        if (puzzlePieceCorrect >= puzzlePieceMax)
+    private void ValidateRotation()
+    {
+        AllCorrect();
+        if (AllCorrect())
         {
-            Debug.Log("Task Completed");
-            RSE_OnFinishPuzzle.Call("Document");
+            Debug.Log("Completed");
+            StartCoroutine(PuzzleFinish());
         }
+    }
+    bool AllCorrect()
+    {
+        foreach(S_GearButton gearButton in listGear)
+        {
+            if(!gearButton.IsCorrect())
+                return false;
+        }
+        return true;
+    }
+
+    IEnumerator PuzzleFinish()
+    {
+        yield return new WaitForSecondsRealtime(1);
+        RSE_OnFinishPuzzle.Call("Gear");
     }
 }
